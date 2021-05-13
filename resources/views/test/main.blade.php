@@ -5,7 +5,7 @@
 <!-- Navigation-->
 @include('test/_partials/nav')
 <!-- Main Content-->
-<main role="main" class="container">
+
     @if(session('error'))
         <div class="alert alert-danger" role="alert">
             <p class="mb-3">{{ session('error') }}</p>
@@ -17,8 +17,8 @@
     <div>
         @yield('content')
     </div>
-</main>
-<hr />
+
+
 <!-- Bootstrap core JS-->
 <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
