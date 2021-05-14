@@ -17,4 +17,6 @@ Route::get('/','TestController@home');
 Route::get('/sign-in','AuthController@signin');
 Route::get('/sign-in/redirect','AuthController@signinRedirect');
 Route::get('/sign-out','AuthController@signout');
+
 Route::get('/index','MazerController@index');
+Route::get('/auth','MazerController@auth');

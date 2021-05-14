@@ -2,7 +2,10 @@
 <html lang="en">
 @include('mazer/_partials/login-head')
 <body>
-@yield('content')
+
+@include('mazer/pages/login-auth')
+
+
 
 <!-- Bootstrap core JS-->
 <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>

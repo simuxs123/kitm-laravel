@@ -11,4 +11,8 @@ class MazerController extends Controller{
     return view('mazer.main',$viewData);
 }
 
+    public function auth(){
+        return view('mazer/layouts/master');
+    }
+
 }
