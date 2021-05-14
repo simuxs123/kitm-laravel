@@ -12,7 +12,7 @@ class MazerController extends Controller{
 }
 
     public function auth(){
-        return view('mazer/layouts/master');
+        return view('mazer/pages/dashboard');
     }
 
 }
