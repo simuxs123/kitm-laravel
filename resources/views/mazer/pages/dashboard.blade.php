@@ -1,11 +1,11 @@
-@extends('login-auth')
+@extends('test.main')
 <div id="main">
     <header class="mb-3">
         <a href="#" class="burger-btn d-block d-xl-none">
             <i class="bi bi-justify fs-3"></i>
         </a>
     </header>
-
+@include('mazer/_partials/sidebar')
     <div class="page-heading">
         <h3>Profile Statistics</h3>
     </div>
@@ -217,7 +217,7 @@
                                 <img src="assets/images/faces/1.jpg" alt="Face 1">
                             </div>
                             <div class="ms-3 name">
-                                <h5 class="font-bold">John Duck</h5>
+                                <h5 class="font-bold">{{$userName}}</h5>
                                 <h6 class="text-muted mb-0">@johnducky</h6>
                             </div>
                         </div>
