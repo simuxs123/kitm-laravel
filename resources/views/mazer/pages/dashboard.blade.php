@@ -23,7 +23,7 @@
                                         </div>
                                     </div>
                                     <div class="col-md-8">
-                                        <h6 class="text-muted font-semibold">Profile Views</h6>
+                                        <h6 class="text-muted font-semibold">Peržiūros</h6>
                                         <h6 class="font-extrabold mb-0">112.000</h6>
                                     </div>
                                 </div>
@@ -40,7 +40,7 @@
                                         </div>
                                     </div>
                                     <div class="col-md-8">
-                                        <h6 class="text-muted font-semibold">Followers</h6>
+                                        <h6 class="text-muted font-semibold">Mokytojai</h6>
                                         <h6 class="font-extrabold mb-0">183.000</h6>
                                     </div>
                                 </div>
@@ -57,7 +57,7 @@
                                         </div>
                                     </div>
                                     <div class="col-md-8">
-                                        <h6 class="text-muted font-semibold">Following</h6>
+                                        <h6 class="text-muted font-semibold">Mokiniai</h6>
                                         <h6 class="font-extrabold mb-0">80.000</h6>
                                     </div>
                                 </div>
@@ -74,7 +74,7 @@
                                         </div>
                                     </div>
                                     <div class="col-md-8">
-                                        <h6 class="text-muted font-semibold">Saved Post</h6>
+                                        <h6 class="text-muted font-semibold">Moduliu atsakymai</h6>
                                         <h6 class="font-extrabold mb-0">112</h6>
                                     </div>
                                 </div>
@@ -213,12 +213,23 @@
                 <div class="card">
                     <div class="card-body py-4 px-5">
                         <div class="d-flex align-items-center">
-                            <div class="avatar avatar-xl">
+                            <div class="avatar">
                                 <img src="assets/images/faces/1.jpg" alt="Face 1">
                             </div>
-                            <div class="ms-3 name">
+                            <div class="ms-3 name ">
                                 <h5 class="font-bold">{{$userName}}</h5>
-                                <h6 class="text-muted mb-0">@johnducky</h6>
+                            <div class="btn-group dropstart ">
+                                <button type="button" class="btn  " data-bs-toggle="dropdown" >
+
+                                    <h6 class="text-muted mb-0"><i class="iconly-boldArrow---Left-2"></i>{{$userEmail}}</h6>
+                                </button>
+                                <div class="dropdown-menu dropleft " style="margin: 0px;">
+                                    <a class="dropdown-item" href="/sign-in">Login</a>
+                                    <a class="dropdown-item " href="/sign-out">Logout</a>
+                                </div>
+                            </div>
+
+
                             </div>
                         </div>
                     </div>
@@ -276,11 +287,11 @@
     <footer>
         <div class="footer clearfix mb-0 text-muted">
             <div class="float-start">
-                <p>2021 &copy; Mazer</p>
+                <p>2021 &copy; KITM</p>
             </div>
             <div class="float-end">
                 <p>Crafted with <span class="text-danger"><i class="bi bi-heart"></i></span> by <a
-                        href="http://ahmadsaugi.com">A. Saugi</a></p>
+                        href="http://ahmadsaugi.com">ZP</a></p>
             </div>
         </div>
     </footer>

@@ -3,7 +3,7 @@
 @include('test/_partials/head')
 <body>
 <!-- Navigation-->
-@include('test/_partials/nav')
+
 <!-- Main Content-->
 
     @if(session('error'))
