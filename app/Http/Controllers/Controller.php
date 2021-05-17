@@ -27,7 +27,7 @@ class Controller extends BaseController
             $viewData['userName'] = session('userName');
             $viewData['userEmail'] = session('userEmail');
             $viewData['userTimeZone'] = session('userTimeZone');
-            
+
 
             $usercheck = KitmUsers::where(['email' => session('userEmail')])->first();
             if ($usercheck === null) {
@@ -35,8 +35,8 @@ class Controller extends BaseController
                     'email' => session('userEmail')
                 ]);
             }
-
-            $viewData['userRole']=KitmUsers::where(['email' => session('userEmail')])->first()->roles->role_name;
+            $viewData['userRole']=('moksleivis');
+            //$viewData['userRole']=KitmUsers::where(['email' => session('userEmail')])->first()->roles->role_name;
         }
 
         return $viewData;

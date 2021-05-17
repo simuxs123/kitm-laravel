@@ -1,8 +1,8 @@
-@extends('test.main')
+@extends('login.main')
 @section('content')
     <div id="auth">
         @if(isset($userName))
-            @include('mazer/pages/dashboard')
+            @include('admin/pages/dashboard')
         @else
         <div class="row h-100">
             <div class="col-lg-5 col-12">
@@ -10,9 +10,9 @@
                     <div class="auth-logo">
                         <a href="index.html"><img src="assets/images/logo/kitm2.png" alt="Logo"></a>
                     </div>
-                    <h1 class="auth-title">Log in.</h1>
+                    <h1 class="auth-title">Sveiki</h1>
                     <p class="auth-subtitle mb-5">Prisijunkite, su savo Office 365 duomenimis.</p>
-                        <a href="/sign-in" class="btn btn-primary btn-block btn-lg shadow-lg mt-5">Click here to sign in</a>
+                        <a href="/sign-in" class="btn btn-primary btn-block btn-lg shadow-lg mt-5">Prisijungti</a>
 
                 </div>
             </div>

@@ -1,11 +1,12 @@
-@extends('test.main')
+@extends('login.main')
+@include('admin/_partials/login-head')
 <div id="main">
     <header class="mb-3">
         <a href="#" class="burger-btn d-block d-xl-none">
             <i class="bi bi-justify fs-3"></i>
         </a>
     </header>
-@include('mazer/_partials/sidebar')
+    @include('admin/_partials/sidebar')
     <div class="page-heading">
         <h3>Profile Statistics</h3>
     </div>
@@ -107,7 +108,7 @@
                                             <svg class="bi text-primary" width="32" height="32" fill="blue"
                                                  style="width:10px">
                                                 <use
-                                                    xlink:href="assets/vendors/bootstrap-icons/bootstrap-icons.svg#circle-fill" />
+                                                    xlink:href="assets/vendors/bootstrap-icons/bootstrap-icons.svg#circle-fill"/>
                                             </svg>
                                             <h5 class="mb-0 ms-3">Europe</h5>
                                         </div>
@@ -125,7 +126,7 @@
                                             <svg class="bi text-success" width="32" height="32" fill="blue"
                                                  style="width:10px">
                                                 <use
-                                                    xlink:href="assets/vendors/bootstrap-icons/bootstrap-icons.svg#circle-fill" />
+                                                    xlink:href="assets/vendors/bootstrap-icons/bootstrap-icons.svg#circle-fill"/>
                                             </svg>
                                             <h5 class="mb-0 ms-3">America</h5>
                                         </div>
@@ -143,7 +144,7 @@
                                             <svg class="bi text-danger" width="32" height="32" fill="blue"
                                                  style="width:10px">
                                                 <use
-                                                    xlink:href="assets/vendors/bootstrap-icons/bootstrap-icons.svg#circle-fill" />
+                                                    xlink:href="assets/vendors/bootstrap-icons/bootstrap-icons.svg#circle-fill"/>
                                             </svg>
                                             <h5 class="mb-0 ms-3">Indonesia</h5>
                                         </div>
@@ -218,82 +219,68 @@
                             </div>
                             <div class="ms-3 name ">
                                 <h5 class="font-bold">{{$userName}} <h6>{{$userRole}}</h6></h5>
-                            <div class="btn-group dropstart ">
-                                <button type="button" class="btn  " data-bs-toggle="dropdown" >
+                                <div class="btn-group dropstart ">
+                                    <button type="button" class="btn  " data-bs-toggle="dropdown">
 
-                                    <h6 class="text-muted mb-0"><i class="iconly-boldArrow---Left-2"></i>{{$userEmail}}</h6>
-                                </button>
-                                <div class="dropdown-menu dropleft " style="margin: 0px;">
-                                    <a class="dropdown-item" href="/sign-in">Login</a>
-                                    <a class="dropdown-item " href="/sign-out">Logout</a>
+                                        <h6 class="text-muted mb-0"><i
+                                                class="iconly-boldArrow---Left-2"></i>{{$userEmail}}</h6>
+                                    </button>
+                                    <div class="dropdown-menu dropleft " style="margin: 0px;">
+                                        <a class="dropdown-item " href="/sign-out">Logout</a>
+                                    </div>
                                 </div>
-                                
-                            </div>
-
-
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="card">
-                    <div class="card-header">
-                        <h4>Recent Messages</h4>
+                    <div class="card">
+                        <div class="card-header">
+                            <h4>Recent Messages</h4>
+                        </div>
+                        <div class="card-content pb-4">
+                            <div class="recent-message d-flex px-4 py-3">
+                                <div class="avatar avatar-lg">
+                                    <img src="assets/images/faces/4.jpg">
+                                </div>
+                                <div class="name ms-4">
+                                    <h5 class="mb-1">Hank Schrader</h5>
+                                    <h6 class="text-muted mb-0">@johnducky</h6>
+                                </div>
+                            </div>
+                            <div class="recent-message d-flex px-4 py-3">
+                                <div class="avatar avatar-lg">
+                                    <img src="assets/images/faces/5.jpg">
+                                </div>
+                                <div class="name ms-4">
+                                    <h5 class="mb-1">Dean Winchester</h5>
+                                    <h6 class="text-muted mb-0">@imdean</h6>
+                                </div>
+                            </div>
+                            <div class="recent-message d-flex px-4 py-3">
+                                <div class="avatar avatar-lg">
+                                    <img src="assets/images/faces/1.jpg">
+                                </div>
+                                <div class="name ms-4">
+                                    <h5 class="mb-1">John Dodol</h5>
+                                    <h6 class="text-muted mb-0">@dodoljohn</h6>
+                                </div>
+                            </div>
+                            <div class="px-4">
+                                <button class='btn btn-block btn-xl btn-light-primary font-bold mt-3'>Start
+                                    Conversation
+                                </button>
+                            </div>
+                        </div>
                     </div>
-                    <div class="card-content pb-4">
-                        <div class="recent-message d-flex px-4 py-3">
-                            <div class="avatar avatar-lg">
-                                <img src="assets/images/faces/4.jpg">
-                            </div>
-                            <div class="name ms-4">
-                                <h5 class="mb-1">Hank Schrader</h5>
-                                <h6 class="text-muted mb-0">@johnducky</h6>
-                            </div>
+                    <div class="card">
+                        <div class="card-header">
+                            <h4>Visitors Profile</h4>
                         </div>
-                        <div class="recent-message d-flex px-4 py-3">
-                            <div class="avatar avatar-lg">
-                                <img src="assets/images/faces/5.jpg">
-                            </div>
-                            <div class="name ms-4">
-                                <h5 class="mb-1">Dean Winchester</h5>
-                                <h6 class="text-muted mb-0">@imdean</h6>
-                            </div>
+                        <div class="card-body">
+                            <div id="chart-visitors-profile"></div>
                         </div>
-                        <div class="recent-message d-flex px-4 py-3">
-                            <div class="avatar avatar-lg">
-                                <img src="assets/images/faces/1.jpg">
-                            </div>
-                            <div class="name ms-4">
-                                <h5 class="mb-1">John Dodol</h5>
-                                <h6 class="text-muted mb-0">@dodoljohn</h6>
-                            </div>
-                        </div>
-                        <div class="px-4">
-                            <button class='btn btn-block btn-xl btn-light-primary font-bold mt-3'>Start
-                                Conversation</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card-header">
-                        <h4>Visitors Profile</h4>
-                    </div>
-                    <div class="card-body">
-                        <div id="chart-visitors-profile"></div>
                     </div>
                 </div>
             </div>
         </section>
     </div>
-
-    <footer>
-        <div class="footer clearfix mb-0 text-muted">
-            <div class="float-start">
-                <p>2021 &copy; KITM</p>
-            </div>
-            <div class="float-end">
-                <p>Crafted with <span class="text-danger"><i class="bi bi-heart"></i></span> by <a
-                        href="http://ahmadsaugi.com">ZP</a></p>
-            </div>
-        </div>
-    </footer>
-
+@include('admin/_partials/footer')

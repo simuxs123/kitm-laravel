@@ -10,9 +10,9 @@
                     <div class="auth-logo">
                         <a href="index.html"><img src="assets/images/logo/kitm2.png" alt="Logo"></a>
                     </div>
-                    <h1 class="auth-title">Log in.</h1>
+                    <h1 class="auth-title">Prisijungimas</h1>
                     <p class="auth-subtitle mb-5">Prisijunkite, su savo Office 365 duomenimis.</p>
-                    <a href="/sign-in" class="btn btn-primary btn-block btn-lg shadow-lg mt-5">Click here to sign in</a>
+                    <a href="/sign-in" class="btn btn-primary btn-block btn-lg shadow-lg mt-5">Prisijungti</a>
 
                 </div>
             </div>
