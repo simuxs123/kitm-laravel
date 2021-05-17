@@ -1,5 +1,5 @@
 <div id="auth">
-        @if($userRole == 'admin')
+        @if(isset($userName))
             <p>Role {{$userRole}}</p>
 {{--            @can('isAdmin')--}}
 {{--                <div class="btn btn-success btn-lg">--}}
