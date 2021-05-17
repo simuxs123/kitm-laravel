@@ -6,7 +6,7 @@ use App\KitmUsers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Gate;
 
-class TestController extends Controller
+class LoginController extends Controller
 {
     public function home(){
 //        if (Gate::allows('isAdmin')) {
@@ -15,7 +15,7 @@ class TestController extends Controller
 //            dd('You are not Admin');
 //        }
         $viewData = $this->loadViewData();
-        return view('mazer.pages.welcome',$viewData);
+        return view('admin.pages.welcome',$viewData);
 
         $users=[];
         if($viewData&&$viewData['userRole']=='admin'){
@@ -23,14 +23,14 @@ class TestController extends Controller
         }
 
         return view('test.pages.welcome',$viewData,compact('users'));
-        }
+    }
 
-        public function addEmail(Request $request){
-            KitmUsers::create([
-                'email'=>request('email'),
-            ]);
-            return redirect('/');
-        }
+    public function addEmail(Request $request){
+        KitmUsers::create([
+            'email'=>request('email'),
+        ]);
+        return redirect('/');
+    }
     public function updateRole(Request $request, $id){
         KitmUsers::where('id',$id)->update([
             'roles_id'=>request('role'),
@@ -44,6 +44,6 @@ class TestController extends Controller
         if($viewData&&$viewData['userRole']=='admin'){
             $users=KitmUsers::where('roles_id','<>',1)->get();
         }
-        return view('mazer.pages.administration',$viewData,compact('users'));
+        return view('admin.pages.administration',$viewData,compact('users'));
     }
 }

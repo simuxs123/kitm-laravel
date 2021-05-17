@@ -1,9 +1,9 @@
-@extends('test.main')
+@extends('login.main')
 @section('content')
     <div id="auth">
         @if(isset($userName))
             <h4>Welcome {{ $userName }}!</h4>
-            <h3>Yor email {{$userEmail}}</h3>
+            <h3>Your email {{$userEmail}}</h3>
             <p>Role {{$userRole}}</p>
 {{--            @can('isAdmin')--}}
 {{--                <div class="btn btn-success btn-lg">--}}
