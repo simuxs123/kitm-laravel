@@ -10,10 +10,17 @@ class ModuleController extends Controller
     public function index()
     {
         $modules = Module::all();
-        return view('mazer.pages.modules', compact('modules'));
+        return view('admin/pages/modules', compact('modules'));
     }
 
     public function createModule(Request $request) {
+        $validateData = $request->validate([
+            'moduleName' => 'required|max:255|min:3',
+            'name' => 'required|min:3',
+            'surname' => 'required|min:3',
+            'groupName' => 'required'
+        ]);
+
         Module::create([
             'module_name' => request('moduleName'),
             'teacher_name' => request('name'),
@@ -35,6 +42,13 @@ class ModuleController extends Controller
     }
 
     public function update(Request $request, Module $module) {
+        $validateData = $request->validate([
+            'moduleName' => 'required|max:255|min:3',
+            'name' => 'required|min:3',
+            'surname' => 'required|min:3',
+            'groupName' => 'required'
+        ]);
+
         Module::where('id', $module->id)->update(['module_name' => request('moduleName'), 'teacher_name' => request('name'), 'teacher_surname' => request('surname'), 'group_name' => request('groupName')]);
         return redirect('/modules');
     }

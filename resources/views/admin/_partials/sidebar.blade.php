@@ -15,7 +15,7 @@
                 <ul class="menu">
                     <li class="sidebar-title">Duomenų surinkimas</li>
                     <li class="sidebar-item ">
-                        <a href="#" class='sidebar-link'>
+                        <a href="/moduleSurveys" class='sidebar-link'>
                             <i class="bi bi-stack"></i>
                             <span>Modulių apklausos</span>
                         </a>
@@ -60,7 +60,7 @@
                     </li>
 
                     <li class="sidebar-item">
-                        <a href="#" class='sidebar-link'>
+                        <a href="/modules" class='sidebar-link'>
                             <i class="bi bi-egg-fill"></i>
                             <span>Modulių Valdymas</span>
                         </a>
