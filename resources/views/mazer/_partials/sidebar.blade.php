@@ -69,7 +69,7 @@
                     <li class="sidebar-title">Administravimas</li>
 
                     <li class="sidebar-item  has-sub">
-                        <a href="#" class='sidebar-link'>
+                        <a href="/administration" class='sidebar-link'>
                             <i class="bi bi-pentagon-fill"></i>
                             <span>Vartotojų Administravimas</span>
                         </a>

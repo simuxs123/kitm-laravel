@@ -16,7 +16,7 @@ class TestController extends Controller
 //        }
         $viewData = $this->loadViewData();
         return view('mazer.pages.welcome',$viewData);
-=======
+
         $users=[];
         if($viewData&&$viewData['userRole']=='admin'){
             $users=KitmUsers::where('roles_id','<>',1)->get();
@@ -24,6 +24,7 @@ class TestController extends Controller
 
         return view('test.pages.welcome',$viewData,compact('users'));
         }
+
         public function addEmail(Request $request){
             KitmUsers::create([
                 'email'=>request('email'),
@@ -35,5 +36,14 @@ class TestController extends Controller
             'roles_id'=>request('role'),
         ]);
         return redirect('/');
+    }
+
+    public function adminView() {
+        $viewData = $this->loadViewData();
+        $users=[];
+        if($viewData&&$viewData['userRole']=='admin'){
+            $users=KitmUsers::where('roles_id','<>',1)->get();
+        }
+        return view('mazer.pages.administration',$viewData,compact('users'));
     }
 }
