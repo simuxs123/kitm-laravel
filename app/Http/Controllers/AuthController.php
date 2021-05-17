@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\KitmUsers;
 use App\TokenStore\TokenCache;
 use Illuminate\Http\Request;
 use Microsoft\Graph\Graph;
@@ -75,7 +76,8 @@ class AuthController extends Controller
                     ->execute();
 
                 $tokenCache = new TokenCache();
-                $tokenCache->storeTokens($accessToken, $user);
+                $role=KitmUsers::where('email',$user->getMail())->first()->roles->role_name;
+                $tokenCache->storeTokens($accessToken, $user,$role);
 
                 return redirect('/');
             }
