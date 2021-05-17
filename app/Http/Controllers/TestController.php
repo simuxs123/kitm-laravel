@@ -15,6 +15,8 @@ class TestController extends Controller
 //            dd('You are not Admin');
 //        }
         $viewData = $this->loadViewData();
+        return view('mazer.pages.welcome',$viewData);
+=======
         $users=[];
         if($viewData&&$viewData['userRole']=='admin'){
             $users=KitmUsers::where('roles_id','<>',1)->get();

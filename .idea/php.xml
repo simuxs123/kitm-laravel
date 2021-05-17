@@ -106,6 +106,10 @@
       <path value="$PROJECT_DIR$/vendor/sebastian/complexity" />
       <path value="$PROJECT_DIR$/vendor/sebastian/code-unit-reverse-lookup" />
       <path value="$PROJECT_DIR$/vendor/league/oauth2-client" />
+
+      <path value="$PROJECT_DIR$/vendor/microsoft/microsoft-graph" />
+      <path value="$PROJECT_DIR$/vendor/paragonie/random_compat" />
+=======
       <path value="$PROJECT_DIR$/vendor/paragonie/random_compat" />
       <path value="$PROJECT_DIR$/vendor/microsoft/microsoft-graph" />
       <path value="$PROJECT_DIR$/vendor/laravel/ui" />
@@ -117,4 +121,8 @@
       <PhpUnitSettings configuration_file_path="$PROJECT_DIR$/phpunit.xml" custom_loader_path="$PROJECT_DIR$/vendor/autoload.php" use_configuration_file="true" />
     </phpunit_settings>
   </component>
+
 </project>
+=======
+</project>
+
