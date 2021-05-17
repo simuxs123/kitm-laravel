@@ -23,6 +23,8 @@
     <td>{{$module->teacher_name}}</td>
     <td>{{$module->teacher_surname}}</td>
     <td>{{$module->group_name}}</td>
+    <td><a href="/updateModule/{{$module->id}}">redaguoti</a></td>
+    <td><a href="/deleteModule/{{$module->id}}">trinti</a></td>
     </tr>
 @endforeach
 </table>
