@@ -6,7 +6,7 @@ use App\KitmUsers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Gate;
 
-class TestController extends Controller
+class LoginController extends Controller
 {
     public function home(){
 //        if (Gate::allows('isAdmin')) {

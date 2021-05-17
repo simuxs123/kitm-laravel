@@ -226,7 +226,6 @@
                                                 class="iconly-boldArrow---Left-2"></i>{{$userEmail}}</h6>
                                     </button>
                                     <div class="dropdown-menu dropleft " style="margin: 0px;">
-                                        <a class="dropdown-item" href="/sign-in">Login</a>
                                         <a class="dropdown-item " href="/sign-out">Logout</a>
                                     </div>
                                 </div>
