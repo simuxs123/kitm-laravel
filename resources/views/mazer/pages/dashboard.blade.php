@@ -217,7 +217,7 @@
                                 <img src="assets/images/faces/1.jpg" alt="Face 1">
                             </div>
                             <div class="ms-3 name ">
-                                <h5 class="font-bold">{{$userName}}</h5>
+                                <h5 class="font-bold">{{$userName}} <h6>{{$userRole}}</h6></h5>
                             <div class="btn-group dropstart ">
                                 <button type="button" class="btn  " data-bs-toggle="dropdown" >
 
@@ -227,6 +227,7 @@
                                     <a class="dropdown-item" href="/sign-in">Login</a>
                                     <a class="dropdown-item " href="/sign-out">Logout</a>
                                 </div>
+                                
                             </div>
 
 
