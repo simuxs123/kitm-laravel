@@ -2,13 +2,14 @@
 namespace App\TokenStore;
 
 class TokenCache {
-    public function storeTokens($accessToken, $user) {
+    public function storeTokens($accessToken, $user,$role) {
         session([
             'accessToken' => $accessToken->getToken(),
             'refreshToken' => $accessToken->getRefreshToken(),
             'tokenExpires' => $accessToken->getExpires(),
             'userName' => $user->getDisplayName(),
             'userEmail' => null !== $user->getMail() ? $user->getMail() : $user->getUserPrincipalName(),
+            'userRole' => $role,
             'userTimeZone' => $user->getMailboxSettings()->getTimeZone()
         ]);
     }
