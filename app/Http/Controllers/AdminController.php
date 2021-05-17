@@ -15,6 +15,9 @@ class AdminController extends Controller{
         $modules = Module::all();
         return view('admin/pages/module-surveys', compact('modules'));
     }
+    public function moduleFill(Module $module){
+        return view('admin/pages/module-fill', compact('module'));
+    }
 
 
     public function auth(){
