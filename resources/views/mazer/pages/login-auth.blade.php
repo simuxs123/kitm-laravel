@@ -1,10 +1,9 @@
-@extends('test.main')
-@section('content')
-    <div id="auth">
-        @if(isset($userName))
-            <h4>Welcome {{ $userName }}!</h4>
-            <h3>Yor email {{$userEmail}}</h3>
-        @else
+
+<div id="auth">
+    @if(isset($userName))
+        <h4>Welcome {{ $userName }}!</h4>
+        <h3>Yor email {{$userEmail}}</h3>
+    @else
         <div class="row h-100">
             <div class="col-lg-5 col-12">
                 <div id="auth-left">
@@ -13,7 +12,7 @@
                     </div>
                     <h1 class="auth-title">Log in.</h1>
                     <p class="auth-subtitle mb-5">Prisijunkite, su savo Office 365 duomenimis.</p>
-                        <a href="/sign-in" class="btn btn-primary btn-block btn-lg shadow-lg mt-5">Click here to sign in</a>
+                    <a href="/sign-in" class="btn btn-primary btn-block btn-lg shadow-lg mt-5">Click here to sign in</a>
 
                 </div>
             </div>
@@ -24,7 +23,5 @@
             </div>
         </div>
 
-    </div>
-    @endif
-
-@endsection
+</div>
+@endif

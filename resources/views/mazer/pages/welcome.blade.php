@@ -2,8 +2,7 @@
 @section('content')
     <div id="auth">
         @if(isset($userName))
-            <h4>Welcome {{ $userName }}!</h4>
-            <h3>Yor email {{$userEmail}}</h3>
+            @include('mazer/pages/dashboard')
         @else
         <div class="row h-100">
             <div class="col-lg-5 col-12">

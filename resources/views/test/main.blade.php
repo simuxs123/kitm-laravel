@@ -3,20 +3,20 @@
 @include('test/_partials/head')
 <body>
 <!-- Navigation-->
-@include('test/_partials/nav')
+
 <!-- Main Content-->
 
-@if(session('error'))
-    <div class="alert alert-danger" role="alert">
-        <p class="mb-3">{{ session('error') }}</p>
-        @if(session('errorDetail'))
-            <pre class="alert-pre border bg-light p-2"><code>{{ session('errorDetail') }}</code></pre>
-        @endif
+    @if(session('error'))
+        <div class="alert alert-danger" role="alert">
+            <p class="mb-3">{{ session('error') }}</p>
+            @if(session('errorDetail'))
+                <pre class="alert-pre border bg-light p-2"><code>{{ session('errorDetail') }}</code></pre>
+            @endif
+        </div>
+    @endif
+    <div>
+        @yield('content')
     </div>
-@endif
-<div>
-    @yield('content')
-</div>
 
 
 <!-- Bootstrap core JS-->
