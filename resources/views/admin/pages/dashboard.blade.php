@@ -232,6 +232,7 @@
                             </div>
                         </div>
                     </div>
+                </div>
                     <div class="card">
                         <div class="card-header">
                             <h4>Recent Messages</h4>
@@ -279,7 +280,6 @@
                             <div id="chart-visitors-profile"></div>
                         </div>
                     </div>
-                </div>
             </div>
         </section>
     </div>
