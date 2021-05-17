@@ -1,7 +1,7 @@
-{% set title = 'Dashboard' %}
+{% set title = 'KITM' %}
 {% set filename = 'home.blade.php' %}
 
-{% extends 'layouts/master.html' %}
+{% extends 'layouts/master' %}
 
 {% block styles %}
 <link rel="stylesheet" href="assets/vendors/iconly/bold.css">
@@ -275,6 +275,6 @@
 </div>
 {% endblock %}
 {% block js %}
-<script src="assets/vendors/apexcharts/apexcharts.js"></script>
-<script src="assets/js/pages/dashboard.js"></script>
+<script src="/assets/vendors/apexcharts/apexcharts.js"></script>
+<script src="/assets/js/pages/dashboard.js"></script>
 {% endblock %}

@@ -1,11 +1,12 @@
-@extends('test.main')
+@extends('login.main')
+@include('admin/_partials/login-head')
 <div id="main">
     <header class="mb-3">
         <a href="#" class="burger-btn d-block d-xl-none">
             <i class="bi bi-justify fs-3"></i>
         </a>
     </header>
-@include('mazer/_partials/sidebar')
+@include('admin/_partials/sidebar')
     <div class="page-heading">
         <h3>Profile Statistics</h3>
     </div>
@@ -218,7 +219,7 @@
                             </div>
                             <div class="ms-3 name">
                                 <h5 class="font-bold">{{$userName}}</h5>
-                                <h6 class="text-muted mb-0">@johnducky</h6>
+                                <h6 class="text-muted mb-0"><a href="/sign-out">Atsijungti</a></h6>
                             </div>
                         </div>
                     </div>
@@ -272,16 +273,5 @@
             </div>
         </section>
     </div>
-
-    <footer>
-        <div class="footer clearfix mb-0 text-muted">
-            <div class="float-start">
-                <p>2021 &copy; Mazer</p>
-            </div>
-            <div class="float-end">
-                <p>Crafted with <span class="text-danger"><i class="bi bi-heart"></i></span> by <a
-                        href="http://ahmadsaugi.com">A. Saugi</a></p>
-            </div>
-        </div>
-    </footer>
+    @include('admin/_partials/footer')
 

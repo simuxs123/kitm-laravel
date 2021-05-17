@@ -1,4 +1,4 @@
-@extends('test.main')
+@extends('login.main')
 @section('content')
     <div id="auth">
         @if(isset($userName))

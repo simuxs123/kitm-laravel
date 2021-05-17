@@ -8,6 +8,6 @@ class TestController extends Controller
 {
     public function home(){
         $viewData = $this->loadViewData();
-        return view('mazer.pages.welcome',$viewData);
+        return view('admin.pages.welcome',$viewData);
         }
 }
