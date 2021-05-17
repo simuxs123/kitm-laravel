@@ -28,6 +28,7 @@ Route::patch('/update/{module}','ModuleController@update');
 
 
 Route::get('/index','AdminController@index');
+Route::get('/moduleSurveys','AdminController@moduleSurveys');
 Route::get('/auth','AdminController@auth');
 
 Auth::routes();
