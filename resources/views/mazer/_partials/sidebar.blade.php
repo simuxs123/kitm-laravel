@@ -76,7 +76,7 @@
                     </li>
 
                     <li class="sidebar-item  has-sub">
-                        <a href="#" class='sidebar-link'>
+                        <a href="/modules" class='sidebar-link'>
                             <i class="bi bi-egg-fill"></i>
                             <span>Modulių Valdymas</span>
                         </a>

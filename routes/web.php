@@ -20,6 +20,9 @@ Route::get('/sign-in','AuthController@signin');
 Route::get('/sign-in/redirect','AuthController@signinRedirect');
 Route::get('/sign-out','AuthController@signout');
 Route::get('/administration','TestController@adminView');
+Route::get('/modules','ModuleController@index');
+Route::post('/createModule','ModuleController@createModule');
+
 
 Route::get('/index','MazerController@index');
 Route::get('/auth','MazerController@auth');
