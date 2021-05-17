@@ -1,3 +1,12 @@
+@if (count($errors) > 0)
+    <div class="alert alert-danger">
+        <ul>
+            @foreach ($errors->all() as $error)
+                <li>{{$error}}</li>
+            @endforeach
+        </ul>
+    </div>
+@endif 
 <form method="post" action="/createModule">
 {{csrf_field()}}
     <label for="moduleName">Modulio pav</label>
