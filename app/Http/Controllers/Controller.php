@@ -6,6 +6,7 @@ use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use Illuminate\Foundation\Bus\DispatchesJobs;
 use Illuminate\Foundation\Validation\ValidatesRequests;
 use Illuminate\Routing\Controller as BaseController;
+use App\KitmUsers;
 
 class Controller extends BaseController
 {
@@ -26,6 +27,16 @@ class Controller extends BaseController
             $viewData['userName'] = session('userName');
             $viewData['userEmail'] = session('userEmail');
             $viewData['userTimeZone'] = session('userTimeZone');
+            
+
+            $usercheck = KitmUsers::where(['email' => session('userEmail')])->first();
+            if ($usercheck === null) {
+                KitmUsers::create([
+                    'email' => session('userEmail')
+                ]);
+            }
+
+            $viewData['userRole']=KitmUsers::where(['email' => session('userEmail')])->first()->roles->role_name;
         }
 
         return $viewData;

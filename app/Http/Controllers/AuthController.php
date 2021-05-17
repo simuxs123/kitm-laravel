@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\KitmUsers;
 use App\TokenStore\TokenCache;
 use Illuminate\Http\Request;
 use Microsoft\Graph\Graph;
@@ -62,6 +63,7 @@ class AuthController extends Controller
             ]);
 
             try {
+                
                 // Make the token request
                 $accessToken = $oauthClient->getAccessToken('authorization_code', [
                     'code' => $authCode
@@ -75,7 +77,8 @@ class AuthController extends Controller
                     ->execute();
 
                 $tokenCache = new TokenCache();
-                $tokenCache->storeTokens($accessToken, $user);
+                $role='test';
+                $tokenCache->storeTokens($accessToken, $user,$role);
 
                 return redirect('/');
             }
