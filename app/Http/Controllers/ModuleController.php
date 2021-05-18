@@ -38,7 +38,7 @@ class ModuleController extends Controller
     }
 
     public function updateModule(Module $module) {
-        return view('mazer.pages.update-module', compact('module'));
+        return view('admin/pages/update-module', compact('module'));
     }
 
     public function update(Request $request, Module $module) {
@@ -48,7 +48,6 @@ class ModuleController extends Controller
             'surname' => 'required|min:3',
             'groupName' => 'required'
         ]);
-
         Module::where('id', $module->id)->update(['module_name' => request('moduleName'), 'teacher_name' => request('name'), 'teacher_surname' => request('surname'), 'group_name' => request('groupName')]);
         return redirect('/modules');
     }
