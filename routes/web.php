@@ -25,11 +25,14 @@ Route::post('/createModule','ModuleController@createModule');
 Route::get('/deleteModule/{module}','ModuleController@deleteModule');
 Route::get('/updateModule/{module}','ModuleController@updateModule');
 Route::patch('/update/{module}','ModuleController@update');
+Route::get('/survey','SurveyController@survey');
+Route::post('/saveSurvey','SurveyController@saveSurvey');
 
 
 Route::get('/index','AdminController@index');
 Route::get('/moduleSurveys','AdminController@moduleSurveys');
 Route::get('/auth','AdminController@auth');
+
 
 Auth::routes();
 

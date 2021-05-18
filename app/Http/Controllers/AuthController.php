@@ -63,7 +63,6 @@ class AuthController extends Controller
             ]);
 
             try {
-                
                 // Make the token request
                 $accessToken = $oauthClient->getAccessToken('authorization_code', [
                     'code' => $authCode
@@ -77,7 +76,7 @@ class AuthController extends Controller
                     ->execute();
 
                 $tokenCache = new TokenCache();
-                $role='test';
+                $role=KitmUsers::where('email',$user->getMail())->first()->roles->role_name;
                 $tokenCache->storeTokens($accessToken, $user,$role);
 
                 return redirect('/');
