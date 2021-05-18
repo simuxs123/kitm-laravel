@@ -9,20 +9,8 @@ use Illuminate\Support\Facades\Gate;
 class LoginController extends Controller
 {
     public function home(){
-//        if (Gate::allows('isAdmin')) {
-//            dd('Admin allowed');
-//        } else {
-//            dd('You are not Admin');
-//        }
         $viewData = $this->loadViewData();
         return view('admin.pages.welcome',$viewData);
-
-        $users=[];
-        if($viewData&&$viewData['userRole']=='admin'){
-            $users=KitmUsers::where('roles_id','<>',1)->get();
-        }
-
-        return view('test.pages.welcome',$viewData,compact('users'));
     }
 
     public function addEmail(Request $request){
