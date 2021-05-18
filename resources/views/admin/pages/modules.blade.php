@@ -43,7 +43,8 @@
                     <h6 class="card-subtitle mb-2 text-muted">{{$module->teacher_name}}</h6>
                     <h6 class="card-subtitle mb-2 text-muted">{{$module->teacher_surname}}</h6>
                     <h6 class="card-subtitle">{{$module->group_name}}</h6>
-                    <a href="#" class="card-link">Uzpildyti</a>
+                    <a href="/updateModule/{{$module->id}}">redaguoti</a>
+                    <a href="/deleteModule/{{$module->id}}">pasalinti</a>
                 </div>
             </div>
         @endforeach

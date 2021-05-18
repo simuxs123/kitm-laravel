@@ -38,7 +38,7 @@ class ModuleController extends Controller
     }
 
     public function updateModule(Module $module) {
-        return view('mazer.pages.update-module', compact('module'));
+        return view('admin.pages.update-module', compact('module'));
     }
 
     public function update(Request $request, Module $module) {

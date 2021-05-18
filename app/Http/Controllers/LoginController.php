@@ -29,13 +29,13 @@ class LoginController extends Controller
         KitmUsers::create([
             'email'=>request('email'),
         ]);
-        return redirect('/');
+        return back();
     }
     public function updateRole(Request $request, $id){
         KitmUsers::where('id',$id)->update([
             'roles_id'=>request('role'),
         ]);
-        return redirect('/');
+        return back();
     }
 
     public function adminView() {
