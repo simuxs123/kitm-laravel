@@ -14,20 +14,20 @@
         <div class="form row">
             <div class="form-group col-md-6">
                 <label for="name">Mokytojo Vardas</label>
-                <input type="text" class="form-control" placeholder="Vardas" required>
+                <input type="text" class="form-control" placeholder="Vardas" required name="name">
             </div>
         <div class="form-group col-md-6">
             <label for="surname">Mokytojo Pavardė</label>
-            <input type="text" class="form-control" placeholder="Pavardė" required>
+            <input type="text" class="form-control" placeholder="Pavardė" required name="surname">
         </div>
     </div>
   <div class="form-group">
     <label for="groupName">Grupės pavadinimas</label>
-    <input type="text" class="form-control" placeholder="Grupės pavadinimas" required>
+    <input type="text" class="form-control" placeholder="Grupės pavadinimas" required name="groupName">
   </div>
   <div class="form-group">
     <label for="moduleName">Modulio pavadinimas</label>
-    <input type="text" class="form-control" placeholder="Modulio pavadinimas"required>
+    <input type="text" class="form-control" placeholder="Modulio pavadinimas" required name="moduleName">
   </div>
   <button type="submit" class="btn btn-primary">Pateikti</button>
 </form>
@@ -36,7 +36,7 @@
 </div>
     <div class="box">
         @foreach($modules as $module)
-            <div class="card" style="width: 13rem; height: 13rem">
+            <div class="card " style="width: 13rem; height: 13rem">
                 <div class="card-body d-flex flex-column align-items-center justify-content-center">
                     <h5 class="card-title">{{$module->module_name}}</h5>
                     <h6 class="card-subtitle mb-2 text-muted">{{$module->teacher_name}}</h6>
