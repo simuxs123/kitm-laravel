@@ -24,36 +24,40 @@
                     <div class="form row">
                         <div class="form-group col-md-6">
                             <label for="name">Mokytojo Vardas</label>
-                            <input type="text" class="form-control" placeholder="Vardas" name="name">
+                            <input type="text" class="form-control" placeholder="Vardas" name="name" maxlength="15"> 
                         </div>
                         <div class="form-group col-md-6">
                             <label for="surname">Mokytojo Pavardė</label>
-                            <input type="text" class="form-control" placeholder="Pavardė" name="surname">
+                            <input type="text" class="form-control" placeholder="Pavardė" name="surname" maxlength="15">
                         </div>
                     </div>
                     <div class="form-group">
                         <label for="groupName">Grupės pavadinimas</label>
-                        <input type="text" class="form-control" placeholder="Grupės pavadinimas" name="groupName">
+                        <input type="text" class="form-control" placeholder="ZP20/1" name="groupName">
                     </div>
                     <div class="form-group">
                         <label for="moduleName">Modulio pavadinimas</label>
-                        <input type="text" class="form-control" placeholder="Modulio pavadinimas" name="moduleName">
+                        <input type="text" class="form-control" placeholder="Programavimo pagrindai" name="moduleName" maxlength="7">
                     </div>
                     <button type="submit" class="btn btn-primary">Pateikti</button>
                 </form>
             </blockquote>
         </div>
     </div>
-    <div class="box">
+    <div class="page-heading">
+        <h3>Moduliai</h3>
+    </div>
+    <div class="box row">
         @foreach($modules as $module)
-        <div class="card" style="width: 13rem; height: 13rem">
+        <div class="card m-3 text-center" style="width: 16rem; height:13rem">
             <div class="card-body d-flex flex-column align-items-center justify-content-center">
-                <h5 class="card-title">{{$module->module_name}}</h5>
-                <h6 class="card-subtitle mb-2 text-muted">{{$module->teacher_name}}</h6>
-                <h6 class="card-subtitle mb-2 text-muted">{{$module->teacher_surname}}</h6>
-                <h6 class="card-subtitle">{{$module->group_name}}</h6>
-                <a href="/updateModule/{{$module->id}}">redaguoti</a>
-                <a href="/deleteModule/{{$module->id}}">pasalinti</a>
+                <h2>{{$module->group_name}}</h2>
+                <h6 class="card-subtitle mb-2 text-muted">{{$module->teacher_name}} {{$module->teacher_surname}}</h6>
+                <h6 class="card-subtitle">{{$module->module_name}}</h6>
+                <div class="row">
+                    <a href="/updateModule/{{$module->id}}" class="btn btn-primary mt-2 btn-sm">REDAGUOTI</a>
+                     <a href="/deleteModule/{{$module->id}}" class="btn btn-danger mt-1 btn-sm">PASALINTI</a>
+                </div>
             </div>
         </div>
         @endforeach
