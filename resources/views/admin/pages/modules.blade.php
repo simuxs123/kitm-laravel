@@ -1,6 +1,5 @@
 @extends('admin.main')
 <div id="main">
-    @include('admin/_partials/sidebar')
     <div class="page-heading">
         <h3>Modulių valdymas</h3>
     </div>
