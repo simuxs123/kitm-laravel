@@ -1,3 +1,4 @@
+@extends('admin.main')
 @if (count($errors) > 0)
     <div class="alert alert-danger">
         <ul>
@@ -6,7 +7,8 @@
             @endforeach
         </ul>
     </div>
-@endif 
+@endif
+@include('admin/_partials/sidebar')
 <form method="post" action="/update/{{$module->id}}" enctype="multipart/form-data">
 {{csrf_field()}}
 {{method_field('PATCH')}}
