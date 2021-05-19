@@ -7,6 +7,8 @@ use Illuminate\Database\Eloquent\Model;
 class Survey extends Model
 {
     protected $fillable=[
+        'module_id',
+        'module_name',
         'group',
         'attendance',
         'module_is_important',
@@ -19,4 +21,9 @@ class Survey extends Model
         'quality',
         'preferences',
         'recommendation'];
+
+        public function modules(){
+            return $this->belongsTo(Module::class,'id');
+        }
+    
 }

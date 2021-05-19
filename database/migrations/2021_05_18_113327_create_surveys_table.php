@@ -15,18 +15,20 @@ class CreateSurveysTable extends Migration
     {
         Schema::create('surveys', function (Blueprint $table) {
             $table->id();
+            $table->integer('module_id');
+            $table->string('module_name');
             $table->string('group');
             $table->string('attendance');
-            $table->string('module_is_important');
-            $table->string('module_material_is_important');
-            $table->string('module_advanced_methods');
-            $table->string('assessment_and_procedure');
-            $table->string('the_teacher_virtually_teaches');
-            $table->string('good_resources');
-            $table->string('safe_environment');
-            $table->string('quality');
+            $table->integer('module_is_important');
+            $table->integer('module_material_is_important');
+            $table->integer('module_advanced_methods');
+            $table->integer('assessment_and_procedure');
+            $table->integer('the_teacher_virtually_teaches');
+            $table->integer('good_resources');
+            $table->integer('safe_environment');
+            $table->integer('quality');
             $table->longText('preferences');
-            $table->string('recommendation');
+            $table->integer('recommendation');
             $table->timestamps();
         });
     }

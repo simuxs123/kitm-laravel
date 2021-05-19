@@ -2,22 +2,21 @@
 
 namespace App\Http\Controllers;
 
-
+use App\Module;
 use App\Survey;
 use Illuminate\Http\Request;
 
 class SurveyController extends Controller
 {
-    public function survey()
+    public function survey(Module $module)
     {
-
-        return view('admin.pages.survey');
+        
+        return view('admin.pages.survey', compact('module'));
     }
 
-    public function saveSurvey(Request $request)
+    public function saveSurvey(Request $request, Module $module)
     {
         $validatedData = $request->validate([
-            'group'=>'required',
             'attendance'=>'required',
             'module_is_important'=>'required',
             'module_material_is_important'=>'required',
@@ -31,7 +30,9 @@ class SurveyController extends Controller
             'recommendation'
         ]);
         Survey::create([
-            'group' => request('group'),
+            'module_id' => $module->id,
+            'module_name' => $module->module_name,
+            'group' => $module->group_name,
             'attendance' => request('attendance'),
             'module_is_important' => request('module_is_important'),
             'module_material_is_important' => request('module_material_is_important'),

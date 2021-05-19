@@ -1,15 +1,11 @@
 @extends('admin.main')
 
-<form method="post" action="/saveSurvey">
+<form method="post" action="/saveSurvey/{{$module->id}}">
     {{csrf_field()}}
-
+    <h2>{{$module->module_name}}</h2>
     <div class="grupe">
         <h3> grupe </h3>
-        <label>
-            <input
-                role="radio" type="radio" name="group">
-            <span>zp20/1</span>
-        </label>
+        <h4>{{$module->group_name}}</h4>
     </div>
     <h6>Kokioje % dalyje modulio užsiėmimų dalyvavote?</h6>
     <div>
@@ -56,15 +52,15 @@
         <h6>Šį modulį laikau svarbia profesinio rengimo dalimi</h6>
         <label>
             <input
-                role="radio" type="radio" name="module_is_important" value="0-20%">
+                role="radio" type="radio" name="module_is_important" value="1">
             <input
-                role="radio" type="radio" name="module_is_important" value="20-40%">
+                role="radio" type="radio" name="module_is_important" value="2">
             <input
-                role="radio" type="radio" name="module_is_important" value="40-60%">
+                role="radio" type="radio" name="module_is_important" value="3">
             <input
-                role="radio" type="radio" name="module_is_important" value="60-80%">
+                role="radio" type="radio" name="module_is_important" value="4">
             <input
-                role="radio" type="radio" name="module_is_important" value="80-100%">
+                role="radio" type="radio" name="module_is_important" value="5">
         </label>
     </div>
     <div>
@@ -72,115 +68,115 @@
             kompetencijas</h6>
         <label>
             <input
-                role="radio" type="radio" name="module_material_is_important" value="0-20%">
+                role="radio" type="radio" name="module_material_is_important" value="1">
             <input
-                role="radio" type="radio" name="module_material_is_important" value="20-40%">
+                role="radio" type="radio" name="module_material_is_important" value="2">
             <input
-                role="radio" type="radio" name="module_material_is_important" value="40-60%">
+                role="radio" type="radio" name="module_material_is_important" value="3">
             <input
-                role="radio" type="radio" name="module_material_is_important" value="60-80%">
+                role="radio" type="radio" name="module_material_is_important" value="4">
             <input
-                role="radio" type="radio" name="module_material_is_important" value="80-100%">
+                role="radio" type="radio" name="module_material_is_important" value="5">
         </label>
     </div>
     <div>
         <h6>Modulyje taikomi pažangūs mokymo(si) metodai (pvz.: projektiniai darbai, kūrybinės užduotys)</h6>
         <label>
             <input
-                role="radio" type="radio" name="module_advanced_methods" value="0-20%">
+                role="radio" type="radio" name="module_advanced_methods" value="1">
             <input
-                role="radio" type="radio" name="module_advanced_methods" value="20-40%">
+                role="radio" type="radio" name="module_advanced_methods" value="2">
             <input
-                role="radio" type="radio" name="module_advanced_methods" value="40-60%">
+                role="radio" type="radio" name="module_advanced_methods" value="3">
             <input
-                role="radio" type="radio" name="module_advanced_methods" value="60-80%">
+                role="radio" type="radio" name="module_advanced_methods" value="4">
             <input
-                role="radio" type="radio" name="module_advanced_methods" value="80-100%">
+                role="radio" type="radio" name="module_advanced_methods" value="5">
         </label>
     </div>
     <div>
         <h6>Vertinimo kriterijai ir tvarka yra aiškūs</h6>
         <label>
             <input
-                role="radio" type="radio" name="assessment_and_procedure" value="0-20%">
+                role="radio" type="radio" name="assessment_and_procedure" value="1">
             <input
-                role="radio" type="radio" name="assessment_and_procedure" value="20-40%">
+                role="radio" type="radio" name="assessment_and_procedure" value="2">
             <input
-                role="radio" type="radio" name="assessment_and_procedure" value="40-60%">
+                role="radio" type="radio" name="assessment_and_procedure" value="3">
             <input
-                role="radio" type="radio" name="assessment_and_procedure" value="60-80%">
+                role="radio" type="radio" name="assessment_and_procedure" value="4">
             <input
-                role="radio" type="radio" name="assessment_and_procedure" value="80-100%">
+                role="radio" type="radio" name="assessment_and_procedure" value="5">
         </label>
     </div>
     <div>
         <h6>Mokytojas nuosekliai naudoja Moodle, Teams ar kitokią virtualaus mokymosi aplinką</h6>
         <label>
             <input
-                role="radio" type="radio" name="the_teacher_virtually_teaches" value="0-20%">
+                role="radio" type="radio" name="the_teacher_virtually_teaches" value="1">
             <input
-                role="radio" type="radio" name="the_teacher_virtually_teaches" value="20-40%">
+                role="radio" type="radio" name="the_teacher_virtually_teaches" value="2">
             <input
-                role="radio" type="radio" name="the_teacher_virtually_teaches" value="40-60%">
+                role="radio" type="radio" name="the_teacher_virtually_teaches" value="3">
             <input
-                role="radio" type="radio" name="the_teacher_virtually_teaches" value="60-80%">
+                role="radio" type="radio" name="the_teacher_virtually_teaches" value="4">
             <input
-                role="radio" type="radio" name="the_teacher_virtually_teaches" value="80-100%">
+                role="radio" type="radio" name="the_teacher_virtually_teaches" value="5">
         </label>
     </div>
     <div>
         <h6>Esu patenkintas materialiniais ištekliais ir jų prieinamumu (kompiuterinė, techninė įranga)</h6>
         <label>
             <input
-                role="radio" type="radio" name="good_resources" value="0-20%">
+                role="radio" type="radio" name="good_resources" value="1">
             <input
-                role="radio" type="radio" name="good_resources" value="20-40%">
+                role="radio" type="radio" name="good_resources" value="2">
             <input
-                role="radio" type="radio" name="good_resources" value="40-60%">
+                role="radio" type="radio" name="good_resources" value="3">
             <input
-                role="radio" type="radio" name="good_resources" value="60-80%">
+                role="radio" type="radio" name="good_resources" value="4">
             <input
-                role="radio" type="radio" name="good_resources" value="80-100%">
+                role="radio" type="radio" name="good_resources" value="5">
         </label>
     </div>
     <div>
         <h6>Esu patenkintas saugia mokymosi aplinka</h6>
         <label>
             <input
-                role="radio" type="radio" name="safe_environment" value="0-20%">
+                role="radio" type="radio" name="safe_environment" value="1">
             <input
-                role="radio" type="radio" name="safe_environment" value="20-40%">
+                role="radio" type="radio" name="safe_environment" value="2">
             <input
-                role="radio" type="radio" name="safe_environment" value="40-60%">
+                role="radio" type="radio" name="safe_environment" value="3">
             <input
-                role="radio" type="radio" name="safe_environment" value="60-80%">
+                role="radio" type="radio" name="safe_environment" value="4">
             <input
-                role="radio" type="radio" name="safe_environment" value="80-100%">
+                role="radio" type="radio" name="safe_environment" value="5">
         </label>
     </div>
     <div>
         <h6>Kiek bendrai esate patenkinta(s) dalyko turinio ir dėstymo kokybe?</h6>
         <label>
             <input
-                role="radio" type="radio" name="quality" value="0-10%">
+                role="radio" type="radio" name="quality" value="1">
             <input
-                role="radio" type="radio" name="quality" value="10-20%">
+                role="radio" type="radio" name="quality" value="2">
             <input
-                role="radio" type="radio" name="quality" value="20-30%">
+                role="radio" type="radio" name="quality" value="3">
             <input
-                role="radio" type="radio" name="quality" value="30-40%">
+                role="radio" type="radio" name="quality" value="4">
             <input
-                role="radio" type="radio" name="quality" value="40-50%">
+                role="radio" type="radio" name="quality" value="5">
             <input
-                role="radio" type="radio" name="quality" value="50-60%">
+                role="radio" type="radio" name="quality" value="6">
             <input
-                role="radio" type="radio" name="quality" value="60-70%">
+                role="radio" type="radio" name="quality" value="7">
             <input
-                role="radio" type="radio" name="quality" value="70-80%">
+                role="radio" type="radio" name="quality" value="8">
             <input
-                role="radio" type="radio" name="quality" value="80-90%">
+                role="radio" type="radio" name="quality" value="9">
             <input
-                role="radio" type="radio" name="quality" value="90-100%">
+                role="radio" type="radio" name="quality" value="10">
         </label>
     </div>
     <div>
@@ -193,25 +189,25 @@
         <h6>Ar rekomenduotumėte mūsų mokyklą kitiems?</h6>
         <label>
             <input
-                role="radio" type="radio" name="recommendation" value="0-10%">
+                role="radio" type="radio" name="recommendation" value="1">
             <input
-                role="radio" type="radio" name="recommendation" value="10-20%">
+                role="radio" type="radio" name="recommendation" value="2">
             <input
-                role="radio" type="radio" name="recommendation" value="20-30%">
+                role="radio" type="radio" name="recommendation" value="3">
             <input
-                role="radio" type="radio" name="recommendation" value="30-40%">
+                role="radio" type="radio" name="recommendation" value="4">
             <input
-                role="radio" type="radio" name="recommendation" value="40-50%">
+                role="radio" type="radio" name="recommendation" value="5">
             <input
-                role="radio" type="radio" name="recommendation" value="50-60%">
+                role="radio" type="radio" name="recommendation" value="6">
             <input
-                role="radio" type="radio" name="recommendation" value="60-70%">
+                role="radio" type="radio" name="recommendation" value="7">
             <input
-                role="radio" type="radio" name="recommendation" value="70-80%">
+                role="radio" type="radio" name="recommendation" value="8">
             <input
-                role="radio" type="radio" name="recommendation" value="80-90%">
+                role="radio" type="radio" name="recommendation" value="9">
             <input
-                role="radio" type="radio" name="recommendation" value="90-100">
+                role="radio" type="radio" name="recommendation" value="10">
         </label>
     </div>
 

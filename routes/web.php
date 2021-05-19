@@ -25,8 +25,8 @@ Route::post('/createModule','ModuleController@createModule');
 Route::get('/deleteModule/{module}','ModuleController@deleteModule');
 Route::get('/updateModule/{module}','ModuleController@updateModule');
 Route::patch('/update/{module}','ModuleController@update');
-Route::get('/survey','SurveyController@survey');
-Route::post('/saveSurvey','SurveyController@saveSurvey');
+Route::get('/survey/{module}','SurveyController@survey');
+Route::post('/saveSurvey/{module}','SurveyController@saveSurvey');
 
 
 Route::get('/index','AdminController@index');

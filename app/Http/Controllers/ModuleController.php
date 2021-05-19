@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Module;
+use App\Survey;
 use Illuminate\Http\Request;
 
 class ModuleController extends Controller
@@ -48,7 +49,17 @@ class ModuleController extends Controller
             'surname' => 'required|min:3',
             'groupName' => 'required'
         ]);
-        Module::where('id', $module->id)->update(['module_name' => request('moduleName'), 'teacher_name' => request('name'), 'teacher_surname' => request('surname'), 'group_name' => request('groupName')]);
+        Module::where('id', $module->id)->update([
+            'module_name' => request('moduleName'), 
+            'teacher_name' => request('name'), 
+            'teacher_surname' => request('surname'), 
+            'group_name' => request('groupName'),
+            ]);
+
+        Survey::where('module_id', $module->id)->update([
+            'module_name' => request('moduleName'),
+            'group' => request('groupName')
+        ]);
         return redirect('/modules');
     }
 }
