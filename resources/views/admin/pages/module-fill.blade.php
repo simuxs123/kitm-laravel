@@ -9,7 +9,7 @@
     <div class="page-content">
         <div class="FormBig">
             <div class="page-heading formHead ">
-                <h2>3. {{$module->module_name}}
+                <h2> {{$module->module_name}}
                     / {{$module->teacher_name}} {{$module->teacher_surname}} {{$module->group_name}}</h2>
                 <h6>Ši anketa skirta išsiaiškinti Jūsų nuomonę apie pasibaigusio modulio kokybę. Prašome atsakyti į
                     žemiau pateiktus klausimus. Nuoširdūs Jūsų atsakymai padės mums tobulinti mokymo(si) kokybę. Anketa

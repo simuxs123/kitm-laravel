@@ -5,7 +5,7 @@
             <i class="bi bi-justify fs-3"></i>
         </a>
     </header>
-    @include('admin/_partials/sidebar')
+
     @if (count($errors) > 0)
         <div>
             <ul>

@@ -22,7 +22,7 @@ class LoginController extends Controller
             $users=KitmUsers::where('roles_id','<>',1)->get();
         }
 
-        return view('test.pages.welcome',$viewData,compact('users'));
+        return view('login.pages.welcome',$viewData,compact('users'));
     }
 
     public function addEmail(Request $request){

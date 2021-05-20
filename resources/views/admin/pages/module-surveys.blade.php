@@ -5,7 +5,7 @@
             <i class="bi bi-justify fs-3"></i>
         </a>
     </header>
-    <div class="box">
+    <div class="box row">
         @foreach($modules as $module)
             <div class="card m-3 text-center" style="width: 13rem; height: 18rem">
                 <div class="card-body d-flex flex-column align-items-center justify-content-center">
