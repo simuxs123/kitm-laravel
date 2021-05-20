@@ -35,6 +35,7 @@ class Controller extends BaseController
                     'email' => session('userEmail')
                 ]);
             }
+            //$viewData['userRole']=('moksleivis');
             $viewData['userRole']=KitmUsers::where(['email' => session('userEmail')])->first()->roles->role_name;
         }
 

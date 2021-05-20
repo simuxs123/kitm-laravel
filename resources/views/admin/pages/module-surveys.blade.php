@@ -5,8 +5,8 @@
             <i class="bi bi-justify fs-3"></i>
         </a>
     </header>
-    @include('admin/_partials/sidebar')
-    <div class="box">
+
+    <div class="box row">
         @foreach($modules as $module)
             <div class="card" style="width: 13rem; height: 13rem">
                 <div class="card-body d-flex flex-column align-items-center justify-content-center">

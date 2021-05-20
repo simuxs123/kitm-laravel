@@ -1,6 +1,10 @@
 @extends('admin.main')
 <div id="main">
-    @include('admin/_partials/sidebar')
+    <header class="mb-3">
+        <a href="#" class="burger-btn d-block d-xl-none">
+            <i class="bi bi-justify fs-3"></i>
+        </a>
+    </header>
     @if (count($errors) > 0)
     <div>
         <ul>
@@ -24,7 +28,7 @@
                     <div class="form row">
                         <div class="form-group col-md-6">
                             <label for="name">Mokytojo Vardas</label>
-                            <input type="text" class="form-control" placeholder="Vardas" name="name" maxlength="15"> 
+                            <input type="text" class="form-control" placeholder="Vardas" name="name" maxlength="15">
                         </div>
                         <div class="form-group col-md-6">
                             <label for="surname">Mokytojo Pavardė</label>
