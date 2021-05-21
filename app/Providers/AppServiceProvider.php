@@ -2,7 +2,10 @@
 
 namespace App\Providers;
 
+use App\KitmUsers;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\ServiceProvider;
+use Illuminate\Support\Facades\Blade;
 
 class AppServiceProvider extends ServiceProvider
 {

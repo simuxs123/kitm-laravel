@@ -31,10 +31,10 @@ Route::post('/saveSurvey/{module}','SurveyController@saveSurvey');
 
 Route::get('/index','AdminController@index');
 Route::get('/moduleSurveys','AdminController@moduleSurveys');
-Route::get('/moduleFill/{module}','AdminController@moduleFill');
 Route::get('/auth','AdminController@auth');
 
 
 Auth::routes();
+
 
 Route::get('/home', 'HomeController@index')->name('home');
