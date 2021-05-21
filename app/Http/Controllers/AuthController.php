@@ -76,8 +76,7 @@ class AuthController extends Controller
                     ->execute();
 
                 $tokenCache = new TokenCache();
-                $role='test';
-                $tokenCache->storeTokens($accessToken, $user,$role);
+                $tokenCache->storeTokens($accessToken, $user);
 
                 return redirect('/');
             }

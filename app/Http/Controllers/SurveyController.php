@@ -27,7 +27,7 @@ class SurveyController extends Controller
             'safe_environment'=>'required',
             'quality'=>'required',
             'preferences'=>'required',
-            'recommendation'
+            'recommendation' => 'required'
         ]);
         Survey::create([
             'module_id' => $module->id,

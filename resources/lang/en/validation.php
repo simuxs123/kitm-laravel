@@ -79,16 +79,16 @@ return [
     'max' => [
         'numeric' => 'The :attribute may not be greater than :max.',
         'file' => 'The :attribute may not be greater than :max kilobytes.',
-        'string' => 'The :attribute may not be greater than :max characters.',
+        'string' => 'Laukelis :attribute turi turėti nedaugiau kaip :min ženklų.',
         'array' => 'The :attribute may not have more than :max items.',
     ],
     'mimes' => 'The :attribute must be a file of type: :values.',
     'mimetypes' => 'The :attribute must be a file of type: :values.',
     'min' => [
-        'numeric' => 'The :attribute must be at least :min.',
-        'file' => 'The :attribute must be at least :min kilobytes.',
-        'string' => 'The :attribute must be at least :min characters.',
-        'array' => 'The :attribute must have at least :min items.',
+        'numeric' => ':attribute must be at least :min.',
+        'file' => ':attribute must be at least :min kilobytes.',
+        'string' => 'Laukelis :attribute turi turėti ne mažiau kaip :min ženklų.',
+        'array' => ':attribute must have at least :min items.',
     ],
     'not_in' => 'The selected :attribute is invalid.',
     'not_regex' => 'The :attribute format is invalid.',
@@ -96,7 +96,7 @@ return [
     'password' => 'The password is incorrect.',
     'present' => 'The :attribute field must be present.',
     'regex' => 'The :attribute format is invalid.',
-    'required' => 'The :attribute field is required.',
+    'required' => 'Laukelis :attribute yra privalomas.',
     'required_if' => 'The :attribute field is required when :other is :value.',
     'required_unless' => 'The :attribute field is required unless :other is in :values.',
     'required_with' => 'The :attribute field is required when :values is present.',
@@ -146,6 +146,22 @@ return [
     |
     */
 
-    'attributes' => [],
+    'attributes' => [
+        'moduleName' => 'Modulio Pavadinimas',
+        'name' => 'Mokytojo Vardas',
+        'surname' => 'Mokytojo Pavardė',
+        'groupName' => 'Grupės Pavadinimas',
+        'attendance' => 'Lankomumas',
+        'module_is_important' => 'Modulio svarba',
+        'module_material_is_important' => 'Modulio medžiaga',
+        'module_advanced_methods' => 'Modulio pažangus mokymas',
+        'assessment_and_procedure' => 'Vertinimo kriterijai',
+        'the_teacher_virtually_teaches' => 'Mokytojo aplinkos naudojimasis',
+        'good_resources' => 'Materialūs ištekliai',
+        'safe_environment' => 'Saugi aplinka',
+        'quality' => 'Modulio kokybė',
+        'preferences' => 'Pageidavimai',
+        'recommendation' => 'Rekomendacija'
+    ],
 
 ];
