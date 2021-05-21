@@ -1,10 +1,5 @@
 @extends('admin.main')
 <div id="main">
-    <header class="mb-3">
-        <a href="#" class="burger-btn d-block d-xl-none">
-            <i class="bi bi-justify fs-3"></i>
-        </a>
-    </header>
     @if (count($errors) > 0)
     <div>
         <ul>
@@ -60,7 +55,7 @@
                 <h6 class="card-subtitle">{{$module->module_name}}</h6>
                 <div class="row">
                     <a href="/updateModule/{{$module->id}}" class="btn btn-primary mt-2 btn-sm">REDAGUOTI</a>
-                     <a href="/deleteModule/{{$module->id}}" class="btn btn-danger mt-1 btn-sm">PASALINTI</a>
+                    <a href="/deleteModule/{{$module->id}}" class="btn btn-danger mt-1 btn-sm">PASALINTI</a>
                 </div>
             </div>
         </div>
