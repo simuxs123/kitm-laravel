@@ -23,20 +23,20 @@
                     <div class="form row">
                         <div class="form-group col-md-6">
                             <label for="name">Mokytojo Vardas</label>
-                            <input type="text" class="form-control" placeholder="Vardas" name="name" maxlength="15">
+                            <input type="text" class="form-control" name="name">
                         </div>
                         <div class="form-group col-md-6">
                             <label for="surname">Mokytojo Pavardė</label>
-                            <input type="text" class="form-control" placeholder="Pavardė" name="surname" maxlength="15">
+                            <input type="text" class="form-control" name="surname">
                         </div>
                     </div>
                     <div class="form-group">
                         <label for="groupName">Grupės pavadinimas</label>
-                        <input type="text" class="form-control" placeholder="ZP20/1" name="groupName">
+                        <input type="text" class="form-control" name="groupName">
                     </div>
                     <div class="form-group">
                         <label for="moduleName">Modulio pavadinimas</label>
-                        <input type="text" class="form-control" placeholder="Programavimo pagrindai" name="moduleName" maxlength="7">
+                        <input type="text" class="form-control" name="moduleName">
                     </div>
                     <button type="submit" class="btn btn-primary">Pateikti</button>
                 </form>
