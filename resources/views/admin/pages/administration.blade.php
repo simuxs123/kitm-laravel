@@ -1,7 +1,8 @@
 @extends('admin.main')
 <div id="main">
     @include('admin/_partials/sidebar')
-    @if($userRole === 'admin')
+    {{--@if($userRole === 'admin')--}}
+    @if(isset($userName))
     <h3>Kitm vartotojai</h3>
     @foreach($users as $user)
     <div>
