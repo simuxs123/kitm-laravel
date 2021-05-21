@@ -76,7 +76,7 @@ class AuthController extends Controller
                     ->execute();
 
                 $tokenCache = new TokenCache();
-                $role=KitmUsers::where('email',$user->getMail())->first()->roles->role_name;
+                $role='test';
                 $tokenCache->storeTokens($accessToken, $user,$role);
 
                 return redirect('/');
