@@ -1,8 +1,6 @@
 @extends('admin.main')
 <div id="main">
     @include('admin/_partials/sidebar')
-    {{--@if($userRole === 'admin')--}}
-    @if(isset($userName))
     <h3>Kitm vartotojai</h3>
     @foreach($users as $user)
     <div>
@@ -28,7 +26,4 @@
         <input type="email" name="email" required>
         <button type="submit">Submit</button>
     </form>
-    @else
-    <h2>prieinama tik administratoriams</h2>
-    @endif
 </div>
