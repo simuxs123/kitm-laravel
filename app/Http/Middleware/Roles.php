@@ -18,7 +18,7 @@ class Roles
     
     public function handle($request, Closure $next, ...$roles)
     {
-        $check = KitmUsers::where(['email' => session('userEmail')])->first()->roles->role_name;
+        $check = session('userRole');
 
         foreach ($roles as $role) {
             if ($role == $check) {
