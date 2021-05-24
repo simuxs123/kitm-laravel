@@ -18,29 +18,58 @@
     <div class="page-content">
         <div class="FormBig">
             <div class="page-heading formHead ">
-                <h2> {{$module->module_name}}
-                    / {{$module->teacher_name}} {{$module->teacher_surname}} {{$module->group_name}}</h2>
-                <h6>Ši anketa skirta išsiaiškinti Jūsų nuomonę apie pasibaigusio modulio kokybę. Prašome atsakyti į
-                    žemiau pateiktus klausimus. Nuoširdūs Jūsų atsakymai padės mums tobulinti mokymo(si) kokybę. Anketa
-                    yra anoniminė.</h6>
+                <h6>TEACHER SURVEY</h6>
             </div>
             <div class="page-content formBody col-12 justify-content-center">
-                <form class="col" method="post" action="/saveSurvey/{{$module->id}}">
+                {{-- change this thx}}<form class="col" method="post" action="/saveSurvey/{{$module->id}}">--}}
                     {{csrf_field()}}
                     <div class="card">
                         <div class="card-header">
-                            <h4>1.Kokioje % dalyje modulio užsiėmimų dalyvavote?:</h4>
+                            <h4>Vardas, Pavardė</h4>
                         </div>
                         <div class="card-content">
-                            <div class="card-body">
-                                <input type="radio" id="25" name="attendance" value="0% - 25%">
-                                <label for="25">0-25%</label><br>
-                                <input type="radio" id="50" name="attendance" value="26% - 50%">
-                                <label for="50">26-50%</label><br>
-                                <input type="radio" id="75" name="attendance" value="51% - 75%">
-                                <label for="75">51-75%</label><br>
-                                <input type="radio" id="100" name="attendance" value="76% - 100%">
-                                <label for="100">76-100%</label><br>
+                            <div class="card-body d-flex flex-column">
+                                <div>
+                                    <label for="name">Vardas</label>
+                                    <input type="text" value="{{$name}}" name="name" readonly="readonly">
+                                    <label for="name">Pavardė</label>
+                                    <input type="text" value="{{$surname}}" name="surname" readonly="readonly">
+                                </div>
+                                <div>
+                                    <label for="name">Pareigos: </label>
+                                    <input type="text"name="job">Mokytojas
+                                </div>
+                                <tr>
+                                    <th>Kvalifikacinė kategorija</th>
+                                    <td>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" name="module_is_important" id="inlineRadio1" value="nonteacher">
+                                            <label class="form-check-label" for="inlineRadio1">Mokytojas(Nesuteikta)</label>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" name="module_is_important" id="inlineRadio1" value="teacher">
+                                            <label class="form-check-label" for="inlineRadio1">Mokytojas(Suteikta)</label>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" name="module_is_important" id="inlineRadio1" value="methTeacher">
+                                            <label class="form-check-label" for="inlineRadio1">Metodininkas</label>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" name="module_is_important" id="inlineRadio1" value="expert">
+                                            <label class="form-check-label" for="inlineRadio1">Ekspertas</label>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <div>
+                                    <label for="name">Darbo stažas: </label>
+                                    <input type="text"name="experience">
+                                </div>
                             </div>
                         </div>
                     </div>

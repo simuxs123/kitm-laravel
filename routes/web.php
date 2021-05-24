@@ -30,6 +30,7 @@ Route::group(['middleware' => ['roles:admin']], function() {});
     Route::get('/deleteModule/{module}','ModuleController@deleteModule');
     Route::get('/updateModule/{module}','ModuleController@updateModule');
     Route::patch('/update/{module}','ModuleController@update');
+    Route::get('/teachers', 'SelfAssessmentController@index');
 
 
 
@@ -39,8 +40,8 @@ Route::group(['middleware' => ['roles:moksleivis,admin,mokytojas,darbuotojas']],
     Route::post('/saveSurvey/{module}','SurveyController@saveSurvey');
     Route::get('/moduleSurveys','AdminController@moduleSurveys');
 
-
 Route::group(['middleware' => ['roles:admin,mokytojas,darbuotojas']], function() {});
+    Route::get('/teacher, SelfAssessmentController@index');
     Route::get('/qualification','QualificationController@index');
     Route::post('/saveQuali','QualificationController@saveQuali');
 

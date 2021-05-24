@@ -21,8 +21,8 @@ class QualificationController extends Controller
             $sum = Qualification::where(['user_id' => $teacher->id])->sum('hours');
             array_push($results, [$teacher->name, $teacher->surname, $sum]);
         }
-        
-        
+
+
         return view('admin.pages.qualification', compact('name', 'surname', 'list', 'results'));
     }
 
