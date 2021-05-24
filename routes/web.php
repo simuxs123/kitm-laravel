@@ -42,6 +42,7 @@ Route::group(['middleware' => ['roles:moksleivis,admin,mokytojas,darbuotojas']],
 
 Route::group(['middleware' => ['roles:admin,mokytojas,darbuotojas']], function() {});
     Route::get('/qualification','QualificationController@index');
+    Route::post('/saveQuali','QualificationController@saveQuali');
 
 
 Auth::routes();

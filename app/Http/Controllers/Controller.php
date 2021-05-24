@@ -31,11 +31,16 @@ class Controller extends BaseController
 
             $usercheck = KitmUsers::where(['email' => session('userEmail')])->first();
             if ($usercheck === null) {
+                $userName = explode(' ', session('userName'));
+                $name = $userName[1];
+                $surname = $userName[0];
                 KitmUsers::create([
+                    'name' => $name,
+                    'surname' => $surname,
                     'email' => session('userEmail')
                 ]);
             }
-            //$viewData['userRole']=('moksleivis');
+            
             $viewData['userRole']=KitmUsers::where(['email' => session('userEmail')])->first()->roles->role_name;
         }
 

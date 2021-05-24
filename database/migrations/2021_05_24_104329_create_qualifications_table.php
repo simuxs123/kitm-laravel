@@ -22,7 +22,7 @@ class CreateQualificationsTable extends Migration
             $table->string('category');
             $table->string('seminar');
             $table->date('date');
-            $table->integer('hours');
+            $table->decimal('hours', 8, 1);
             $table->string('certificate');
             $table->string('location');
             $table->timestamps();
