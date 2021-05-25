@@ -21,7 +21,7 @@
                         </a>
                     </li>
                     <li class="sidebar-item">
-                        <a href="/teachers" class='sidebar-link'>
+                        <a href="/page" class='sidebar-link'>
                             <i class="bi bi-collection-fill"></i>
                             <span>Mokytojų įvertinimas</span>
                         </a>

@@ -2,27 +2,21 @@
 
 namespace App\Http\Middleware;
 
+use App\Http\Controllers\Controller;
 use Illuminate\Http\Response;
 use App\KitmUsers;
 use Closure;
 
-class Roles
+class Roles extends Controller
 {
-    /**
-     * Handle an incoming request.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \Closure  $next
-     * @return mixed
-     */
-    
     public function handle($request, Closure $next, ...$roles)
     {
-        $check = KitmUsers::where(['email' => session('userEmail')])->first()->roles->role_name;
-
-        foreach ($roles as $role) {
-            if ($role == $check) {
-                return $next($request);
+        $viewData = $this->loadViewData();
+        if (isset($viewData['userRole'])) {
+            foreach ($roles as $role) {
+                if ($role == $viewData['userRole']) {
+                    return $next($request);
+                }
             }
         }
 
