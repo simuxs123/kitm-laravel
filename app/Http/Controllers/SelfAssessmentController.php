@@ -2,20 +2,19 @@
 
 namespace App\Http\Controllers;
 
+use App\Module;
 use App\Roles;
 use App\SelfAssessment;
 use Illuminate\Http\Request;
 
 class SelfAssessmentController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function index()
     {
-        //
+        $userName = explode(' ', session('userName'));
+        $name = $userName[1];
+        $surname = $userName[0];
+        return view('admin.pages.teacher-survey', compact('name', 'surname'));
     }
 
     /**
