@@ -8,9 +8,8 @@
     <input type="text" name="surname" placeholder="Pavarde">
     <span>pareigos</span>
     <select name="role">
-        @foreach($roles as $role =>$value)
-            <option value="{{$value->id}}">{{$value->role_name}}</option>
-        @endforeach
+            <option value="Mokytojas">Mokytojas</option>
+            <option value="Profesijos mokytojas">Profesijos mokytojas</option>
     </select>
     <span>Kvalifikacinė kategorija</span>
     <select name="category">
@@ -66,21 +65,21 @@
     <input type="text" name="difficulties">
     <p>1.10. Kur patalpinate mokymo(si) medžiagą, kurią esate parengęs pamokoms ir/ar diferencijuotam mokymui . </p>
     <span>Moodle aplinkoje </span>
-    <input type="radio" value="Moodle aplinkoje" name="Moodle">
+    <input type="checkbox" value="Moodle aplinkoje" name="Moodle">
     <span>MS Teams aplinkoje </span>
-    <input type="radio" value="MS Teams aplinkoje " name="Teams">
+    <input type="checkbox" value="MS Teams aplinkoje " name="Teams">
     <span>Google diske </span>
-    <input type="radio" value="Google diske " name="Google_disk">
+    <input type="checkbox" value="Google diske " name="Google_disk">
     <span>Eduka aplinkoje </span>
-    <input type="radio" value="Eduka aplinkoje " name="Eduka">
+    <input type="checkbox" value="Eduka aplinkoje " name="Eduka">
     <span>Gitlab kodo saugykla </span>
-    <input type="radio" value="Gitlab kodo saugykla " name="Gitlab">
+    <input type="checkbox" value="Gitlab kodo saugykla " name="Gitlab">
     <span>Ftp paslauga </span>
-    <input type="radio" value="Ftp paslauga " name="Ftp">
+    <input type="checkbox" value="Ftp paslauga " name="Ftp">
     <span>Siunčiu į el.paštą </span>
-    <input type="radio" value="Siunčiu į el.paštą " name="send_gmail">
+    <input type="checkbox" value="Siunčiu į el.paštą " name="send_gmail">
     <span>Dalinuosi facebook grupėje </span>
-    <input type="radio" value="Dalinuosi facebook grupėje " name="Facebook">
+    <input type="checkbox" value="Dalinuosi facebook grupėje " name="Facebook">
     <input type="text" name="other_for_learning_material" placeholder="Kita(įrašykite)">
     <p>1.11. Kokiais jūsų dėstomo dalyko šių mokslo metų mokinių įgytais gebėjimai, rezultatais ugdomosios veiklos
         darbais, veiklomis džiaugiatės (išvardinkite) </p>
@@ -173,7 +172,7 @@
     <p>Max 54 balai(-ų) </p>
     <p>II SRITIS IŠ VISO<input type="number" name="II_score">
     <p>Max 30 balai(-ų) </p>
-    <p>II SRITIS IŠ VISO<input type="number" name="III_score">
+    <p>III SRITIS IŠ VISO<input type="number" name="III_score">
     <p>Ne mažiau kaip 5 balai(-ų) </p>
     <p>Surinktų balų suma: <input type="number" name="final_score">balai(-ų) </p>
     <b>IV. BAIGIAMOJI DALIS </b>
