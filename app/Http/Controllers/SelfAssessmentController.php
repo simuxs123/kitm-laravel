@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Roles;
 use App\SelfAssessment;
 use Illuminate\Http\Request;
 
@@ -81,5 +82,13 @@ class SelfAssessmentController extends Controller
     public function destroy(SelfAssessment $selfAssessment)
     {
         //
+    }
+
+    public function assessment(){
+        $roles = Roles::all();
+        return view('admin.pages.assessment', compact('roles'));
+    }
+    public function page(){
+        return view('admin.pages.page');
     }
 }

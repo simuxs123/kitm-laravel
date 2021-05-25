@@ -38,6 +38,8 @@ Route::group(['middleware' => ['roles:moksleivis,admin,mokytojas,darbuotojas']],
     Route::get('/survey/{module}','SurveyController@survey');
     Route::post('/saveSurvey/{module}','SurveyController@saveSurvey');
     Route::get('/moduleSurveys','AdminController@moduleSurveys');
+    Route::get('/assessment','SelfAssessmentController@assessment');
+    Route::get('/page','SelfAssessmentController@page');
 
 
 Route::group(['middleware' => ['roles:admin,mokytojas,darbuotojas']], function() {});
