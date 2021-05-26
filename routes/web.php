@@ -22,7 +22,7 @@ Route::get('/sign-out','AuthController@signout');
 Route::get('/auth','AdminController@auth');
 Route::get('/index','AdminController@index');
 
-Route::group(['middleware' => ['roles:admin']], function() {});
+Route::group(['middleware' => ['roles:admin']], function() {
     Route::post('/addemail','LoginController@addEmail');
     Route::post('/updaterole/{id}','LoginController@updateRole');
     Route::get('/administration','LoginController@adminView');
@@ -30,23 +30,27 @@ Route::group(['middleware' => ['roles:admin']], function() {});
     Route::get('/deleteModule/{module}','ModuleController@deleteModule');
     Route::get('/updateModule/{module}','ModuleController@updateModule');
     Route::patch('/update/{module}','ModuleController@update');
-    Route::get('/teachers', 'SelfAssessmentController@index');
+});
 
 
+Route::group(['middleware' => ['roles:moksleivis,admin,mokytojas,darbuotojas']], function() {
+    Route::get('/modules', 'ModuleController@index');
+    Route::get('/survey/{module}', 'SurveyController@survey');
+    Route::post('/saveSurvey/{module}', 'SurveyController@saveSurvey');
+    Route::get('/moduleSurveys', 'AdminController@moduleSurveys');
+});
+Route::group(['middleware' => ['roles:darbuotojas']], function() {
+    Route::post('/activate-form','SelfAssessmentController@activateForm');
+    Route::get('/delete-activate','SelfAssessmentController@deleteActivate');
+});
+Route::get('/assessment', 'SelfAssessmentController@assessment')->middleware('roles:mokytojas','form.active');
+Route::get('/self-assessment','SelfAssessmentController@activateView')->middleware('roles:darbuotojas,mokytojas');
 
-Route::group(['middleware' => ['roles:moksleivis,admin,mokytojas,darbuotojas']], function() {});
-    Route::get('/modules','ModuleController@index');
-    Route::get('/survey/{module}','SurveyController@survey');
-    Route::post('/saveSurvey/{module}','SurveyController@saveSurvey');
-    Route::get('/moduleSurveys','AdminController@moduleSurveys');
-    Route::get('/assessment','SelfAssessmentController@assessment');
-    Route::get('/page','SelfAssessmentController@page');
 
-Route::group(['middleware' => ['roles:admin,mokytojas,darbuotojas']], function() {});
-    Route::get('/teacher, SelfAssessmentController@index');
-    Route::get('/qualification','QualificationController@index');
-    Route::post('/saveQuali','QualificationController@saveQuali');
-
+Route::group(['middleware' => ['roles:admin,mokytojas,darbuotojas']], function() {
+    Route::get('/qualification', 'QualificationController@index');
+    Route::post('/saveQuali', 'QualificationController@saveQuali');
+});
 
 Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');

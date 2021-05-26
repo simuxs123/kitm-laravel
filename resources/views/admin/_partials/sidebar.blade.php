@@ -21,7 +21,7 @@
                         </a>
                     </li>
                     <li class="sidebar-item">
-                        <a href="/page" class='sidebar-link'>
+                        <a href="/self-assessment" class='sidebar-link'>
                             <i class="bi bi-collection-fill"></i>
                             <span>Mokytojų įvertinimas</span>
                         </a>
