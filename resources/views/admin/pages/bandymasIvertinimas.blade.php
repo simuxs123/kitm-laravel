@@ -15,7 +15,7 @@
                 </div>
             @endif
     @include('admin/_partials/sidebar')
-            @if ($userRole=='darbuotojas')
+            @darbuotojas
                 <form class="text-center" enctype='multipart/form-data' method="post" action="/activate-form">
                     {{csrf_field()}}
                     <input type="date" id="date" name="data" >
@@ -27,15 +27,15 @@
                     <label>Ištrinti kai aktyvuota, bandymams</label>
                     <a href="/delete-activate" class="btn btn-danger">Ištrinti</a>
                 </div>
-            @endif
+            @enddarbuotojas
         @if($activated)
             <div class="text-center">
                 <label>Anketos pildymo pabaiga: {{$data->end_date}}</label>
             </div>
 {{--            padaryta kad darbuotojas nemato ir negali ieiti forma--}}
-                @if ($userRole=='mokytojas')
+                @mokytojas
                     <a href="/assessment"><h2>Mokytojo apklausa</h2></a>
-                @endif
+                @endmokytojas
         @else
             <p>Anketa neaktyvuota</p>
         @endif

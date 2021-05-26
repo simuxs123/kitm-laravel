@@ -4,22 +4,20 @@ namespace App\Http\Middleware;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Response;
-use App\KitmUsers;
 use Closure;
+use Illuminate\Support\Facades\Redis;
 
 class Roles extends Controller
 {
     public function handle($request, Closure $next, ...$roles)
     {
         $viewData = $this->loadViewData();
-        if (isset($viewData['userRole'])) {
             foreach ($roles as $role) {
                 if ($role == $viewData['userRole']) {
                     return $next($request);
-                }
+                } 
             }
-        }
-        return back();
-        abort(Response::HTTP_UNAUTHORIZED);
+        
+        return redirect('/restriction');
     }
 }
