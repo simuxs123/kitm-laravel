@@ -13,8 +13,13 @@ class UsersSeeder extends Seeder
     public function run()
     {
         DB::table('kitm_users')->insert([
+            [
             'email' => 'simonas.paulius@stud.kitm.lt',
-            'roles_id'=>1
-        ]);
+            'roles_id'=>2
+        ],
+            [
+                'email' => 'paulius.simonas@gmail.com',
+                'roles_id'=>3
+            ] ]);
     }
 }
