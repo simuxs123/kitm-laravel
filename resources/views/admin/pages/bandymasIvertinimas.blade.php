@@ -33,7 +33,7 @@
                 <label>Anketos pildymo pabaiga: {{$data->end_date}}</label>
             </div>
 {{--            padaryta kad darbuotojas nemato ir negali ieiti forma--}}
-                @if ($userRole=='darbuotojas')
+                @if ($userRole=='mokytojas')
                     <a href="/assessment"><h2>Mokytojo apklausa</h2></a>
                 @endif
         @else
