@@ -9,7 +9,7 @@
                 <h6 class="card-subtitle mb-2 text-muted">{{$module->teacher_name}}</h6>
                 <h6 class="card-subtitle mb-2 text-muted">{{$module->teacher_surname}}</h6>
                 <h6 class="card-subtitle">{{$module->group_name}}</h6>
-                <a href="/survey/{{$module->id}}" class="card-link">Uzpildyti</a>
+                <a href="/survey/{{$module->id}}" class="card-link">Užpildyti</a>
             </div>
         </div>
         @endforeach
