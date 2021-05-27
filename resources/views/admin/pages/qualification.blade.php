@@ -31,7 +31,7 @@
                                         <div class="form-group">
                                             <label for="duty">Pareigos</label>
                                             <input type="text" id="duty" class="form-control"
-                                                   name="duty" required>
+                                                    name="duty" required>
                                         </div>
                                     </div>
                                     <div class="col-md-6 col-12">
@@ -115,20 +115,20 @@
                                 </thead>
                                 <tbody>
                                 <tr>
-                                @foreach($list as $item)
-                                    <tr>
-                                        <td>{{$item->name}}</td>
-                                        <td>{{$item->surname}}</td>
-                                        <td>{{$item->duty}}</td>
-                                        <td>{{$item->category}}</td>
-                                        <td>{{$item->seminar}}</td>
-                                        <td>{{$item->date}}</td>
-                                        <td>{{$item->hours}}</td>
-                                        <td>{{$item->certificate}}</td>
-                                        <td>{{$item->location}}</td>
-                                    </tr>
+                                    @foreach($list as $item)
+                                            <tr>
+                                                <td>{{$item->name}}</td>
+                                                <td>{{$item->surname}}</td>
+                                                <td>{{$item->duty}}</td>
+                                                <td>{{$item->category}}</td>
+                                                <td>{{$item->seminar}}</td>
+                                                <td>{{$item->date}}</td>
+                                                <td>{{$item->hours}}</td>
+                                                <td>{{$item->certificate}}</td>
+                                                <td>{{$item->location}}</td>
+                                            </tr>
                                     @endforeach
-                                    </tr>
+                                </tr>
 
                                 </tbody>
                             </table>
