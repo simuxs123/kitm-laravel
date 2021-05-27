@@ -40,7 +40,6 @@ Route::group(['middleware' => ['check']], function () {
 
     Route::group(['middleware' => ['roles:mokytojas,admin']], function () {
         Route::get('/assessment', 'SelfAssessmentController@assessment')->middleware('form.active');
-        Route::get('/qualification', 'QualificationController@index');
         Route::post('/saveQuali', 'QualificationController@saveQuali');
     });
 
@@ -49,7 +48,11 @@ Route::group(['middleware' => ['check']], function () {
         Route::post('/saveSurvey/{module}', 'SurveyController@saveSurvey');
         Route::get('/moduleSurveys', 'AdminController@moduleSurveys');
     });
+    Route::group(['middleware' => ['roles:darbuotojas,mokytojas,admin']], function () {
+        Route::get('/self-assessment', 'SelfAssessmentController@activateView');
+        Route::get('/qualification', 'QualificationController@index');
+    });
 
-    Route::get('/self-assessment', 'SelfAssessmentController@activateView')->middleware('roles:darbuotojas,mokytojas,admin');
+    
     Route::get('/restriction', 'AdminController@restriction')->middleware('roles:moksleivis,darbuotojas,mokytojas,admin');
 });
