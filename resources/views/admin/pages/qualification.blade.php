@@ -1,6 +1,6 @@
 @extends('admin.main')
 <div id="main">
-
+@mokytojas
     <section id="multiple-column-form">
         <div class="row match-height">
             <div class="col-12">
@@ -138,7 +138,8 @@
             </div>
         </div>
     </section>
-
+@endmokytojas
+@darbuotojas
     <section class="section">
         <div class="row" id="table-striped">
             <div class="col-12">
@@ -173,4 +174,5 @@
             </div>
         </div>
     </section>
+    @enddarbuotojas
 </div>

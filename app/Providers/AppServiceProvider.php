@@ -37,7 +37,7 @@ class AppServiceProvider extends ServiceProvider
 
         Blade::if('darbuotojas', function () {
             $role = KitmUsers::where(['email' => session('userEmail')])->first()->roles->role_name;            
-            if ($role == 'darbuotojas') {
+            if ($role == 'darbuotojas' or $role == 'admin') {
                 return 1;
             }
             return 0;
@@ -45,7 +45,7 @@ class AppServiceProvider extends ServiceProvider
 
         Blade::if('mokytojas', function () {
             $role = KitmUsers::where(['email' => session('userEmail')])->first()->roles->role_name;            
-            if ($role == 'mokytojas') {
+            if ($role == 'mokytojas' or $role == 'admin') {
                 return 1;
             }
             return 0;
@@ -53,7 +53,7 @@ class AppServiceProvider extends ServiceProvider
 
         Blade::if('moksleivis', function () {
             $role = KitmUsers::where(['email' => session('userEmail')])->first()->roles->role_name;            
-            if ($role == 'moksleivis') {
+            if ($role == 'moksleivis' or $role == 'admin') {
                 return 1;
             }
             return 0;
