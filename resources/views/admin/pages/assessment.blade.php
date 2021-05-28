@@ -19,12 +19,11 @@
         <div class="form-group card">
             <div class="card-content">
                 <div class="card-body">
-                    <div class="form-group row align-items-center">
-                        <div class="col-lg-1 col-1"><label class="col-form-label"> 20-</label></div>
+                    <div class="form-group d-flex">
+                        <div class=""><label class="col-form-label"> 20</label></div>
                         <div class="col-lg-1 col-1"><input class="form-control form-control-sm " type="text"
                                                            name="dateOne"></div>
-                        -
-                        <div class="col-lg-1 col-1"><label class="col-form-label">20- </label></div>
+                        <div class=""><label class="col-form-label">-20 </label></div>
                         <div class="col-lg-1 col-1"><input class="form-control form-control-sm" type="text"
                                                            name="dateTwo"></div>
                         <div class="col-lg-4 col-4"><label class="card-title">MOKSLO METAIS SAVIANALIZĖS ANKETA</label>
@@ -69,15 +68,19 @@
                         <div class="form-group">
                             <label class=" card-title">1.1Kokie pagrindiniai iššūkiai organizuojant mokymo
                                 procesą(išvardinkite)?</label>
+                            <div class="space mt-2"></div>
                             <div class="  ">
                                 <input class="form-control" type="text" name="firstChallenge"
                                        placeholder="pirmas iššukis">
+                                <div class="space mt-2"></div>
                                 <input class="form-control" type="text" name="secondChallenge"
                                        placeholder="antras iššukis">
+                                <div class="space mt-2"></div>
                                 <input class="form-control" type="text" name="thirdChallenge"
                                        placeholder="trecias iššukis">
                             </div>
                         </div>
+                        <div class="space mt-5"></div>
                         <div class="form-group">
                             <label class=" card-title">1.2. Aprašykite gerąją mokymo proceso organizavimo patirtį,
                                 pasiekimus. </label>
@@ -93,6 +96,7 @@
                                 <input class="form-control" type="text" name="quality_of_teaching">
                             </div>
                         </div>
+                        <div class="space mt-5"></div>
                         <div class="form-group">
                             <label class=" card-title">1.4. Kokios buvo kilusios problemos ir kokias sprendimais jas
                                 pavyko išspręsti? </label>
@@ -100,6 +104,7 @@
                                 <input class="form-control" type="text" name="problems_and_solutions">
                             </div>
                         </div>
+                        <div class="space mt-5"></div>
                         <div class="form-group">
                             <label class=" card-title">
                                 1.5. Kokiose bendruomenės narių veiklose dalyvavote sprendžiant iniciatyvumo ir
@@ -110,64 +115,82 @@
                                 <textarea class="form-control" type="text" name="participated_acts"></textarea>
                             </div>
                         </div>
+                        <div class="space mt-5"></div>
                         <div class="form-group">
                             <label class=" card-title">1.6 Parengtų arba atnaujintų veiklos planų,
                                 individualių/dalyko, integruoto ugdymo programų/planų
                                 skaičius (įrašykite): </label>
+                            <div class="space mt-2"></div>
                             <div class="  ">
                                 <input class="form-control" type="number" name="number_of_plans">
                                 <p class="text-muted">Išvardinkite svarbiausius planus, kuriuos esate parengęs: </p>
                                 <input class="form-control" type="text" name="firstPlan" placeholder="pirmas planas">
+                                <div class="space mt-2"></div>
                                 <input class="form-control" type="text" name="secondPlan" placeholder="antras planas">
+                                <div class="space mt-2"></div>
                                 <input class="form-control" type="text" name="thirdPlan" placeholder="trecias planas">
+                                <div class="space mt-2"></div>
                                 <p class="text-muted">Nurodykite, kur patalpinti dalyko/modulio teminiai planai </p>
                                 <input class="form-control" type="text" name="link_to_plans">
                             </div>
                         </div>
+                        <div class="space mt-5"></div>
                         <div class="form-group">
                             <label class=" card-title">1.7. Kokias priemones ir būdus taikote planuojant ugdymo
                                 turinį ir išsiaiškinti mokinių
                                 mokymosi
                                 poreikius ir
                                 pasiekimus. Išvardinkite </label>
+                            <div class="space mt-2"></div>
                             <div class=" c ">
                                 <textarea class="form-control" type="text" name="tools_and_methods"></textarea>
+                                <div class="space mt-2"></div>
                                 <p class="text-muted">Išvardinkite svarbiausius: </p>
-                                <input class="form-control" type="text" name="first_tool_or_method">
-                                <input class="form-control" type="text" name="second_tool_or_method">
-                                <input class="form-control" type="text" name="third_tool_or_method">
+                                <input class="form-control" type="text" name="first_tool_or_method" placeholder="pirmas">
+                                <div class="space mt-2"></div>
+                                <input class="form-control" type="text" name="second_tool_or_method" placeholder="antras">
+                                <div class="space mt-2"></div>
+                                <input class="form-control" type="text" name="third_tool_or_method" placeholder="trečias">
                             </div>
                         </div>
+                        <div class="space mt-5"></div>
                         <div class="form-group">
                             <label class=" card-title">1.8. Ar organizuojama pedagoginė, psichologinė ir kita
                                 pagalba mokiniui, ar ji teikiama
                                 tinkamai
                                 ir ar yra
                                 savalaikė. Pateikite pavyzdžių. </label>
+                            <div class="space mt-2"></div>
                             <div class="  ">
                                 <textarea class="form-control" type="text" name="student_assistance"></textarea>
                             </div>
                         </div>
+                        <div class="space mt-5"></div>
                         <div class="form-group">
                             <label class=" card-title">1.9. Kokius mokymosi būdus bei metodus taikote pamokose,
                                 skatinančias mokinius savarankiškai
                                 mokytis: </label>
+                            <div class="space mt-2"></div>
                             <div class="  ">
-                                <input class="form-control" type="text" name="first_method_for_self_directed_learning">
-                                <input class="form-control" type="text" name="second_method_for_self_directed_learning">
-                                <input class="form-control" type="text" name="third_method_for_self_directed_learning">
+                                <input class="form-control" type="text" name="first_method_for_self_directed_learning" placeholder="pirmas">
+                                <div class="space mt-2"></div>
+                                <input class="form-control" type="text" name="second_method_for_self_directed_learning" placeholder="antras">
+                                <div class="space mt-2"></div>
+                                <input class="form-control" type="text" name="third_method_for_self_directed_learning" placeholder="trečias">
+                                <div class="space mt-2"></div>
                                 <p class="text-muted">Kas pasisekė </p>
                                 <input class="form-control" type="text" name="luck">
                                 <p class="text-muted">Kokių patyrėte sunkumų </p>
                                 <input class="form-control" type="text" name="difficulties">
                             </div>
                         </div>
+                        <div class="space mt-5"></div>
                         <div class="form-group">
                             <label class=" card-title">1.10. Kur patalpinate mokymo(si) medžiagą, kurią esate
                                 parengęs pamokoms ir/ar
                                 diferencijuotam
                                 mokymui . </label>
-                            <ul class="list-unstyled mb-0">
+                            <ul class="list-unstyled mb-0 d-flex flex-column">
                                 <li class="d-inline-block me-2 mb-1">
                                     <div class="form-check">
                                         <div class="checkbox">
@@ -253,17 +276,22 @@
                             </ul>
 
                         </div>
+                        <div class="space mt-5"></div>
                         <div class="form-group">
                             <label class=" card-title">1.11. Kokiais jūsų dėstomo dalyko šių mokslo metų mokinių įgytais
                                 gebėjimai, rezultatais
                                 ugdomosios veiklos
                                 darbais, veiklomis džiaugiatės (išvardinkite) </label>
+                            <div class="space mt-2"></div>
                             <div class="  ">
-                                <input class="form-control" type="text" name="first_happiness_for_good_student">
-                                <input class="form-control" type="text" name="second_happiness_for_good_student">
-                                <input class="form-control" type="text" name="third_happiness_for_good_student">
+                                <input class="form-control" type="text" name="first_happiness_for_good_student" placeholder="pirmas">
+                                <div class="space mt-2"></div>
+                                <input class="form-control" type="text" name="second_happiness_for_good_student" placeholder="antras">
+                                <div class="space mt-2"></div>
+                                <input class="form-control" type="text" name="third_happiness_for_good_student" placeholder="trečias">
                             </div>
                         </div>
+                        <div class="space mt-5"></div>
                         <div class="form-group">
                             <label class=" card-title">1.12. Kokiuose dalyvavote konkursuose konkursuose, projektuose,
                                 parodose (ne mokykloje)
@@ -273,48 +301,63 @@
                                 <input class="form-control" type="text" name="competitions">
                             </div>
                         </div>
+                        <div class="space mt-5"></div>
                         <div class="form-group">
                             <label class=" card-title"> 1.13. BU mokytojams. Kiek mokinių pasirinko Jūsų dalyko
                                 valstybinį egzaminą (įrašykite
                                 skaičių) </label>
+                            <div class="space mt-2"></div>
                             <div class="  ">
                                 <input class="form-control" type="number" name="pass_an_exam"
                                        placeholder="Kiek egzaminą išlaikė ">
+                                <div class="space mt-2"></div>
                                 <input class="form-control" type="number" name="didnt_pass_an_exam"
                                        placeholder="Kiek egzamino neišlaikė ">
                             </div>
                         </div>
+                        <div class="space mt-5"></div>
                         <div class="form-group">
                             <label class=" card-title">1.14. Profesijos mokytojams. Kiek mokinių pasirinko iš Jūsų
                                 dalyko atlikti mokyklinį
                                 technologijų
                                 egzaminą? </label>
+                            <div class="space mt-2"></div>
                             <div class="  ">
                                 <input class="form-control" type="number">
+                                <div class="space mt-2"></div>
                                 <input class="form-control" type="number" name="pass_an_exam_technology"
                                        placeholder="Kiek egzaminą išlaikė ">
+                                <div class="space mt-2"></div>
                                 <input class="form-control" type="number" name="didnt_pass_an_exam_technology"
                                        placeholder="Kiek egzamino neišlaikė ">
                             </div>
                         </div>
+                        <div class="space mt-5"></div>
                         <div class="form-group">
                             <label class=" card-title">1.15. Praktikos vadovams. Kokiam mokinių skaičiui vadovauta
                                 praktikai</label>
+                            <div class="space mt-2"></div>
                             <div class="  ">
                                 <input class="form-control" type="number" name="guided_practice"
                                        placeholder="įrašykite">
+                                <div class="space mt-2"></div>
 
                                 <label class="col-md-12">Žinios apie mokinių praktikos vietas (pasirinkite) </label>
+                                <div class="space mt-2"></div>
                                 <input class="form-control" type="number" name="practise_in_companies"
                                        placeholder="Mokinių, atlikusių praktiką įmonėse skaičius ">
+                                <div class="space mt-2"></div>
                                 <input class="form-control" type="number" name="practise_apprenticeships"
                                        placeholder="Mokinių, atlikusių praktiką pameistrystės mokymosi forma skaičius  ">
+                                <div class="space mt-2"></div>
                                 <input class="form-control" type="number" name="practise_in_school"
                                        placeholder="Mokinių, atlikusių praktiką mokykloje skaičius  ">
+                                <div class="space mt-2"></div>
                                 <input class="form-control" type="number" name="practise_with_project_works"
                                        placeholder="Mokinių, praktikos metų atlikusių projektinius darbus skaičius ">
                             </div>
                         </div>
+                        <div class="space mt-5"></div>
                         <div class="form-group">
                             <label class=" card-title">1.16. Žinios apie absolventus. Absolventų skaičius Iš
                                 jų: </label>
@@ -396,14 +439,26 @@
                                name="number_of_distance_learning_lessons_for_students_in_grades_7-12">
                         <div class="space mt-5"></div>
                         <p class="text-muted">Metodinė veikla mokykloje, pagalba kolegoms. Išvardinkite veiklas</p>
-                        <textarea class="form-control" type="text" name="first_activity"></textarea>
+                        <textarea class="form-control" type="text" name="first_activity" placeholder="pirmas"></textarea>
+                        <div class="space mt-2"></div>
+                        <textarea class="form-control" type="text" name="second_activity" placeholder="antras"></textarea>
+                        <div class="space mt-2"></div>
+                        <textarea class="form-control" type="text" name="third_activity" placeholder="trečias"></textarea>
                         <div class="space mt-5"></div>
                             <label class="card-title">2.5. Grupės vadovo veikla, bendravimas su tėvais, mokinių
                                 pasitenkinimas Kas pasisekė: </label>
-                        <textarea class="form-control" type="text" name="first_group_leader_activities_luck"></textarea>
+                        <textarea class="form-control" type="text" name="first_group_leader_activities_luck" placeholder="pirmas"></textarea>
+                        <div class="space mt-2"></div>
+                        <textarea class="form-control" type="text" name="second_group_leader_activities_luck" placeholder="antras"></textarea>
+                        <div class="space mt-2"></div>
+                        <textarea class="form-control" type="text" name="third_group_leader_activities_luck" placeholder="trečias"></textarea>
                         <div class="space mt-5"></div>
                             <label class="card-title">Kokių turėjote problemų </label>
-                        <textarea class="form-control" type="text" name="first_problem"></textarea>
+                        <textarea class="form-control" type="text" name="first_problem" placeholder="pirmas"></textarea>
+                        <div class="space mt-2"></div>
+                        <textarea class="form-control" type="text" name="second_problem" placeholder="antras"></textarea>
+                        <div class="space mt-2"></div>
+                        <textarea class="form-control" type="text" name="third_problem" placeholder="trečias"></textarea>
                         <div class="space mt-5"></div>
                             <label class="card-title">2.6. Grupės vadovo veikla - mokinių nubyrėjimas </label>
                         <div class="space mt-5"></div>
@@ -422,18 +477,30 @@
                             kolegomis,
                             kitais
                             suinteresuotais asmenimis? </label>
-                        <textarea class="form-control" type="text" name="first_provision_of_information"></textarea>
+                        <textarea class="form-control" type="text" name="first_provision_of_information" placeholder="pirmas"></textarea>
+                        <div class="space mt-2"></div>
+                        <textarea class="form-control" type="text" name="second_provision_of_information" placeholder="antras"></textarea>
+                        <div class="space mt-2"></div>
+                        <textarea class="form-control" type="text" name="third_provision_of_information" placeholder="trečias"></textarea>
                         <div class="space mt-5"></div>
                         <label class="card-title">2.9. Jūsų (kaip grupės vadovo) naudojami mokinių motyvavimo mokytis ir
                             lankyti pamokas būdai ir
                             priemonės </label>
-                        <textarea class="form-control" type="text" name="first_student_motivation"></textarea>
+                        <textarea class="form-control" type="text" name="first_student_motivation" placeholder="pirmas"></textarea>
+                        <div class="space mt-2"></div>
+                        <textarea class="form-control" type="text" name="second_student_motivation" placeholder="antras"></textarea>
+                        <div class="space mt-2"></div>
+                        <textarea class="form-control" type="text" name="third_student_motivation" placeholder="trečias"></textarea>
                         <div class="space mt-5"></div>
                         <label class="card-title">2.10. Dalyvavimas mokyklos socialiniame kultūriniame gyvenime. Jūsų
                             suorganizuoti renginiai
                             mokykloje, kita
                             popamokinė veikla (mokiniams arba mokytojams). </label>
-                        <textarea class="form-control" type="text" name="first_events_and_extracurricular_activities"></textarea>
+                        <textarea class="form-control" type="text" name="first_events_and_extracurricular_activities" placeholder="pirmas"></textarea>
+                        <div class="space mt-2"></div>
+                        <textarea class="form-control" type="text" name="second_events_and_extracurricular_activities" placeholder="antras"></textarea>
+                        <div class="space mt-2"></div>
+                        <textarea class="form-control" type="text" name="third_events_and_extracurricular_activities" placeholder="trečias"></textarea>
                     </div>
                 </div>
             </div>
@@ -1021,6 +1088,7 @@
                                 </tr>
                                 </tbody>
                             </table>
+                            <div class="space mt-5"></div>
                             <div class="form-group"><label class="card-title">4.3. Pedagogo...</label><input
                                     class="form-control" type="text" name="pedagogues"></div>
 
@@ -1082,7 +1150,14 @@
                             <label class="card-title">5.1.Kuruojančio vadovo stebėtų ir aptartų pamokų (veiklų) skaičius
                                 (kokiose grupėse ir kokiam tikslui) </label>
                             <textarea class="form-control" type="text"
-                                   name="first_number_of_lessons_discussed_by_the_supervisor"></textarea>
+                                   name="first_number_of_lessons_discussed_by_the_supervisor" placeholder="pirmas"></textarea>
+                            <div class="space mt-2"></div>
+                            <textarea class="form-control" type="text"
+                                      name="second_number_of_lessons_discussed_by_the_supervisor" placeholder="antras"></textarea>
+                            <div class="space mt-2"></div>
+                            <textarea class="form-control" type="text"
+                                      name="third_number_of_lessons_discussed_by_the_supervisor" placeholder="trečias"></textarea>
+                            <div class="space mt-2"></div>
 
                             <p>5.2. Kuruojančio vadovo komentaras dėl veiklos ir siūlymai dėl veiklos, kvalifikacijos
                                 tobulinimo </p>
@@ -1097,7 +1172,11 @@
                             <p>5.4. Kokios pagalbos Jums reikėtų, kad galėtumėte tobulinti ugdomąją veiklą, įgyvendinti
                                 sumanymus, ugdymo
                                 tikslus kitais mokslo metais? </p>
-                            <textarea class="form-control" type="text" name="first_help_which_I_need"></textarea>
+                            <textarea class="form-control" type="text" name="first_help_which_I_need" placeholder="pirmas"></textarea>
+                            <div class="space mt-2"></div>
+                            <textarea class="form-control" type="text" name="second_help_which_I_need" placeholder="antras"></textarea>
+                            <div class="space mt-2"></div>
+                            <textarea class="form-control" type="text" name="third_help_which_I_need" placeholder="trečias"></textarea>
 
                         </div>
                     </div>
