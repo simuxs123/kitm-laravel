@@ -39,7 +39,7 @@ Route::group(['middleware' => ['check']], function () {
     });
 
     Route::group(['middleware' => ['roles:mokytojas,admin']], function () {
-        Route::get('/assessment', 'SelfAssessmentController@assessment')->middleware('form.active');
+        Route::get('/assessment/page/{page}', 'SelfAssessmentController@assessment')->middleware('form.active');
         Route::post('/saveQuali', 'QualificationController@saveQuali');
     });
 
@@ -53,6 +53,6 @@ Route::group(['middleware' => ['check']], function () {
         Route::get('/qualification', 'QualificationController@index');
     });
 
-    
+
     Route::get('/restriction', 'AdminController@restriction')->middleware('roles:moksleivis,darbuotojas,mokytojas,admin');
 });

@@ -19,7 +19,6 @@
         <div class="form-group card">
             <div class="card-content">
                 <div class="card-body">
-                    </ul>
                     <div class="form-group row align-items-center">
                         <div class="col-lg-1 col-1"><label class="col-form-label"> 20-</label></div>
                         <div class="col-lg-1 col-1"><input class="form-control form-control-sm " type="text"
@@ -352,6 +351,9 @@
                             <div class="  ">
                                 <input class="form-control" type="text" name="graduate_reviews">
                             </div>
+                        </div>
+                        <div class="col ">
+                            <button href="assessment/page/2" class="btn btn-success me-1 mb-1">Kitas puslapis</button>
                         </div>
                     </div>
                 </div>

@@ -126,9 +126,17 @@ class SelfAssessmentController extends Controller
         //
     }
 
-    public function assessment(){
-
+    public function assessment($page){
         $roles = Roles::all();
-        return view('admin.pages.assessment', compact('roles'));
+        switch ($page) {
+            case 1:
+                return view('admin.pages.assessment', compact('roles', 'page'));
+            case 2:
+                echo "i equals 1";
+                break;
+            case 3:
+                echo "i equals 2";
+                break;
+        }
     }
 }

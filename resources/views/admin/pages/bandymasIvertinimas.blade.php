@@ -34,7 +34,7 @@
             </div>
 {{--            padaryta kad darbuotojas nemato ir negali ieiti forma--}}
                 @mokytojas
-                    <a href="/assessment"><h2>Mokytojo apklausa</h2></a>
+                    <a href="/assessment/page/1"><h2>Mokytojo apklausa</h2></a>
                 @endmokytojas
         @else
             <p>Anketa neaktyvuota</p>
