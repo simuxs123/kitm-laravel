@@ -10,10 +10,9 @@ class SurveyController extends Controller
 {
     public function survey(Module $module)
     {
-        
+
         return view('admin.pages.survey', compact('module'));
     }
-
     public function saveSurvey(Request $request, Module $module)
     {
         $validatedData = $request->validate([
