@@ -59,7 +59,7 @@
                 </div>
             </div>
         </div>
-        <h6 class="text-danger">Kiekvienas kriterijus vertinamas 0-1-2-3 balais</h6>
+        <h6 class="">Kiekvienas kriterijus vertinamas 0-1-2-3 balais</h6>
             <div class="card">
                 <div class="card-header">
                     <h3>I sritis. Veiklos planavimas, tiesioginio darbo vykdymas</h3>
@@ -322,21 +322,29 @@
                                 <input class="form-control" type="number"
                                        name="Continue_studying_at_a_college_or_university"
                                        placeholder="Tęsia mokymąsi kolegijoje ar universitete (kiek) ">
+                                <div class="space mt-2"></div>
                                 <input class="form-control" type="number" name="Employed"
                                        placeholder="Įsidarbino (kiek) ">
+                                <div class="space mt-2"></div>
                                 <input class="form-control" type="number" name="not_working_not_studying"
                                        placeholder="Nedirba, nesimoko (kiek)  ">
+                                <div class="space mt-2"></div>
                                 <input class="form-control" type="number" name="Signed_up_for_UT "
                                        placeholder="Užsiregistravo UT (kiek)  ">
+                                <div class="space mt-2"></div>
                                 <input class="form-control" type="number" name="Went_abroad"
                                        placeholder="Išvyko į užsienį (kiek) ">
+                                <div class="space mt-2"></div>
                                 <input class="form-control" type="text" name="other" placeholder="Kita (nurodykite) ">
+                                <div class="space mt-2"></div>
                                 <input class="form-control" type="number" name="no_data"
                                        placeholder="Nėra duomenų (kiek) ">
+                                <div class="space mt-2"></div>
                                 <input class="form-control" type="text" name="data_not_provided "
                                        placeholder="Duomenys nepateikti (nurodykite priežastį) ">
                             </div>
                         </div>
+                        <div class="space mt-5"></div>
                         <div class="form-group">
                             <label class=" card-title">1.17. Pateikite darbdavių atsiliepimus apie pasitenkinimą
                                 absolventų įgytomis
@@ -345,6 +353,7 @@
                                 <input class="form-control" type="text" name="employer_reviews">
                             </div>
                         </div>
+                        <div class="space mt-5"></div>
                         <div class="form-group">
                             <label class=" card-title">1.18. Pateikite absolventų atsiliepimus apie jų pasitenkinimą
                                 įgyta kvalifikacija 5.2.5 </label>
@@ -352,9 +361,9 @@
                                 <input class="form-control" type="text" name="graduate_reviews">
                             </div>
                         </div>
-                        <div class="col ">
-                            <button href="assessment/page/2" class="btn btn-success me-1 mb-1">Kitas puslapis</button>
-                        </div>
+                        {{--<div class="col "> does not work
+                         <button href="assessment/page/2" class="btn btn-success me-1 mb-1">Kitas puslapis</button>
+                        </div>--}}
                     </div>
                 </div>
             </div>
@@ -366,63 +375,65 @@
                     <div class="card-body form-group">
                         <label class="card-title">2.1. Išvardinkite projektus, kuriuose dalyvavote ir savo vaidmenį
                             juose </label>
-                        <input class="form-control" type="text" name="projects">
-                        <input class="form-control" type="text" name="project_name"
+                        <textarea class="form-control" type="text" name="projects"></textarea>
+                        <label>Prie projekto nurodykite projekto pavadinima, jo rengėją, koordinatorių ir vykdytoją</label>
+
+                        {{--<input class="form-control" type="text" name="project_name"
                                placeholder="projekto rengėjas (nurodykite projekto pavadinimą) ">
                         <input class="form-control" type="text" name="project_coordinator"
                                placeholder="projekto koordinatorius (nurodykite projekto pavadinimą) ">
                         <input class="form-control" type="text" name="project_executor"
-                               placeholder="projekto vykdytojas (nurodykite projekto pavadinimą)  ">
+                               placeholder="projekto vykdytojas (nurodykite projekto pavadinimą)  ">--}}
+                        <div class="space mt-5"></div>
                         <label class="card-title">2.2. Pravestų profesinio orientavimo susitikimų skaičius (KITM
                             renginiai, susitikimai BU
                             mokyklose)... </label>
                         <input class="form-control" type="number" name="number_of_career_guidance_meetings">
+                        <div class="space mt-5"></div>
                         <label class="card-title">2.3. Pravestų nuotolinių pamokų 7-12 klasių mokiniams
                             skaičius </label>
                         <input class="form-control" type="number"
                                name="number_of_distance_learning_lessons_for_students_in_grades_7-12">
-                        <p class="text-muted">Metodinė veikla mokykloje, pagalba kolegoms. Išvardinkite veiklas</label>
-                            <input class="form-control" type="text" name="first_activity">
-                            <input class="form-control" type="text" name="second_activity">
-                            <input class="form-control" type="text" name="third_activity">
+                        <div class="space mt-5"></div>
+                        <p class="text-muted">Metodinė veikla mokykloje, pagalba kolegoms. Išvardinkite veiklas</p>
+                        <textarea class="form-control" type="text" name="first_activity"></textarea>
+                        <div class="space mt-5"></div>
                             <label class="card-title">2.5. Grupės vadovo veikla, bendravimas su tėvais, mokinių
                                 pasitenkinimas Kas pasisekė: </label>
-                            <input class="form-control" type="text" name="first_group_leader_activities_luck">
-                            <input class="form-control" type="text" name="second_group_leader_activities_luck">
-                            <input class="form-control" type="text" name="third_group_leader_activities_luck">
+                        <textarea class="form-control" type="text" name="first_group_leader_activities_luck"></textarea>
+                        <div class="space mt-5"></div>
                             <label class="card-title">Kokių turėjote problemų </label>
-                            <input class="form-control" type="text" name="first_problem">
-                            <input class="form-control" type="text" name="second_problem">
-                            <input class="form-control" type="text" name="third_problem">
+                        <textarea class="form-control" type="text" name="first_problem"></textarea>
+                        <div class="space mt-5"></div>
                             <label class="card-title">2.6. Grupės vadovo veikla - mokinių nubyrėjimas </label>
+                        <div class="space mt-5"></div>
                         <p class="card-title text-muted">Kiek mokinių įstojo į I kursą: </p>
                         <input class="form-control" type="number" name="students_in_first_year">
+                        <div class="space mt-5"></div>
                         <p class="card-title text-muted">Kiek mokinių mokosi šiuo metu (baigė)</p>
                         <input class="form-control" type="number" name="students_studying_or_graduated">
+                        <div class="space mt-5"></div>
                         <label class="card-title">2.7. Įvardinkite mokinių „nubyrėjimo“ priežastis ir kaip jas
                             sprendžiate </label>
                         <textarea class="form-control" type="text" name="The_cause_of_the_fall"></textarea>
+                        <div class="space mt-5"></div>
                         <label class="card-title">2.8. Kaip informaciją pateikiate ir aptariate ją su mokinių tėvais
                             (globėjais, rūpintojais),
                             kolegomis,
                             kitais
                             suinteresuotais asmenimis? </label>
-                        <input class="form-control" type="text" name="first_provision_of_information">
-                        <input class="form-control" type="text" name="second_provision_of_information">
-                        <input class="form-control" type="text" name="third_provision_of_information">
+                        <textarea class="form-control" type="text" name="first_provision_of_information"></textarea>
+                        <div class="space mt-5"></div>
                         <label class="card-title">2.9. Jūsų (kaip grupės vadovo) naudojami mokinių motyvavimo mokytis ir
                             lankyti pamokas būdai ir
                             priemonės </label>
-                        <input class="form-control" type="text" name="first_student_motivation">
-                        <input class="form-control" type="text" name="second_student_motivation">
-                        <input class="form-control" type="text" name="third_student_motivation">
+                        <textarea class="form-control" type="text" name="first_student_motivation"></textarea>
+                        <div class="space mt-5"></div>
                         <label class="card-title">2.10. Dalyvavimas mokyklos socialiniame kultūriniame gyvenime. Jūsų
                             suorganizuoti renginiai
                             mokykloje, kita
                             popamokinė veikla (mokiniams arba mokytojams). </label>
-                        <input class="form-control" type="text" name="first_events_and_extracurricular_activities">
-                        <input class="form-control" type="text" name="second_events_and_extracurricular_activities">
-                        <input class="form-control" type="text" name="third_events_and_extracurricular_activities">
+                        <textarea class="form-control" type="text" name="first_events_and_extracurricular_activities"></textarea>
                     </div>
                 </div>
             </div>
@@ -436,16 +447,20 @@
                             mokslo metus </p>
                         <input class="form-control" type="number" name="training" placeholder="valandų skaičius">
                         <p class="text-muted text-decoration-underline">Už kiekvieną dieną (6 valandas) 1 balas </p>
+                        <div class="space mt-5"></div>
                         <h4>VEIKLOS ĮSIVERTINIMAS BALŲ: </h4>
                         <p class="card-title text-muted">I SRITIS IŠ VISO<input class="form-control" type="number"
                                                                                 name="I_score">
                         <p class="card-title text-muted">Max 54 balai(-ų) </p>
+                        <div class="space mt-5"></div>
                         <p class="card-title text-muted">II SRITIS IŠ VISO<input class="form-control" type="number"
                                                                                  name="II_score">
                         <p class="card-title text-muted">Max 30 balai(-ų) </p>
+                        <div class="space mt-5"></div>
                         <p class="card-title text-muted">III SRITIS IŠ VISO<input class="form-control" type="number"
                                                                                   name="III_score">
                         <p class="card-title text-muted">Ne mažiau kaip 5 balai(-ų) </p>
+                        <div class="space mt-5"></div>
                         <p class="card-title text-muted">Surinktų balų suma: <input class="form-control" type="number"
                                                                                     name="final_score">balai(-ų) </p>
                     </div>
@@ -459,234 +474,250 @@
                     <div class="card-body">
                         <div class="form-group">
                             <label label class="card-title">4.1. Aprūpinimas materialiaisiais ištekliais </label>
+                            <table class="table table-striped">
+                                <tbody>
+                                <tr>
+                                    <th></th>
+                                    <th>Tikrai nepritariu (1)</th>
+                                    <th>Nepritariu (2)</th>
+                                    <th>Nei nepritariu, nei pritariu (3)</th>
+                                    <th>Pritariu (4)</th>
+                                    <th>Tikrai pritariu (5)</th>
+                                </tr>
+                                <tr>
+                                    <th>Pedagogo dalyvavimas formuojant ilgalaikius materialiųjų išteklių
+                                        modernizavimo tikslus </th>
+                                    <td>
+                                        <div class="form-check ">
+                                            <input class="form-check-input" type="radio" value="Tikrai nepritariu"
+                                                   name="teacher_participation">
+                                            <label class="">1</label>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="form-check ">
+                                            <input class="form-check-input" type="radio" value="Nepritariu"
+                                                   name="teacher_participation">
+                                            <label class="">2</label>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="form-check ">
+                                            <input class="form-check-input" type="radio"
+                                                   value="Nei nepritariu, nei pritariu" name="teacher_participation">
+                                            <label class="">3</label>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="form-check ">
+                                            <input class="form-check-input" type="radio" value="Pritariu"
+                                                   name="teacher_participation">
+                                            <label class="">4</label>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="form-check ">
+                                            <input class="form-check-input " type="radio" value="Tikrai pritariu"
+                                                   name="teacher_participation">
+                                            <label class="">5</label>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>Pagrindinių materialiųjų išteklių nėra ar nepakanka </th>
+                                    <td>
+                                        <div class="form-check ">
+                                            <input class="form-check-input" type="radio" value="Tikrai nepritariu"
+                                                   name="no_insufficient_basic_material_resources">
+                                            <label class=""> 1</label>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="form-check ">
+                                            <input class="form-check-input" type="radio" value="Nepritariu"
+                                                   name="no_insufficient_basic_material_resources">
+                                            <label class=""> 2</label>
+                                        </div>
+                                    </td>
+                                    <td>
+                                    <div class="form-check ">
+                                        <input class="form-check-input" type="radio"
+                                               value="Nei nepritariu, nei pritariu"
+                                               name="no_insufficient_basic_material_resources">
+                                        <label class="">3</label>
+                                    </div>
+                                    </td>
+                                    <td>
+                                        <div class="form-check ">
+                                            <input class="form-check-input" type="radio" value="Pritariu"
+                                                   name="no_insufficient_basic_material_resources">
+                                            <label class=""> 4</label>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="form-check ">
+                                            <input class="form-check-input " type="radio" value="Tikrai pritariu"
+                                                   name="no_insufficient_basic_material_resources">
+                                            <label class=""> 5</label>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        Materialiųjų išteklių modernumas ir atitiktis darbo rinkos
+                                        poreikiams
+                                    </th>
+                                    <td>
+                                        <div class="form-check ">
+                                            <input class="form-check-input" type="radio" value="Tikrai nepritariu"
+                                                   name="modernity_of_material_resources">
+                                            <label class=""> 1</label>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="form-check ">
+                                            <input class="form-check-input" type="radio" value="Nepritariu"
+                                                   name="modernity_of_material_resources">
+                                            <label class=""> 2</label>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="form-check ">
+                                            <input class="form-check-input" type="radio" value="Nei nepritariu, nei pritariu"
+                                                   name="modernity_of_material_resources">
+                                            <label class=""> 3</label>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="form-check ">
+                                            <input class="form-check-input" type="radio" value="Pritariu"
+                                                   name="modernity_of_material_resources">
+                                            <label class=""> 4</label>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="form-check ">
+                                            <input class="form-check-input" type="radio" value="Tikrai pritariu"
+                                                   name="modernity_of_material_resources">
+                                            <label class=""> 5</label>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        Mokykloje analizuojamas materialiųjų išteklių pakankamumas ir
+                                        prieinamumas mokiniams ir
+                                        pedagogams
+                                    </th>
+                                    <td>
+                                        <div class="form-check ">
+                                            <input class="form-check-input" type="radio" value="Tikrai nepritariu"
+                                                   name="availability_of_material_resources_for_students_and_teachers">
+                                            <label class=""> 1</label>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="form-check ">
+                                            <input class="form-check-input" type="radio" value="Nepritariu"
+                                                   name="availability_of_material_resources_for_students_and_teachers">
+                                            <label class=""> 2</label>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="form-check ">
+                                            <input class="form-check-input" type="radio"
+                                                   value="Nei nepritariu, nei pritariu"
+                                                   name="availability_of_material_resources_for_students_and_teachers">
+                                            <label class=""> 3</label>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="form-check ">
+                                            <input class="form-check-input" type="radio" value="Pritariu"
+                                                   name="availability_of_material_resources_for_students_and_teachers">
+                                            <label class=""> 4</label>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="form-check ">
+                                            <input class="form-check-input " type="radio" value="Tikrai pritariu"
+                                                   name="availability_of_material_resources_for_students_and_teachers">
+                                            <label class=""> 5</label>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        Mokyklos biblioteka aprūpinta moderniais materialiaisiais
+                                        ištekliais
+                                    </th>
+                                    <td>
+                                        <div class="form-check ">
+                                            <input class="form-check-input" type="radio" value="Tikrai nepritariu"
+                                                   name="school_library_with_modern_material_resources">
+                                            <label class=""> 1</label>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="form-check ">
+                                            <input class="form-check-input" type="radio" value="Nepritariu"
+                                                   name="school_library_with_modern_material_resources">
+                                            <label class=""> 2</label>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="form-check ">
+                                            <input class="form-check-input" type="radio"
+                                                   value="Nei nepritariu, nei pritariu"
+                                                   name="school_library_with_modern_material_resources">
+                                            <label class=""> 3</label>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="form-check ">
+                                            <input class="form-check-input" type="radio" value="Pritariu"
+                                                   name="school_library_with_modern_material_resources">
+                                            <label class=""> 4</label>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="form-check ">
+                                            <input class="form-check-input " type="radio" value="Tikrai pritariu"
+                                                   name="school_library_with_modern_material_resources">
+                                            <label class=""> 5</label>
+                                        </div>
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
                             <!-- <ul class="list-unstyled mb-0">
                                  <li class="d-inline-block me-2 mb-1">
                                      <div>
-                                             <label class="text-danger"> Tikrai nepritariu (1)</label>
+                                             <label class=""> Tikrai nepritariu (1)</label>
                                      </div>
                                  </li>
                                  <li class="d-inline-block me-2 mb-1">
                                      <div>
-                                         <label class="text-Secondary"> Nepritariu (2)</label>
+                                         <label class=""> Nepritariu (2)</label>
                                      </div>
                                  </li>
                                  <li class="d-inline-block me-2 mb-1">
                                      <div>
-                                         <label class="text-Primary"> Nei nepritariu, nei pritariu (3)</label>
+                                         <label class=""> Nei nepritariu, nei pritariu (3)</label>
                                      </div>
                                  </li>
                                  <li class="d-inline-block me-2 mb-1">
                                      <div>
-                                         <label class="text-Warning"> Pritariu (4)</label>
+                                         <label class=""> Pritariu (4)</label>
                                      </div>
                                  </li>
                                  <li class="d-inline-block me-2 mb-1">
                                      <div>
-                                         <label class="text-Success"> Tikrai pritariu (5)</label>
+                                         <label class=""> Tikrai pritariu (5)</label>
                                      </div>
                                  </li>
                              </ul> -->
-
-                            <label class="card-title ">Pedagogo dalyvavimas formuojant ilgalaikius materialiųjų išteklių
-                                modernizavimo tikslus </label>
-                            <ul class="list-unstyled mb-0">
-                                <li class="d-inline-block me-2 mb-1">
-                                    <div class="form-check form-check-danger">
-                                        <input class="form-check-input" type="radio" value="Tikrai nepritariu"
-                                               name="teacher_participation">
-                                        <label class="text-danger"> Tikrai nepritariu (1)</label>
-                                    </div>
-                                </li>
-                                <li class="d-inline-block me-2 mb-1">
-                                    <div class="form-check form-check-secondary">
-                                        <input class="form-check-input" type="radio" value="Nepritariu"
-                                               name="teacher_participation">
-                                        <label class="text-Secondary"> Nepritariu (2)</label>
-                                    </div>
-                                </li>
-                                <li class="d-inline-block me-2 mb-1">
-                                    <div class="form-check form-check-primary">
-                                        <input class="form-check-input" type="radio"
-                                               value="Nei nepritariu, nei pritariu" name="teacher_participation">
-                                        <label class="text-Primary"> Nei nepritariu, nei pritariu (3)</label>
-                                    </div>
-                                </li>
-                                <li class="d-inline-block me-2 mb-1">
-                                    <div class="form-check form-check-warning">
-                                        <input class="form-check-input" type="radio" value="Pritariu"
-                                               name="teacher_participation">
-                                        <label class="text-Warning"> Pritariu (4)</label>
-                                    </div>
-                                </li>
-                                <li class="d-inline-block me-2 mb-1">
-                                    <div class="form-check form-check-success">
-                                        <input class="form-check-input " type="radio" value="Tikrai pritariu"
-                                               name="teacher_participation">
-                                        <label class="text-Success"> Tikrai pritariu (5)</label>
-                                    </div>
-                                </li>
-                            </ul>
-
-                            <label class="card-title ">Pagrindinių materialiųjų išteklių nėra ar nepakanka </label>
-                            <ul class="list-unstyled mb-0">
-                                <li class="d-inline-block me-2 mb-1">
-                                    <div class="form-check form-check-danger">
-                                        <input class="form-check-input" type="radio" value="Tikrai nepritariu"
-                                               name="no_insufficient_basic_material_resources">
-                                        <label class="text-danger"> Tikrai nepritariu (1)</label>
-                                    </div>
-                                </li>
-                                <li class="d-inline-block me-2 mb-1">
-                                    <div class="form-check form-check-secondary">
-                                        <input class="form-check-input" type="radio" value="Nepritariu"
-                                               name="no_insufficient_basic_material_resources">
-                                        <label class="text-Secondary"> Nepritariu (2)</label>
-                                    </div>
-                                </li>
-                                <li class="d-inline-block me-2 mb-1">
-                                    <div class="form-check form-check-primary">
-                                        <input class="form-check-input" type="radio"
-                                               value="Nei nepritariu, nei pritariu"
-                                               name="no_insufficient_basic_material_resources">
-                                        <label class="text-Primary"> Nei nepritariu, nei pritariu (3)</label>
-                                    </div>
-                                </li>
-                                <li class="d-inline-block me-2 mb-1">
-                                    <div class="form-check form-check-warning">
-                                        <input class="form-check-input" type="radio" value="Pritariu"
-                                               name="no_insufficient_basic_material_resources">
-                                        <label class="text-Warning"> Pritariu (4)</label>
-                                    </div>
-                                </li>
-                                <li class="d-inline-block me-2 mb-1">
-                                    <div class="form-check form-check-success">
-                                        <input class="form-check-input " type="radio" value="Tikrai pritariu"
-                                               name="no_insufficient_basic_material_resources">
-                                        <label class="text-Success"> Tikrai pritariu (5)</label>
-                                    </div>
-                                </li>
-                            </ul>
-                            <label class="card-title ">Materialiųjų išteklių modernumas ir atitiktis darbo rinkos
-                                poreikiams </label>
-                            <ul class="list-unstyled mb-0">
-                                <li class="d-inline-block me-2 mb-1">
-                                    <div class="form-check form-check-danger">
-                                        <input class="form-check-input" type="radio" value="Tikrai nepritariu"
-                                               name="modernity_of_material_resources">
-                                        <label class="text-danger"> Tikrai nepritariu (1)</label>
-                                    </div>
-                                </li>
-                                <li class="d-inline-block me-2 mb-1">
-                                    <div class="form-check form-check-secondary">
-                                        <input class="form-check-input" type="radio" value="Nepritariu"
-                                               name="modernity_of_material_resources">
-                                        <label class="text-Secondary"> Nepritariu (2)</label>
-                                    </div>
-                                </li>
-                                <li class="d-inline-block me-2 mb-1">
-                                    <div class="form-check form-check-primary">
-                                        <input class="form-check-input" type="radio"
-                                               value="Nei nepritariu, nei pritariu"
-                                               name="modernity_of_material_resources">
-                                        <label class="text-Primary"> Nei nepritariu, nei pritariu (3)</label>
-                                    </div>
-                                </li>
-                                <li class="d-inline-block me-2 mb-1">
-                                    <div class="form-check form-check-warning">
-                                        <input class="form-check-input" type="radio" value="Pritariu"
-                                               name="modernity_of_material_resources">
-                                        <label class="text-Warning"> Pritariu (4)</label>
-                                    </div>
-                                </li>
-                                <li class="d-inline-block me-2 mb-1">
-                                    <div class="form-check form-check-success">
-                                        <input class="form-check-input " type="radio" value="Tikrai pritariu"
-                                               name="modernity_of_material_resources">
-                                        <label class="text-Success"> Tikrai pritariu (5)</label>
-                                    </div>
-                                </li>
-                            </ul>
-                            <label class="card-title">Mokykloje analizuojamas materialiųjų išteklių pakankamumas ir
-                                prieinamumas mokiniams ir
-                                pedagogams </label>
-                            <ul class="list-unstyled mb-0">
-                                <li class="d-inline-block me-2 mb-1">
-                                    <div class="form-check form-check-danger">
-                                        <input class="form-check-input" type="radio" value="Tikrai nepritariu"
-                                               name="availability_of_material_resources_for_students_and_teachers">
-                                        <label class="text-danger"> Tikrai nepritariu (1)</label>
-                                    </div>
-                                </li>
-                                <li class="d-inline-block me-2 mb-1">
-                                    <div class="form-check form-check-secondary">
-                                        <input class="form-check-input" type="radio" value="Nepritariu"
-                                               name="availability_of_material_resources_for_students_and_teachers">
-                                        <label class="text-Secondary"> Nepritariu (2)</label>
-                                    </div>
-                                </li>
-                                <li class="d-inline-block me-2 mb-1">
-                                    <div class="form-check form-check-primary">
-                                        <input class="form-check-input" type="radio"
-                                               value="Nei nepritariu, nei pritariu"
-                                               name="availability_of_material_resources_for_students_and_teachers">
-                                        <label class="text-Primary"> Nei nepritariu, nei pritariu (3)</label>
-                                    </div>
-                                </li>
-                                <li class="d-inline-block me-2 mb-1">
-                                    <div class="form-check form-check-warning">
-                                        <input class="form-check-input" type="radio" value="Pritariu"
-                                               name="availability_of_material_resources_for_students_and_teachers">
-                                        <label class="text-Warning"> Pritariu (4)</label>
-                                    </div>
-                                </li>
-                                <li class="d-inline-block me-2 mb-1">
-                                    <div class="form-check form-check-success">
-                                        <input class="form-check-input " type="radio" value="Tikrai pritariu"
-                                               name="availability_of_material_resources_for_students_and_teachers">
-                                        <label class="text-Success"> Tikrai pritariu (5)</label>
-                                    </div>
-                                </li>
-                            </ul>
-                            <label class="card-title">Mokyklos biblioteka aprūpinta moderniais materialiaisiais
-                                ištekliais </label>
-                            <ul class="list-unstyled mb-0">
-                                <li class="d-inline-block me-2 mb-1">
-                                    <div class="form-check form-check-danger">
-                                        <input class="form-check-input" type="radio" value="Tikrai nepritariu"
-                                               name="school_library_with_modern_material_resources">
-                                        <label class="text-danger"> Tikrai nepritariu (1)</label>
-                                    </div>
-                                </li>
-                                <li class="d-inline-block me-2 mb-1">
-                                    <div class="form-check form-check-secondary">
-                                        <input class="form-check-input" type="radio" value="Nepritariu"
-                                               name="school_library_with_modern_material_resources">
-                                        <label class="text-Secondary"> Nepritariu (2)</label>
-                                    </div>
-                                </li>
-                                <li class="d-inline-block me-2 mb-1">
-                                    <div class="form-check form-check-primary">
-                                        <input class="form-check-input" type="radio"
-                                               value="Nei nepritariu, nei pritariu"
-                                               name="school_library_with_modern_material_resources">
-                                        <label class="text-Primary"> Nei nepritariu, nei pritariu (3)</label>
-                                    </div>
-                                </li>
-                                <li class="d-inline-block me-2 mb-1">
-                                    <div class="form-check form-check-warning">
-                                        <input class="form-check-input" type="radio" value="Pritariu"
-                                               name="school_library_with_modern_material_resources">
-                                        <label class="text-Warning"> Pritariu (4)</label>
-                                    </div>
-                                </li>
-                                <li class="d-inline-block me-2 mb-1">
-                                    <div class="form-check form-check-success">
-                                        <input class="form-check-input " type="radio" value="Tikrai pritariu"
-                                               name="school_library_with_modern_material_resources">
-                                        <label class="text-Success"> Tikrai pritariu (5)</label>
-                                    </div>
-                                </li>
-                            </ul>
+                            <div class="space mt-5"></div>
                             <label class="card-title">Kokius naujos jums svarbius metodinių išteklių įsigijimo atvejus
                                 galėtumėte išskirti kaip
                                 reikšmingiausius
@@ -694,311 +725,349 @@
                                 institucijoje? </label>
                             <textarea class="form-control" type="text"
                                       name="the_most_significant_resources_in_the_institution"></textarea>
-                            <div class="form-group"><label class="card-title"> 4.2. Pedagogų pasitenkinimas darbo
-                                    sąlygomis</label></div>
-                            <label class="card-title text-muted">Mokyklos mikroklimatas 2.1.3 </label>
-                            <ul class="list-unstyled mb-0">
-                                <li class="d-inline-block me-2 mb-1">
-                                    <div class="form-check form-check-danger">
-                                        <input class="form-check-input" type="radio" value="Tikrai nepritariu"
-                                               name="school_microclimate">
-                                        <label class="text-danger"> Tikrai nepritariu (1)</label>
-                                    </div>
-                                </li>
-                                <li class="d-inline-block me-2 mb-1">
-                                    <div class="form-check form-check-secondary">
-                                        <input class="form-check-input" type="radio" value="Nepritariu"
-                                               name="school_microclimate">
-                                        <label class="text-Secondary"> Nepritariu (2)</label>
-                                    </div>
-                                </li>
-                                <li class="d-inline-block me-2 mb-1">
-                                    <div class="form-check form-check-primary">
-                                        <input class="form-check-input" type="radio"
-                                               value="Nei nepritariu, nei pritariu" name="school_microclimate">
-                                        <label class="text-Primary"> Nei nepritariu, nei pritariu (3)</label>
-                                    </div>
-                                </li>
-                                <li class="d-inline-block me-2 mb-1">
-                                    <div class="form-check form-check-warning">
-                                        <input class="form-check-input" type="radio" value="Pritariu"
-                                               name="school_microclimate">
-                                        <label class="text-Warning"> Pritariu (4)</label>
-                                    </div>
-                                </li>
-                                <li class="d-inline-block me-2 mb-1">
-                                    <div class="form-check form-check-success">
-                                        <input class="form-check-input " type="radio" value="Tikrai pritariu"
-                                               name="school_microclimate">
-                                        <label class="text-Success"> Tikrai pritariu (5)</label>
-                                    </div>
-                                </li>
-                            </ul>
-                            <label class="card-title text-muted">Apmokėjimo už darbą sistemos skaidrumas </label>
-                            <ul class="list-unstyled mb-0">
-                                <li class="d-inline-block me-2 mb-1">
-                                    <div class="form-check form-check-danger">
-                                        <input class="form-check-input" type="radio" value="Tikrai nepritariu"
-                                               name="transparency_of_the_pay_system">
-                                        <label class="text-danger"> Tikrai nepritariu (1)</label>
-                                    </div>
-                                </li>
-                                <li class="d-inline-block me-2 mb-1">
-                                    <div class="form-check form-check-secondary">
-                                        <input class="form-check-input" type="radio" value="Nepritariu"
-                                               name="transparency_of_the_pay_system">
-                                        <label class="text-Secondary"> Nepritariu (2)</label>
-                                    </div>
-                                </li>
-                                <li class="d-inline-block me-2 mb-1">
-                                    <div class="form-check form-check-primary">
-                                        <input class="form-check-input" type="radio"
-                                               value="Nei nepritariu, nei pritariu"
-                                               name="transparency_of_the_pay_system">
-                                        <label class="text-Primary"> Nei nepritariu, nei pritariu (3)</label>
-                                    </div>
-                                </li>
-                                <li class="d-inline-block me-2 mb-1">
-                                    <div class="form-check form-check-warning">
-                                        <input class="form-check-input" type="radio" value="Pritariu"
-                                               name="transparency_of_the_pay_system">
-                                        <label class="text-Warning"> Pritariu (4)</label>
-                                    </div>
-                                </li>
-                                <li class="d-inline-block me-2 mb-1">
-                                    <div class="form-check form-check-success">
-                                        <input class="form-check-input " type="radio" value="Tikrai pritariu"
-                                               name="transparency_of_the_pay_system">
-                                        <label class="text-Success"> Tikrai pritariu (5)</label>
-                                    </div>
-                                </li>
-                            </ul>
-                            <label class="card-title text-muted">Materialios darbo sąlygos</label>
-                            <ul class="list-unstyled mb-0">
-                                <li class="d-inline-block me-2 mb-1">
-                                    <div class="form-check form-check-danger">
-                                        <input class="form-check-input" type="radio" value="Tikrai nepritariu"
-                                               name="material_working_conditions">
-                                        <label class="text-danger"> Tikrai nepritariu (1)</label>
-                                    </div>
-                                </li>
-                                <li class="d-inline-block me-2 mb-1">
-                                    <div class="form-check form-check-secondary">
-                                        <input class="form-check-input" type="radio" value="Nepritariu"
-                                               name="material_working_conditions">
-                                        <label class="text-Secondary"> Nepritariu (2)</label>
-                                    </div>
-                                </li>
-                                <li class="d-inline-block me-2 mb-1">
-                                    <div class="form-check form-check-primary">
-                                        <input class="form-check-input" type="radio"
-                                               value="Nei nepritariu, nei pritariu" name="material_working_conditions">
-                                        <label class="text-Primary"> Nei nepritariu, nei pritariu (3)</label>
-                                    </div>
-                                </li>
-                                <li class="d-inline-block me-2 mb-1">
-                                    <div class="form-check form-check-warning">
-                                        <input class="form-check-input" type="radio" value="Pritariu"
-                                               name="material_working_conditions">
-                                        <label class="text-Warning"> Pritariu (4)</label>
-                                    </div>
-                                </li>
-                                <li class="d-inline-block me-2 mb-1">
-                                    <div class="form-check form-check-success">
-                                        <input class="form-check-input " type="radio" value="Tikrai pritariu"
-                                               name="material_working_conditions">
-                                        <label class="text-Success"> Tikrai pritariu (5)</label>
-                                    </div>
-                                </li>
-                            </ul>
-                            <label class="card-title text-muted">Darbo santykiai </label>
-                            <ul class="list-unstyled mb-0">
-                                <li class="d-inline-block me-2 mb-1">
-                                    <div class="form-check form-check-danger">
-                                        <input class="form-check-input" type="radio" value="Tikrai nepritariu"
-                                               name="work_relations">
-                                        <label class="text-danger"> Tikrai nepritariu (1)</label>
-                                    </div>
-                                </li>
-                                <li class="d-inline-block me-2 mb-1">
-                                    <div class="form-check form-check-secondary">
-                                        <input class="form-check-input" type="radio" value="Nepritariu"
-                                               name="work_relations">
-                                        <label class="text-Secondary"> Nepritariu (2)</label>
-                                    </div>
-                                </li>
-                                <li class="d-inline-block me-2 mb-1">
-                                    <div class="form-check form-check-primary">
-                                        <input class="form-check-input" type="radio"
-                                               value="Nei nepritariu, nei pritariu" name="work_relations">
-                                        <label class="text-Primary"> Nei nepritariu, nei pritariu (3)</label>
-                                    </div>
-                                </li>
-                                <li class="d-inline-block me-2 mb-1">
-                                    <div class="form-check form-check-warning">
-                                        <input class="form-check-input" type="radio" value="Pritariu"
-                                               name="work_relations">
-                                        <label class="text-Warning"> Pritariu (4)</label>
-                                    </div>
-                                <li class="d-inline-block me-2 mb-1">
-                                    <div class="form-check form-check-success">
-                                        <input class="form-check-input " type="radio" value="Tikrai pritariu"
-                                               name="work_relations">
-                                        <label class="text-Success"> Tikrai pritariu (5)</label>
-                                    </div>
-                                </li>
-                            </ul>
-                            <label class="card-title text-muted">Psichologinis klimatas </label>
-                            <ul class="list-unstyled mb-0">
-                                <li class="d-inline-block me-2 mb-1">
-                                    <div class="form-check form-check-danger">
-                                        <input class="form-check-input" type="radio" value="Tikrai nepritariu"
-                                               name="psychological_climate">
-                                        <label class="text-danger"> Tikrai nepritariu (1)</label>
-                                    </div>
-                                </li>
-                                <li class="d-inline-block me-2 mb-1">
-                                    <div class="form-check form-check-secondary">
-                                        <input class="form-check-input" type="radio" value="Nepritariu"
-                                               name="psychological_climate">
-                                        <label class="text-Secondary"> Nepritariu (2)</label>
-                                    </div>
-                                </li>
-                                <li class="d-inline-block me-2 mb-1">
-                                    <div class="form-check form-check-primary">
-                                        <input class="form-check-input" type="radio"
-                                               value="Nei nepritariu, nei pritariu" name="psychological_climate">
-                                        <label class="text-Primary"> Nei nepritariu, nei pritariu (3)</label>
-                                    </div>
-                                </li>
-                                <li class="d-inline-block me-2 mb-1">
-                                    <div class="form-check form-check-warning">
-                                        <input class="form-check-input" type="radio" value="Pritariu"
-                                               name="psychological_climate">
-                                        <label class="text-Warning"> Pritariu (4)</label>
-                                    </div>
 
-                                <li class="d-inline-block me-2 mb-1">
-                                    <div class="form-check form-check-success">
-                                        <input class="form-check-input " type="radio" value="Tikrai pritariu"
-                                               name="psychological_climate">
-                                        <label class="text-Success"> Tikrai pritariu (5)</label>
-                                    </div>
-                                </li>
-                            </ul>
-                            <label class="card-title text-muted">Tiesioginio darbo proceso įgyvendinimas </label>
-                            <ul class="list-unstyled mb-0">
-                                <li class="d-inline-block me-2 mb-1">
-                                    <div class="form-check form-check-danger">
-                                        <input class="form-check-input" type="radio" value="Tikrai nepritariu"
-                                               name="implementation_of_direct_work_process">
-                                        <label class="text-danger"> Tikrai nepritariu (1)</label>
-                                    </div>
-                                </li>
-                                <li class="d-inline-block me-2 mb-1">
-                                    <div class="form-check form-check-secondary">
-                                        <input class="form-check-input" type="radio" value="Nepritariu"
-                                               name="implementation_of_direct_work_process">
-                                        <label class="text-Secondary"> Nepritariu (2)</label>
-                                    </div>
-                                </li>
-                                <li class="d-inline-block me-2 mb-1">
-                                    <div class="form-check form-check-primary">
-                                        <input class="form-check-input" type="radio"
-                                               value="Nei nepritariu, nei pritariu"
-                                               name="implementation_of_direct_work_process">
-                                        <label class="text-Primary"> Nei nepritariu, nei pritariu (3)</label>
-                                    </div>
-                                </li>
-                                <li class="d-inline-block me-2 mb-1">
-                                    <div class="form-check form-check-warning">
-                                        <input class="form-check-input" type="radio" value="Pritariu"
-                                               name="implementation_of_direct_work_process">
-                                        <label class="text-Warning"> Pritariu (4)</label>
-                                    </div>
+                            <div class="space mt-5"></div>
 
-                                <li class="d-inline-block me-2 mb-1">
-                                    <div class="form-check form-check-success">
-                                        <input class="form-check-input " type="radio" value="Tikrai pritariu"
-                                               name="implementation_of_direct_work_process">
-                                        <label class="text-Success"> Tikrai pritariu (5)</label>
-                                    </div>
-                                </li>
-                            </ul>
-                            <label class="card-title text-muted">Veiksmingi ryšiai su mokiniais, kolegomis, tėvais,
-                                vietos bendruomenės nariais.</label>
-                            <ul class="list-unstyled mb-0">
-                                <li class="d-inline-block me-2 mb-1">
-                                    <div class="form-check form-check-danger">
-                                        <input class="form-check-input" type="radio" value="Tikrai nepritariu"
-                                               name="effective_communication">
-                                        <label class="text-danger"> Tikrai nepritariu (1)</label>
-                                    </div>
-                                </li>
-                                <li class="d-inline-block me-2 mb-1">
-                                    <div class="form-check form-check-secondary">
-                                        <input class="form-check-input" type="radio" value="Nepritariu"
-                                               name="effective_communication">
-                                        <label class="text-Secondary"> Nepritariu (2)</label>
-                                    </div>
-                                </li>
-                                <li class="d-inline-block me-2 mb-1">
-                                    <div class="form-check form-check-primary">
-                                        <input class="form-check-input" type="radio"
-                                               value="Nei nepritariu, nei pritariu" name="effective_communication">
-                                        <label class="text-Primary"> Nei nepritariu, nei pritariu (3)</label>
-                                    </div>
-                                </li>
-                                <li class="d-inline-block me-2 mb-1">
-                                    <div class="form-check form-check-warning">
-                                        <input class="form-check-input" type="radio" value="Pritariu"
-                                               name="effective_communication">
-                                        <label class="text-Warning"> Pritariu (4)</label>
-                                    </div>
-                                <li class="d-inline-block me-2 mb-1">
-                                    <div class="form-check form-check-success">
-                                        <input class="form-check-input " type="radio" value="Tikrai pritariu"
-                                               name="effective_communication">
-                                        <label class="text-Success"> Tikrai pritariu (5)</label>
-                                    </div>
-                                </li>
-                            </ul>
-                            <div class="form-group"><label class="card-title">4.3. Pedagogo</label><input
+                            <label class="card-title"> 4.2. Pedagogų pasitenkinimas darbo
+                                sąlygomis</label>
+                            <table class="table table-striped">
+                                <tbody>
+                                <tr>
+                                    <th></th>
+                                    <th>Tikrai nepritariu (1)</th>
+                                    <th>Nepritariu (2)</th>
+                                    <th>Nei nepritariu, nei pritariu (3)</th>
+                                    <th>Pritariu (4)</th>
+                                    <th>Tikrai pritariu (5)</th>
+                                </tr>
+                                <tr>
+                                    <th>Mokyklos mikroklimatas 2.1.3 </th>
+                                    <td>
+                                        <div class="form-check ">
+                                            <input class="form-check-input" type="radio" value="Tikrai nepritariu"
+                                                   name="school_microclimate">
+                                            <label class=""> 1</label>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="form-check ">
+                                            <input class="form-check-input" type="radio" value="Nepritariu"
+                                                   name="school_microclimate">
+                                            <label class=""> 2</label>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="form-check ">
+                                            <input class="form-check-input" type="radio"
+                                                   value="Nei nepritariu, nei pritariu" name="school_microclimate">
+                                            <label class=""> 3</label>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="form-check ">
+                                            <input class="form-check-input" type="radio" value="Pritariu"
+                                                   name="school_microclimate">
+                                            <label class=""> 4</label>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="form-check ">
+                                            <input class="form-check-input " type="radio" value="Tikrai pritariu"
+                                                   name="school_microclimate">
+                                            <label class=""> 5</label>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        Apmokėjimo už darbą sistemos skaidrumas
+                                    </th>
+                                    <td>
+                                        <div class="form-check ">
+                                            <input class="form-check-input" type="radio" value="Tikrai nepritariu"
+                                                   name="transparency_of_the_pay_system">
+                                            <label class=""> 1</label>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="form-check ">
+                                            <input class="form-check-input" type="radio" value="Nepritariu"
+                                                   name="transparency_of_the_pay_system">
+                                            <label class="">2</label>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="form-check ">
+                                            <input class="form-check-input" type="radio"
+                                                   value="Nei nepritariu, nei pritariu"
+                                                   name="transparency_of_the_pay_system">
+                                            <label class=""> 3</label>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="form-check ">
+                                            <input class="form-check-input" type="radio" value="Pritariu"
+                                                   name="transparency_of_the_pay_system">
+                                            <label class=""> 4</label>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="form-check ">
+                                            <input class="form-check-input " type="radio" value="Tikrai pritariu"
+                                                   name="transparency_of_the_pay_system">
+                                            <label class=""> 5</label>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        Materialios darbo sąlygos
+                                    </th>
+                                    <td>
+                                        <div class="form-check ">
+                                            <input class="form-check-input" type="radio" value="Tikrai nepritariu"
+                                                   name="material_working_conditions">
+                                            <label class="">1</label>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="form-check ">
+                                            <input class="form-check-input" type="radio" value="Nepritariu"
+                                                   name="material_working_conditions">
+                                            <label class="">2</label>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="form-check ">
+                                            <input class="form-check-input" type="radio"
+                                                   value="Nei nepritariu, nei pritariu" name="material_working_conditions">
+                                            <label class="">3</label>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="form-check ">
+                                            <input class="form-check-input" type="radio" value="Pritariu"
+                                                   name="material_working_conditions">
+                                            <label class=""> 4</label>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="form-check ">
+                                            <input class="form-check-input " type="radio" value="Tikrai pritariu"
+                                                   name="material_working_conditions">
+                                            <label class=""> 5</label>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        Darbo santykiai
+                                    </th>
+                                    <td>
+                                        <div class="form-check ">
+                                            <input class="form-check-input" type="radio" value="Tikrai nepritariu"
+                                                   name="work_relations">
+                                            <label class=""> 1</label>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="form-check ">
+                                            <input class="form-check-input" type="radio" value="Nepritariu"
+                                                   name="work_relations">
+                                            <label class=""> 2</label>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="form-check ">
+                                            <input class="form-check-input" type="radio"
+                                                   value="Nei nepritariu, nei pritariu" name="work_relations">
+                                            <label class=""> 3</label>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="form-check ">
+                                            <input class="form-check-input" type="radio" value="Pritariu"
+                                                   name="work_relations">
+                                            <label class=""> 4</label>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="form-check ">
+                                            <input class="form-check-input " type="radio" value="Tikrai pritariu"
+                                                   name="work_relations">
+                                            <label class="">5</label>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        Psichologinis klimatas
+                                    </th>
+                                    <td>
+                                        <div class="form-check ">
+                                            <input class="form-check-input" type="radio" value="Tikrai nepritariu"
+                                                   name="psychological_climate">
+                                            <label class="">1</label>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="form-check ">
+                                            <input class="form-check-input" type="radio" value="Nepritariu"
+                                                   name="psychological_climate">
+                                            <label class=""> 2</label>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="form-check ">
+                                            <input class="form-check-input" type="radio"
+                                                   value="Nei nepritariu, nei pritariu" name="psychological_climate">
+                                            <label class="">3</label>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="form-check ">
+                                            <input class="form-check-input" type="radio" value="Pritariu"
+                                                   name="psychological_climate">
+                                            <label class=""> 4</label>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="form-check ">
+                                            <input class="form-check-input " type="radio" value="Tikrai pritariu"
+                                                   name="psychological_climate">
+                                            <label class=""> 5</label>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        Tiesioginio darbo proceso įgyvendinimas
+                                    </th>
+                                    <td>
+                                        <div class="form-check ">
+                                            <input class="form-check-input" type="radio" value="Tikrai nepritariu"
+                                                   name="implementation_of_direct_work_process">
+                                            <label class="">1</label>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="form-check ">
+                                            <input class="form-check-input" type="radio" value="Nepritariu"
+                                                   name="implementation_of_direct_work_process">
+                                            <label class="">2</label>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="form-check ">
+                                            <input class="form-check-input" type="radio"
+                                                   value="Nei nepritariu, nei pritariu"
+                                                   name="implementation_of_direct_work_process">
+                                            <label class="">3</label>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="form-check ">
+                                            <input class="form-check-input" type="radio" value="Pritariu"
+                                                   name="implementation_of_direct_work_process">
+                                            <label class="">4</label>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="form-check ">
+                                            <input class="form-check-input " type="radio" value="Tikrai pritariu"
+                                                   name="implementation_of_direct_work_process">
+                                            <label class="">5</label>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>Veiksmingi ryšiai su mokiniais, kolegomis, tėvais,
+                                        vietos bendruomenės nariais.</th>
+                                    <td>
+                                        <div class="form-check ">
+                                            <input class="form-check-input" type="radio" value="Tikrai nepritariu"
+                                                   name="effective_communication">
+                                            <label class=""> 1</label>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="form-check ">
+                                            <input class="form-check-input" type="radio" value="Nepritariu"
+                                                   name="effective_communication">
+                                            <label class="">2</label>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="form-check ">
+                                            <input class="form-check-input" type="radio"
+                                                   value="Nei nepritariu, nei pritariu" name="effective_communication">
+                                            <label class=""> 3</label>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="form-check ">
+                                            <input class="form-check-input" type="radio" value="Pritariu"
+                                                   name="effective_communication">
+                                            <label class=""> 4</label>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="form-check ">
+                                            <input class="form-check-input " type="radio" value="Tikrai pritariu"
+                                                   name="effective_communication">
+                                            <label class="">5</label>
+                                        </div>
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                            <div class="form-group"><label class="card-title">4.3. Pedagogo...</label><input
                                     class="form-control" type="text" name="pedagogues"></div>
+
                             <label class="card-title text-muted">Koks Svarbiausias asmeninis šių metų profesinis
                                 pasiekimas (patirtis)? </label>
                             <input class="form-control" type="text" name="the_most_important_achievement">
+
                             <label class="card-title text-muted">Koks nemaloniausias šių metų įvykis
                                 (patirtis)? </label>
                             <input class="form-control" type="text" name="most_unpleasant_event">
+
                             <label class="card-title text-muted">Kurių funkcijų ar darbų norėtumėte atsisakyti ateityje?
                                 Pagrįskite. </label>
                             <input class="form-control" type="text" name="feature_waiver">
+
                             <label class="card-title text-muted">Kokias kompetencijas Jūs turėtumėte tobulinti
-                                ateinančiais metais? Kokia reikalinga pagalba? </>
+                                ateinančiais metais? Kokia reikalinga pagalba?</label>
                             <input class="form-control" type="text" name="improvements_and_support">
+
                             <label class="card-title text-muted">Kokis sritys, kuriose labiausiai susiduriu su
                                 problemomis </label>
                             <input class="form-control" type="text" name="problematic_areas">
+
                             <label class="card-title text-muted">Ką tiesioginis vadovas turėtų tobulinti savo
                                 sprendimuose ar elgsenoje, kad jūsų veiklos
                                 rezultatas būtų
                                 geresnis? </label>
                             <input class="form-control" type="text" name="what_should_manager_improve">
+
                             <p class="card-title text-muted">Kokie institucijos veiksmai užtikrintų vykdomų programų
                                 populiarumą? </p>
                             <input class="form-control" type="text" name="popularity_of_programs">
+
                             <p class="card-title text-muted">Kaip personalas vertina institucijos vadybą ir
                                 administravimą (2.1.3.) </p>
                             <input class="form-control" type="text" name="staff_evaluation">
+
                             <p class="card-title text-muted">Grįžtamasis ryšys iš vadovų. Ar esate patenkintas
                                 bendravimu su institucijos administracija
                                 (parašykite
                                 komentarą) </p>
                             <input class="form-control" type="text" name="happiness_with_communication">
+
                             <p class="card-title text-muted">Kuo galėtumėte būti naudingas mokyklai (veikla, nesusijusi
                                 su pareigybėmis)? </p>
                             <input class="form-control" type="text" name="how_can_I_benefit_the_school">
+
                         </div>
                     </div>
                 </div>
@@ -1012,26 +1081,24 @@
                         <div class="form-group">
                             <label class="card-title">5.1.Kuruojančio vadovo stebėtų ir aptartų pamokų (veiklų) skaičius
                                 (kokiose grupėse ir kokiam tikslui) </label>
-                            <input class="form-control" type="text"
-                                   name="first_number_of_lessons_discussed_by_the_supervisor">
-                            <input class="form-control" type="text"
-                                   name="second_number_of_lessons_discussed_by_the_supervisor">
-                            <input class="form-control" type="text"
-                                   name="third_number_of_lessons_discussed_by_the_supervisor">
+                            <textarea class="form-control" type="text"
+                                   name="first_number_of_lessons_discussed_by_the_supervisor"></textarea>
+
                             <p>5.2. Kuruojančio vadovo komentaras dėl veiklos ir siūlymai dėl veiklos, kvalifikacijos
                                 tobulinimo </p>
-                            <input class="form-control" type="text"
-                                   name="managers_comment_on_activities_and_suggestions">
+                            <textarea class="form-control" type="text"
+                                   name="managers_comment_on_activities_and_suggestions"></textarea>
+
                             <p>5.3. Kokią realią pagalbą kuruojantis vadovas numato teikti kitais mokslo metais (šis
                                 klausimas aptariamas su
                                 mokytoju ar pagalbos mokiniui specialistu)</p>
-                            <input class="form-control" type="text" name="assistance_in_the_next_school_year">
+                            <textarea class="form-control" type="text" name="assistance_in_the_next_school_year"></textarea>
+
                             <p>5.4. Kokios pagalbos Jums reikėtų, kad galėtumėte tobulinti ugdomąją veiklą, įgyvendinti
                                 sumanymus, ugdymo
                                 tikslus kitais mokslo metais? </p>
-                            <input class="form-control" type="text" name="first_help_which_I_need">
-                            <input class="form-control" type="text" name="second_help_which_I_need">
-                            <input class="form-control" type="text" name="third__help_which_I_need">
+                            <textarea class="form-control" type="text" name="first_help_which_I_need"></textarea>
+
                         </div>
                     </div>
                 </div>
