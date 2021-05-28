@@ -28,10 +28,8 @@ class LoginController extends Controller
 
     public function adminView() {
         $viewData = $this->loadViewData();
-        $users=[];
-        if($viewData&&$viewData['userRole']=='admin'){
-            $users=KitmUsers::where('roles_id','<>',1)->get();
-        }
+        $users=KitmUsers::all();
+
         return view('admin.pages.administration',$viewData,compact('users'));
     }
 }

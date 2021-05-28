@@ -15,7 +15,7 @@ class QualificationController extends Controller
         $surname = $userName[0];
         $id = KitmUsers::where(['email' => session('userEmail')])->first()->id;
         $list = Qualification::where(['user_id' => $id])->get();
-        $teachers = KitmUsers::where(['roles_id' => 3])->get();
+        $teachers = KitmUsers::where(['roles_id' => 3])->orWhere(['roles_id' => 1])->get();
         $results = array();
         foreach ($teachers as $teacher) {
             $sum = Qualification::where(['user_id' => $teacher->id])->sum('hours');

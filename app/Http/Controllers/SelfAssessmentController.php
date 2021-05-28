@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Datepicker;
 use App\KitmUsers;
 use App\Mail\FormActivation;
+use App\Qualification;
 use App\Roles;
 use App\SelfAssessment;
 use Illuminate\Http\Request;
@@ -127,8 +128,8 @@ class SelfAssessmentController extends Controller
     }
 
     public function assessment(){
-
-        $roles = Roles::all();
-        return view('admin.pages.assessment', compact('roles'));
+        $id = KitmUsers::where(['email' => session('userEmail')])->first()->id;
+        $qualifications = Qualification::where(['user_id' => $id])->get();
+        return view('admin.pages.assessment', compact('qualifications'));
     }
 }

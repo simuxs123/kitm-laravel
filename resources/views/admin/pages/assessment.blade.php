@@ -365,6 +365,11 @@
                         <label class="card-title">2.1. Išvardinkite projektus, kuriuose dalyvavote ir savo vaidmenį
                             juose </label>
                         <input class="form-control" type="text" name="projects">
+                        <!--<select class="form-control" name="projects">
+                            @foreach ($qualifications as $item)
+                                <option value="{{$item->seminar}}">{{$item->seminar}}</option>
+                            @endforeach
+                        </select>-->
                         <input class="form-control" type="text" name="project_name"
                                placeholder="projekto rengėjas (nurodykite projekto pavadinimą) ">
                         <input class="form-control" type="text" name="project_coordinator"
