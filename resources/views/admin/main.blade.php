@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-@include('admin/_partials/login-head')
+@include('admin/_partials/main-head')
 <body>
 @include('admin/_partials/sidebar')
 <!-- Bootstrap core JS-->
