@@ -27,33 +27,10 @@ class AppServiceProvider extends ServiceProvider
     public function boot()
     {
         
-        Blade::if('admin', function () {
+        Blade::if('roles', function ($args) {
+            $roles = explode(',', $args);
             $role = KitmUsers::where(['email' => session('userEmail')])->first()->roles->role_name;            
-            if ($role == 'admin') {
-                return 1;
-            }
-            return 0;
-        });
-
-        Blade::if('darbuotojas', function () {
-            $role = KitmUsers::where(['email' => session('userEmail')])->first()->roles->role_name;            
-            if ($role == 'darbuotojas' or $role == 'admin') {
-                return 1;
-            }
-            return 0;
-        });
-
-        Blade::if('mokytojas', function () {
-            $role = KitmUsers::where(['email' => session('userEmail')])->first()->roles->role_name;            
-            if ($role == 'mokytojas' or $role == 'admin') {
-                return 1;
-            }
-            return 0;
-        });
-
-        Blade::if('moksleivis', function () {
-            $role = KitmUsers::where(['email' => session('userEmail')])->first()->roles->role_name;            
-            if ($role == 'moksleivis' or $role == 'admin') {
+            if (in_array($role, $roles)) {
                 return 1;
             }
             return 0;

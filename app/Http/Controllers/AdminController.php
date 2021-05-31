@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Module;
 use Illuminate\Http\Request;
+use App\Datepicker;
 
 class AdminController extends Controller{
 
@@ -11,7 +12,6 @@ class AdminController extends Controller{
         $modules = Module::all();
         return view('admin/pages/module-surveys', compact('modules'));
     }
-
 
     public function auth(){
         return view('admin/pages/dashboard');
@@ -21,4 +21,13 @@ class AdminController extends Controller{
         return view('admin.pages.restriction');
     }
 
+    public function employeeView() {
+        $activated=Datepicker::exists();
+        $data='';
+        if($activated){
+            $data=Datepicker::first();
+        }
+        
+        return view('admin.pages.employee', compact('activated', 'data'));
+    }
 }
