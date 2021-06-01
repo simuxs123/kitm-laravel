@@ -42,6 +42,7 @@ Route::group(['middleware' => ['check']], function () {
     Route::group(['middleware' => ['roles:mokytojas,admin']], function () {
         Route::get('/assessment', 'SelfAssessmentController@assessment')->middleware('form.active');
         Route::post('/saveQuali', 'QualificationController@saveQuali');
+        Route::patch('/storeAssessment', 'SelfAssessmentController@storeAssessment');
     });
 
     Route::group(['middleware' => ['roles:moksleivis,admin']], function () {

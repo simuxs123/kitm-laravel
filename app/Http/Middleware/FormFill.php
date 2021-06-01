@@ -7,16 +7,26 @@ use Illuminate\Http\Response;
 use App\Datepicker;
 use Closure;
 use Illuminate\Support\Carbon;
+use App\SelfAssessment;
+use App\KitmUsers;
 
 class FormFill extends Controller
 {
     public function handle($request, Closure $next)
     {
         Datepicker::where('end_date','<=', Carbon::now()->toDateTimeString())->delete(); //naujas middleware, kad leisti pildyti forma, jei laikas baigesi, apsaugoti routus
-        if (Datepicker::exists()) {
+        $id = KitmUsers::where(['email' => session('userEmail')])->first()->id;
+        $check = SelfAssessment::where(['user_id' => $id])->first();
+        if ($check == null or $check['pateikta'] < 1) {
+            $pateikta = false;
+        } else {
+            $pateikta = true;
+        }
+
+        if (Datepicker::exists() && $pateikta == false) {
             return $next($request);
             }
+
         return redirect('/self-assessment');
-        abort(Response::HTTP_UNAUTHORIZED);
         }
     }
