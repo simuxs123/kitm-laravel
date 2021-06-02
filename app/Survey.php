@@ -8,6 +8,7 @@ class Survey extends Model
 {
     protected $fillable=[
         'module_id',
+        'teacher_id',
         'module_name',
         'group',
         'attendance',

@@ -15,6 +15,7 @@ class SurveyController extends Controller
     }
     public function saveSurvey(Request $request, Module $module)
     {
+        $teacher_id = Module::where(['id' => $module->id])->first();
         $validatedData = $request->validate([
             'attendance'=>'required',
             'module_is_important'=>'required',
@@ -30,6 +31,7 @@ class SurveyController extends Controller
         ]);
         Survey::create([
             'module_id' => $module->id,
+            'teacher_id' => $teacher_id->teacher_id,
             'module_name' => $module->module_name,
             'group' => $module->group_name,
             'attendance' => request('attendance'),

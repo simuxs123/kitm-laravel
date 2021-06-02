@@ -51,9 +51,9 @@
                     <li class="sidebar-item  has-sub">
 
                     <li class="sidebar-item  ">
-                        <a href="table.html" class='sidebar-link'>
+                        <a href="/assessmentReport" class='sidebar-link'>
                             <i class="bi bi-grid-1x2-fill"></i>
-                            <span>Generuoti ataskaita</span>
+                            <span>Isivertinimo ataskaita</span>
                         </a>
                     </li>
                     <li class="sidebar-item  ">

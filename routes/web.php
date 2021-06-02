@@ -37,6 +37,8 @@ Route::group(['middleware' => ['check']], function () {
         Route::post('/activate-form', 'SelfAssessmentController@activateForm');
         Route::get('/delete-activate', 'SelfAssessmentController@deleteActivate');
         Route::get('/employeeMenu', 'AdminController@employeeView');
+        Route::get('/assessmentReport', 'SelfAssessmentController@report');
+        Route::get('/reportView/{report}', 'SelfAssessmentController@reportView');
     });
 
     Route::group(['middleware' => ['roles:mokytojas,admin']], function () {

@@ -22,12 +22,12 @@
                     </div>
                     <div class="form row">
                         <div class="form-group col-md-6">
-                            <label for="name">Mokytojo Vardas</label>
-                            <input type="text" class="form-control" name="name">
-                        </div>
-                        <div class="form-group col-md-6">
-                            <label for="surname">Mokytojo Pavardė</label>
-                            <input type="text" class="form-control" name="surname">
+                            <label for="surname">Mokytojo Vardas Pavardė</label>
+                            <select name="surname">
+                            @foreach($teachers as $teacher)
+                            <option class="form-control" name="surname" value="{{$teacher->id}}">{{$teacher->name . " " . $teacher->surname}}</option>
+                            @endforeach
+                            </select>
                         </div>
                     </div>
                     <div class="form-group">

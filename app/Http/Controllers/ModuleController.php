@@ -5,28 +5,31 @@ namespace App\Http\Controllers;
 use App\Module;
 use App\Survey;
 use Illuminate\Http\Request;
+use App\KitmUsers;
 
 class ModuleController extends Controller
 {
     public function index()
     {
         $modules = Module::all();
-        return view('admin/pages/modules', compact('modules'));
+        $teachers = KitmUsers::where(['roles_id' => 3])->orWhere(['roles_id' => 1])->get();
+
+        return view('admin/pages/modules', compact('modules', 'teachers'));
     }
 
     public function createModule(Request $request)
     {
         $validateData = $request->validate([
             'moduleName' => 'required|max:255|min:3',
-            'name' => 'required|min:3',
-            'surname' => 'required|min:3',
             'groupName' => 'required'
         ]);
+        
+        $name = KitmUsers::where(['id' => request('surname')])->first();
 
         Module::create([
             'module_name' => request('moduleName'),
-            'teacher_name' => request('name'),
-            'teacher_surname' => request('surname'),
+            'teacher_id' => request('surname'),
+            'teacher_surname' => $name->name . ' ' . $name->surname,
             'group_name' => request('groupName')
         ]);
 
