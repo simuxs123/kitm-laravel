@@ -219,8 +219,14 @@ class SelfAssessmentController extends Controller
             ]);
         }
         $update = SelfAssessment::where(['user_id' => $id])->first();
+        $check = SelfAssessment::where(['user_id' => $id])->first();
+        if ($check == null or $check['pateikta'] < 1) {
+            $pateikta = false;
+        } else {
+            $pateikta = true;
+        }
         
 
-        return view('admin.pages.assessment', compact('qualifications', 'name', 'surname', 'update'));
+        return view('admin.pages.assessment', compact('qualifications', 'name', 'surname', 'update', 'pateikta'));
     }
 }

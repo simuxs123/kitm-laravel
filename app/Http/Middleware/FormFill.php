@@ -15,15 +15,8 @@ class FormFill extends Controller
     public function handle($request, Closure $next)
     {
         Datepicker::where('end_date','<=', Carbon::now()->toDateTimeString())->delete(); //naujas middleware, kad leisti pildyti forma, jei laikas baigesi, apsaugoti routus
-        $id = KitmUsers::where(['email' => session('userEmail')])->first()->id;
-        $check = SelfAssessment::where(['user_id' => $id])->first();
-        if ($check == null or $check['pateikta'] < 1) {
-            $pateikta = false;
-        } else {
-            $pateikta = true;
-        }
 
-        if (Datepicker::exists() && $pateikta == false) {
+        if (Datepicker::exists()) {
             return $next($request);
             }
 

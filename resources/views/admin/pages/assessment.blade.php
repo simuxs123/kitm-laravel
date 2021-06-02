@@ -9,9 +9,10 @@
         </ul>
     </div>
     @endif
-    <form class="col" method="post" action="/storeAssessment">
+    <form class="col" method="post" action="/storeAssessment" readonly="readonly">
         {{csrf_field()}}
         {{method_field('PATCH')}}
+        <fieldset {{ $pateikta == true ? 'disabled' : '' }}>
         <div class="page-heading">
             <h5>KAUNO INFORMACINIŲ TECHNOLOGIJŲ MOKYKLOS
                 MOKYTOJO IR PAGALBOS MOKINIUI SPECIALISTO VEIKLOS IR KVALIFIKACIJOS TOBULINIMO
@@ -915,5 +916,6 @@
                 <button type="submit" name="action" value="pateikti" class="btn btn-primary me-1 mb-1" onclick="return confirm('Pateikdami anketą nebegalėsite jos redaguoti. Ar tikrai norite užbaigti pildymą?')">Išsiūsti</button>
             </div>
         </div>
+        </fieldset>
     </form>
 </div>
