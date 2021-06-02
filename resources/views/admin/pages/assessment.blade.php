@@ -9,7 +9,7 @@
         </ul>
     </div>
     @endif
-    <form class="col" method="post" action="/storeAssessment" readonly="readonly">
+    <form class="col" method="post" action="/storeAssessment">
         {{csrf_field()}}
         {{method_field('PATCH')}}
         <fieldset {{ $pateikta == true ? 'disabled' : '' }}>
