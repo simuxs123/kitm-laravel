@@ -334,9 +334,9 @@
                     <div class="card-body form-group">
                         <label class="card-title">2.1. Išvardinkite projektus, kuriuose dalyvavote ir savo vaidmenį
                             juose </label>
-                        <select class="form-control">
+                        <select class="form-control" name="projects">
                             @foreach ($qualifications as $item)
-                            <option name="projects" value="{{$item->seminar}}">{{$item->seminar}}</option>
+                            <option name="projects" value="{{$item->seminar}}" {{ ($update->{'2_1'} == "$item->seminar") ? 'selected' : '' }}>{{$item->seminar}}</option>
                             @endforeach
                         </select>
                         <input class="form-control" type="text" name="project_name" placeholder="projekto rengėjas (nurodykite projekto pavadinimą) " value="{{($update->{'2_1_1'})}}">
