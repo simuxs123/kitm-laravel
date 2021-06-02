@@ -19,14 +19,12 @@
                     <h4>Redaguoti modulį</h4>
                 </div>
                 <div class="form row">
-                    <div class="form-group col-md-6">
-                        <label for="name">Mokytojo Vardas</label>
-                        <input type="text" class="form-control" name="name" value="{{$module->teacher_name}}">
-                    </div>
-                    <div class="form-group col-md-6">
-                        <label for="surname">Mokytojo Pavardė</label>
-                        <input type="text" class="form-control" name="surname" value="{{$module->teacher_surname}}">
-                    </div>
+                    <label for="surname">Mokytojo Vardas Pavardė</label>
+                    <select name="surname">
+                        @foreach($teachers as $teacher)
+                        <option class="form-control" name="surname" value="{{$teacher->id}}">{{$teacher->name . " " . $teacher->surname}}</option>
+                        @endforeach
+                    </select>
                 </div>
                 <div class="form-group">
                     <label for="groupName">Grupės pavadinimas</label>

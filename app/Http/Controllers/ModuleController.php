@@ -45,36 +45,39 @@ class ModuleController extends Controller
 
     public function updateModule(Module $module)
     {
-        return view('admin.pages.update-module', compact('module'));
+        $teachers = KitmUsers::where(['roles_id' => 3])->orWhere(['roles_id' => 1])->get();
+
+        return view('admin.pages.update-module', compact('module', 'teachers'));
     }
 
     public function update(Request $request, Module $module)
     {
+        $name = KitmUsers::where(['id' => request('surname')])->first();
+
         $validateData = $request->validate([
             'moduleName' => 'required|max:255|min:3',
-            'name' => 'required|min:3',
-            'surname' => 'required|min:3',
             'groupName' => 'required'
         ]);
 
         if (isset($request->updatecheck)) {
             Module::where('id', $module->id)->update([
                 'module_name' => request('moduleName'),
-                'teacher_name' => request('name'),
-                'teacher_surname' => request('surname'),
+                'teacher_id' => request('surname'),
+                'teacher_surname' => $name->name . ' ' . $name->surname,
                 'group_name' => request('groupName'),
             ]);
 
             Survey::where('module_id', $module->id)->update([
                 'module_name' => request('moduleName'),
+                'teacher_id' => $name->id,
                 'group' => request('groupName')
             ]);
         }
 
         Module::where('id', $module->id)->update([
             'module_name' => request('moduleName'),
-            'teacher_name' => request('name'),
-            'teacher_surname' => request('surname'),
+            'teacher_id' => request('surname'),
+            'teacher_surname' => $name->name . ' ' . $name->surname,
             'group_name' => request('groupName'),
         ]);
 
