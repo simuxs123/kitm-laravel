@@ -301,11 +301,11 @@
                                 <input class="form-control" type="number" name="Continue_studying_at_a_college_or_university" placeholder="Tęsia mokymąsi kolegijoje ar universitete (kiek) " value="{{($update->{'1_16_1'})}}">
                                 <input class="form-control" type="number" name="Employed" placeholder="Įsidarbino (kiek) " value="{{($update->{'1_16_2'})}}">
                                 <input class="form-control" type="number" name="not_working_not_studying" placeholder="Nedirba, nesimoko (kiek)  " value="{{($update->{'1_16_3'})}}">
-                                <input class="form-control" type="number" name="Signed_up_for_UT " placeholder="Užsiregistravo UT (kiek)  " value="{{($update->{'1_16_4'})}}">
+                                <input class="form-control" type="number" name="Signed_up_for_UT" placeholder="Užsiregistravo UT (kiek)  " value="{{($update->{'1_16_4'})}}">
                                 <input class="form-control" type="number" name="Went_abroad" placeholder="Išvyko į užsienį (kiek) " value="{{($update->{'1_16_5'})}}">
                                 <input class="form-control" type="text" name="other" placeholder="Kita (nurodykite) " value="{{($update->{'1_16_6'})}}">
                                 <input class="form-control" type="number" name="no_data" placeholder="Nėra duomenų (kiek) " value="{{($update->{'1_16_7'})}}">
-                                <input class="form-control" type="text" name="data_not_provided " placeholder="Duomenys nepateikti (nurodykite priežastį) " value="{{($update->{'1_16_8'})}}">
+                                <input class="form-control" type="text" name="data_not_provided" placeholder="Duomenys nepateikti (nurodykite priežastį) " value="{{($update->{'1_16_8'})}}">
                             </div>
                         </div>
                         <div class="form-group">
