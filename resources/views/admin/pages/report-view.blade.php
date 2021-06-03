@@ -7,4 +7,5 @@
     @if($surveycheck == false)
     <h5 style="color: red;">Nėra pateiktų modulio apklausų</h5>
     @endif
+    <a href="/assessmentReport/"><button type="button" class="btn btn-danger">Grįžti</button></a>
 </div>
