@@ -54,10 +54,10 @@ class SelfAssessmentController extends Controller
                 'date' => $date,
                 'email' => $viewData['userEmail']
             );
-            $emailTo = KitmUsers::where('roles_id', 3)->pluck('email')->all();
+            $emailTo = KitmUsers::where('roles_id', 3)->orWhere('roles_id', 1)->pluck('email')->all();
             Mail::to($emailTo)->send(new FormActivation($data));
         } else {
-            return back()->with('danger', 'Forma galite aktivuoti tik vieną kartą. Jeigu norite atnaujinti, ištrinkite ir aktivuokite dar kartą');
+            return back()->with('danger', 'Forma galite aktyvuoti tik vieną kartą. Jeigu norite atnaujinti, ištrinkite ir aktyvuokite dar kartą');
         }
         return back();
     }

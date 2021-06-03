@@ -19,11 +19,10 @@
         {{csrf_field()}}
         <input type="date" id="date" name="data">
         <input type="time" id="time" name="laikas">
-        <input type="submit" class="btn btn-primary" value="Atnaujinti" :disabled='true'>
+        <input type="submit" class="btn btn-primary" value="Aktyvuoti" :disabled='true'>
     </form>
     <div class="text-center">
-        <label>Ištrinti kai aktyvuota, bandymams</label>
-        <a href="/delete-activate" class="btn btn-danger">Ištrinti</a>
+        <a href="/delete-activate" class="btn btn-danger">Atšaukti aktyvaciją</a>
     </div>
     @if($activated)
     <p class="text-center">Anketa aktyvuota iki {{$data->end_date}}</p>
