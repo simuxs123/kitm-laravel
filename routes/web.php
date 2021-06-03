@@ -47,18 +47,22 @@ Route::group(['middleware' => ['check']], function () {
         Route::get('/assessment', 'SelfAssessmentController@assessment')->middleware('form.active');
         Route::post('/saveQuali', 'QualificationController@saveQuali');
         Route::patch('/storeAssessment', 'SelfAssessmentController@storeAssessment');
+
     });
 
     Route::group(['middleware' => ['roles:moksleivis,admin']], function () {
         Route::get('/survey/{module}', 'SurveyController@survey')->middleware('surveycheck');
         Route::post('/saveSurvey/{module}', 'SurveyController@saveSurvey');
         Route::get('/moduleSurveys', 'AdminController@moduleSurveys');
+        Route::get('/guide','GuideController@guide');
+        Route::patch('/storeGuide','GuideController@storeGuide');
     });
     Route::group(['middleware' => ['roles:darbuotojas,mokytojas,admin']], function () {
         Route::get('/self-assessment', 'SelfAssessmentController@activateView');
         Route::get('/qualification', 'QualificationController@index');
+
     });
 
-    
+
     Route::get('/restriction', 'AdminController@restriction')->middleware('roles:moksleivis,darbuotojas,mokytojas,admin');
 });

@@ -1,5 +1,6 @@
 @extends('admin.main')
 <div class="text-center">
+
     @if($activated)
     <div class="text-center">
         <label>Anketos pildymo pabaiga: {{$data->end_date}}</label>
@@ -14,7 +15,9 @@
         <h2>Peržiūrėti anketą</h2>
     </a>
     <h4>Jūsų anketa pateikta, redaguoti jos nebegalite.</h4>
+    <a href="/guide">vadovo vertinimas</a>
     @endif
+
     @else
     <p>Anketa neaktyvuota</p>
     @endif
