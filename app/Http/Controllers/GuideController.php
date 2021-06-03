@@ -4,18 +4,19 @@ namespace App\Http\Controllers;
 
 use App\Guide;
 use App\KitmUsers;
+use App\SelfAssessment;
+use App\Survey;
 use Illuminate\Http\Request;
 
 class GuideController extends Controller
 {
-    public function guide()
+    public function guide($survey)
     {
-        return view('admin.pages.guide');
+        return view('admin.pages.guide', compact('survey'));
     }
 
-    public function storeGuide(Request $request)
+    public function storeGuide(Request $request, $survey)
     {
-        $id = KitmUsers::where(['email' => session('userEmail')])->first()->id;
         $validatedData = $request->validate([
             'first_number_of_lessons_discussed_by_the_supervisor'=>'required',
             'second_number_of_lessons_discussed_by_the_supervisor'=>'required',
@@ -27,8 +28,9 @@ class GuideController extends Controller
             'third_help_which_I_need'=>'required',
             'guide_evaluation'=>'required'
         ]);
+
         Guide::create([
-            'user_id' => $id,
+            'user_id' => $survey,
             'first_number_of_lessons_discussed_by_the_supervisor' => request('first_number_of_lessons_discussed_by_the_supervisor'),
             'second_number_of_lessons_discussed_by_the_supervisor' => request('second_number_of_lessons_discussed_by_the_supervisor'),
             'third_number_of_lessons_discussed_by_the_supervisor' => request('third_number_of_lessons_discussed_by_the_supervisor'),
@@ -39,6 +41,7 @@ class GuideController extends Controller
             'third_help_which_I_need' => request('third_help_which_I_need'),
             'guide_evaluation' => request('guide_evaluation')
         ]);
+
         return redirect('/');
-            }
+    }
 }

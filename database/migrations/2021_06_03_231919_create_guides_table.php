@@ -16,7 +16,6 @@ class CreateGuidesTable extends Migration
         Schema::create('guides', function (Blueprint $table) {
             $table->id();
             $table->integer('user_id');
-
             $table->string('first_number_of_lessons_discussed_by_the_supervisor')->nullable();
             $table->string('second_number_of_lessons_discussed_by_the_supervisor')->nullable();
             $table->string('third_number_of_lessons_discussed_by_the_supervisor')->nullable();

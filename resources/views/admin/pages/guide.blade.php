@@ -1,7 +1,6 @@
-<form method="post" action="/storeGuide">
-    {{csrf_field()}}
-    {{method_field('PATCH')}}
 <div class="card">
+<form method="post" action="/storeGuide/{{$survey}}">
+    {{csrf_field()}}
     <div class="card-header">
         <h3>V. KURUOJANČIO VADOVO IŠVADOS, SIŪLYMAI IR NUMATOMA PAGALBA (pildo kuruojantis vadovas) </h3>
     </div>
@@ -31,14 +30,10 @@
                 <input class="form-control" type="text" name="second_help_which_I_need">
                 <input class="form-control" type="text" name="third_help_which_I_need">
                 <p>5.5. Vadovo vertinimas(10 balu sistemoje)</p>
-                <input class="form-control" type="number" name="guide_evaluation">
+                <input class="form-control" type="number" name="guide_evaluation" min="0" max="10">
             </div>
         </div>
     </div>
 </div>
-<div class="row">
-    <div class="col ">
         <button type="submit" class="btn btn-primary me-1 mb-1">Pateikti</button>
-    </div>
-</div>
 </form>
