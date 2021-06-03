@@ -54,7 +54,7 @@ class AdminController extends Controller
     public function activateModule(Request $request)
     {
 
-        if (request('date') > Carbon::now()) {
+        if ($request->date . ' ' . $request->time > Carbon::now()) {
             if (Module::where(['id' => request('module')])->first()['active'] == 0) {
                 Module::where(['id' => request('module')])->update([
                     'date' => $request->date . ' ' . $request->time,
