@@ -11,6 +11,7 @@ class Roles extends Controller
 {
     public function handle($request, Closure $next, ...$roles)
     {
+        $reason = 'Neturite prieigos teisių';
         $viewData = $this->loadViewData();
             foreach ($roles as $role) {
                 if ($role == $viewData['userRole']) {
@@ -18,6 +19,8 @@ class Roles extends Controller
                 } 
             }
         
-        return redirect('/restriction');
+        
+
+        return redirect('/restriction')->with('reason', $reason);
     }
 }

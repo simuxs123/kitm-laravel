@@ -59,7 +59,7 @@
                                         <div class="form-group">
                                             <label for="hours">Valandų skaičius</label>
                                             <input type="number" id="hours" class="form-control"
-                                                   name="hours" step="0.1" required>
+                                                   name="hours" step="0.1" min="0" max="99" required>
                                         </div>
                                     </div>
                                     <div class="col-md-6 col-12">

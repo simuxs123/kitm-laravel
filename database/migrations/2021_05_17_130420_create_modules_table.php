@@ -19,6 +19,8 @@ class CreateModulesTable extends Migration
             $table->string('teacher_surname');
             $table->string('module_name');
             $table->string('group_name');
+            $table->timestamp('date')->nullable();
+            $table->boolean('active')->default(0);
             $table->timestamps();
         });
     }

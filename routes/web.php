@@ -39,6 +39,8 @@ Route::group(['middleware' => ['check']], function () {
         Route::get('/employeeMenu', 'AdminController@employeeView');
         Route::get('/assessmentReport', 'SelfAssessmentController@report');
         Route::get('/reportView/{report}', 'SelfAssessmentController@reportView');
+        Route::patch('/activateModule', 'AdminController@activateModule');
+        Route::patch('/cancelActivation/{item}', 'AdminController@cancelActivation');
     });
 
     Route::group(['middleware' => ['roles:mokytojas,admin']], function () {
@@ -48,7 +50,7 @@ Route::group(['middleware' => ['check']], function () {
     });
 
     Route::group(['middleware' => ['roles:moksleivis,admin']], function () {
-        Route::get('/survey/{module}', 'SurveyController@survey');
+        Route::get('/survey/{module}', 'SurveyController@survey')->middleware('surveycheck');
         Route::post('/saveSurvey/{module}', 'SurveyController@saveSurvey');
         Route::get('/moduleSurveys', 'AdminController@moduleSurveys');
     });

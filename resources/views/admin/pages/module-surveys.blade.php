@@ -10,7 +10,7 @@
                 <div class="accordion-item">
                     <h2 class="accordion-header" id="flush-heading{{$module->id}}">
                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse{{$module->id}}" aria-expanded="false" aria-controls="flush-collapse{{$module->id}}">
-                            {{$module->module_name}} / {{$module->teacher_surname}} / {{$module->group_name}}
+                            {{$module->module_name}} / {{$module->teacher_surname}} / {{$module->group_name}} / <span style="color:red;">&nbsp;Pildymo pabaiga: {{$module->date}}</span>
                         </button>
                     </h2>
                     <div id="flush-collapse{{$module->id}}" class="accordion-collapse collapse" aria-labelledby="flush-heading{{$module->id}}" data-bs-parent="#accordionFlushExample">

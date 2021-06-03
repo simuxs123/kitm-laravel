@@ -5,14 +5,15 @@ namespace App\Http\Controllers;
 use App\Module;
 use App\Survey;
 use Illuminate\Http\Request;
+use Illuminate\Support\Carbon;
 
 class SurveyController extends Controller
 {
     public function survey(Module $module)
     {
-
         return view('admin.pages.survey', compact('module'));
     }
+
     public function saveSurvey(Request $request, Module $module)
     {
         $teacher_id = Module::where(['id' => $module->id])->first();
@@ -46,9 +47,7 @@ class SurveyController extends Controller
             'preferences' => request('preferences'),
             'recommendation' => request('recommendation')
         ]);
+
         return redirect('/');
-
-
     }
-
 }
