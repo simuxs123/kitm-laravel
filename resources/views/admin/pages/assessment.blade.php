@@ -93,7 +93,7 @@
                             </div>
                         </div>
                         <div class="form-group">
-                            <label class=" card-title">1.4. Kokios buvo kilusios problemos ir kokias sprendimais jas
+                            <label class=" card-title">1.4. Kokios buvo kilusios problemos ir kokiais sprendimais jas
                                 pavyko išspręsti? </label>
                             <div class="  ">
                                 <input class="form-control" type="text" name="problems_and_solutions" value="{{($update->{'1_4'})}}">
