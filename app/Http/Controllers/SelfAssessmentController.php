@@ -34,10 +34,12 @@ class SelfAssessmentController extends Controller
             $pateikta = true;
         }
 
+        $qualiExists = Qualification::where(['user_id' => $id])->exists();
+
         $surveys = SelfAssessment::where(['pateikta' => 1])->get();
 
 
-        return view('admin.pages.bandymasIvertinimas', compact(['data', 'activated', 'pateikta', 'surveys']), $viewData);
+        return view('admin.pages.bandymasIvertinimas', compact(['data', 'activated', 'pateikta', 'surveys', 'qualiExists']), $viewData);
     }
 
     public function activateForm(Request $request)

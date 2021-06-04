@@ -1,6 +1,11 @@
 @extends('admin.main')
 <div id="main">
 @roles('admin,mokytojas')
+@if(Session::has('danger'))
+    <div class="alert alert-danger">
+        {{Session::get('danger')}}
+    </div>
+@endif
     <section id="multiple-column-form">
         <div class="row match-height">
             <div class="col-12">
@@ -126,6 +131,7 @@
                                                 <td>{{$item->hours}}</td>
                                                 <td>{{$item->certificate}}</td>
                                                 <td>{{$item->location}}</td>
+                                                <td><a href="/removeQuali/{{$item->id}}"><button type="button" class="btn btn-danger">Šalinti</button></a></td>
                                             </tr>
                                     @endforeach
                                 </tr>

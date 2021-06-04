@@ -7,17 +7,19 @@
         </div>
 
         @if(!$pateikta)
+        @if($qualiExists)
         <a href="/assessment">
-            <h2>Mokytojo apklausa</h2>
+        <button type="button" class="btn btn-success">Pildyti mokytojo apklausą</button>
         </a>
         @else
-        <a href="/assessment">
-            <h2>Peržiūrėti anketą</h2>
-        </a>
-        <h4>Jūsų anketa pateikta, redaguoti jos nebegalite.</h4>
-
+            <h2 style="color: red;">Jūs neturite išsaugotų <a href="/qualification">mokytojo kvalifikacijų</a></h2>
         @endif
-
+        @else
+        <h4 style="color: green;">Jūsų anketa pateikta, redaguoti jos nebegalite.</h4>
+        <a href="/assessment">
+        <button type="button" class="btn btn-outline-success">Peržiūrėti anketą</button>
+        </a>
+        @endif
         @else
         <p>Anketa neaktyvuota</p>
         @endif

@@ -62,7 +62,7 @@
                     </div>
                 </div>
             </div>
-            <h6 class="text-danger">Kiekvienas kriterijus vertinamas 0-1-2-3 balais</h6>
+            <h6 class="text-danger">Kiekviena sritis vertinamas 1-10 balų</h6>
             <div class="card">
                 <div class="card-header">
                     <h3>I sritis. Veiklos planavimas, tiesioginio darbo vykdymas</h3>
@@ -328,7 +328,7 @@
             </div>
             <div class="card">
                 <div class="card-header">
-                    <h3>II. Bendravimas, bendradarbiavimas ir veikla institucijos bendruomenėje. </h3>
+                    <h3>II sritis. Bendravimas, bendradarbiavimas ir veikla institucijos bendruomenėje. </h3>
                 </div>
                 <div class="card-content">
                     <div class="card-body form-group">
@@ -398,13 +398,13 @@
             </div>
             <div class="card">
                 <div class="card-header">
-                    <h3>III veiklos sritis. Asmeninis profesinis tobulėjimas </h3>
+                    <h3>III sritis. Asmeninis profesinis tobulėjimas.</h3>
                 </div>
                 <div class="card-content">
                     <div class="card-body">
                         <p class="card-title text-muted">Kvalifikacijos kėlimas mažiau kaip 5 dienas (30 val.) per
                             mokslo metus </p>
-                        <input class="form-control" type="number" name="training" value="{{$hourscore}}" readonly="readonly">
+                        <input class="form-control" type="number" name="training" value="{{ $pateikta == true ? $update->{'3_hours'} : $hourscore }}"  readonly="readonly">
                         <p class="text-muted text-decoration-underline">Už kiekvieną dieną (6 valandas) 1 balas </p>
                     </div>
                     <div class="card-body">
@@ -496,7 +496,7 @@
                     </div>
                 </div>
                 <div class="card-body">
-                    <p>III sritis</p>
+                    <p>III sritis.</p>
                     <div class="form-check form-check-inline">
                         <input class="form-check-input" type="radio" name="III_score" id="inlineRadioExt2" value="1" {{ ($update->{'3_III'} =="1") ? 'checked' : '' }}>
                         <label class="form-check-label" for="inlineRadioExt2">1</label>
@@ -539,7 +539,7 @@
                     </div>
                 </div>
                 <h4>VEIKLOS ĮSIVERTINIMAS BALŲ: </h4>
-                <p class="card-title text-muted">Surinktų balų suma: <input class="form-control" type="number" name="final_score" value="{{($update->{'3_sum'})}}">balai(-ų) </p>
+                <p class="card-title text-muted">Surinktų balų suma: <input class="form-control" type="number" name="final_score" value="{{($update->{'3_sum'})}}"></p>
             </div>
             <div class="card">
                 <div class="card-header">
@@ -998,46 +998,13 @@
                     </div>
                 </div>
             </div>
-            <!-- <div class="card">
-                <div class="card-header">
-                    <h3>V. KURUOJANČIO VADOVO IŠVADOS, SIŪLYMAI IR NUMATOMA PAGALBA (pildo kuruojantis vadovas) </h3>
-                </div>
-                <div class="card-content">
-                    <div class="card-body">
-                        <div class="form-group">
-                            <label class="card-title">5.1.Kuruojančio vadovo stebėtų ir aptartų pamokų (veiklų) skaičius
-                                (kokiose grupėse ir kokiam tikslui) </label>
-                            <input class="form-control" type="text"
-                                   name="first_number_of_lessons_discussed_by_the_supervisor">
-                            <input class="form-control" type="text"
-                                   name="second_number_of_lessons_discussed_by_the_supervisor">
-                            <input class="form-control" type="text"
-                                   name="third_number_of_lessons_discussed_by_the_supervisor">
-                            <p>5.2. Kuruojančio vadovo komentaras dėl veiklos ir siūlymai dėl veiklos, kvalifikacijos
-                                tobulinimo </p>
-                            <input class="form-control" type="text"
-                                   name="managers_comment_on_activities_and_suggestions">
-                            <p>5.3. Kokią realią pagalbą kuruojantis vadovas numato teikti kitais mokslo metais (šis
-                                klausimas aptariamas su
-                                mokytoju ar pagalbos mokiniui specialistu)</p>
-                            <input class="form-control" type="text" name="assistance_in_the_next_school_year">
-                            <p>5.4. Kokios pagalbos Jums reikėtų, kad galėtumėte tobulinti ugdomąją veiklą, įgyvendinti
-                                sumanymus, ugdymo
-                                tikslus kitais mokslo metais? </p>
-                            <input class="form-control" type="text" name="first_help_which_I_need">
-                            <input class="form-control" type="text" name="second_help_which_I_need">
-                            <input class="form-control" type="text" name="third__help_which_I_need">
-                        </div>
-                    </div>
-                </div>
-            </div> -->
             <div class="row">
                 <div class="col ">
-                    <button type="submit" name="action" value="issaugoti" class="btn btn-success me-1 mb-1">Išsaugoti</button>
+                    <button type="submit" name="action" value="issaugoti" class="btn btn-success me-1 mb-1">Išsaugoti pakeitimus</button>
                 </div>
 
                 <div class="col ">
-                    <button type="submit" name="action" value="pateikti" class="btn btn-primary me-1 mb-1" onclick="return confirm('Pateikdami anketą nebegalėsite jos redaguoti. Ar tikrai norite užbaigti pildymą?')">Išsiūsti</button>
+                    <button type="submit" name="action" value="pateikti" class="btn btn-primary me-1 mb-1" onclick="return confirm('Pateikus anketą nebegalėsite jos redaguoti. Ar tikrai norite užbaigti pildymą?')">Pateikti anketą</button>
                 </div>
             </div>
         </fieldset>

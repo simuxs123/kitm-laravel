@@ -26,20 +26,37 @@ class QualificationController extends Controller
         return view('admin.pages.qualification', compact('name', 'surname', 'list', 'results'));
     }
 
-    public function saveQuali(Request $request) {
+    public function saveQuali(Request $request)
+    {
         $id = KitmUsers::where(['email' => session('userEmail')])->first()->id;
-        Qualification::create([
-            'user_id' => $id,
-            'name' => request('name'),
-            'surname' => request('surname'),
-            'duty' => request('duty'),
-            'category' => request('category'),
-            'seminar' => request('seminar'),
-            'date' => request('date'),
-            'hours' => request('hours'),
-            'certificate' => request('certificate'),
-            'location' => request('location')
-        ]);
+
+        if (!Qualification::where(['user_id' => $id])->where('certificate', '=', request('certificate'))->exists()) {
+            if (!Qualification::where(['user_id' => $id])->where('seminar', '=', request('seminar'))->exists()) {
+                Qualification::create([
+                    'user_id' => $id,
+                    'name' => request('name'),
+                    'surname' => request('surname'),
+                    'duty' => request('duty'),
+                    'category' => request('category'),
+                    'seminar' => request('seminar'),
+                    'date' => request('date'),
+                    'hours' => request('hours'),
+                    'certificate' => request('certificate'),
+                    'location' => request('location')
+                ]);
+
+                return back();
+            } else {
+                return back()->with('danger', 'Toks seminaras jau įrašytas');
+            }
+        } else {
+            return back()->with('danger', 'Toks pažymėjimo numeris jau egzistuoja');
+        }
+    }
+
+    public function removeQuali(Qualification $item)
+    {
+        Qualification::where(['id' => $item->id])->delete();
 
         return back();
     }
