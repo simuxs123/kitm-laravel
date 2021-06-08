@@ -64,9 +64,6 @@ class SelfAssessment extends Model
     '1_17',
     '1_18',
     '2_1',
-    '2_1_1',
-    '2_1_2',
-    '2_1_3',
     '2_2',
     '2_3',
     '2_4_1',
@@ -121,6 +118,8 @@ class SelfAssessment extends Model
     '4_3_11',
 ];
 
-
+protected $casts = [
+    '2_1' => 'array',
+];
 
 }

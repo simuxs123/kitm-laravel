@@ -334,23 +334,31 @@
                     <div class="card-body form-group">
                         <label class="card-title">2.1. Išvardinkite projektus, kuriuose dalyvavote ir savo vaidmenį
                             juose </label>
-                        <select class="form-control" name="projects">
-                            @foreach ($qualifications as $item)
-                            <option name="projects" value="{{$item->seminar}}" {{ ($update->{'2_1'} == "$item->seminar") ? 'selected' : '' }}>{{$item->seminar}}</option>
+                        <div id="projects">
+                            @if($projects[0] == null)
+                            <input class="form-control" type="text" name="projects[0][prname]" placeholder="projektas">
+                            <input class="form-control" type="text" name="projects[0][prdev]" placeholder="projekto rengėjas">
+                            <input class="form-control" type="text" name="projects[0][prcoo]" placeholder="projekto koordinatorius">
+                            <input class="form-control" type="text" name="projects[0][prexe]" placeholder="projekto vykdytojas">
+                            <p style="visibility: hidden;" class="key">0</p>
+                            @else
+                            @foreach($projects[0] as $key=>$project)
+                            <input class="form-control" type="text" name="projects[{{$key}}][prname]" placeholder="projektas" value="{{$project['prname']}}">
+                            <input class="form-control" type="text" name="projects[{{$key}}][prdev]" placeholder="projekto rengėjas" value="{{$project['prdev']}}">
+                            <input class="form-control" type="text" name="projects[{{$key}}][prcoo]" placeholder="projekto koordinatorius" value="{{$project['prcoo']}}">
+                            <input class="form-control" type="text" name="projects[{{$key}}][prexe]" placeholder="projekto vykdytojas" value="{{$project['prexe']}}">
+                            <p style="visibility: hidden;" class="key">{{++$key}}</p>
                             @endforeach
-                        </select>
-                        <input class="form-control" type="text" name="project_name" placeholder="projekto rengėjas (nurodykite projekto pavadinimą) " value="{{($update->{'2_1_1'})}}">
-                        <input class="form-control" type="text" name="project_coordinator" placeholder="projekto koordinatorius (nurodykite projekto pavadinimą) " value="{{($update->{'2_1_2'})}}">
-                        <input class="form-control" type="text" name="project_executor" placeholder="projekto vykdytojas (nurodykite projekto pavadinimą)  " value="{{($update->{'2_1_3'})}}">
-                        <label class="card-title">2.2. Pravestų profesinio orientavimo susitikimų skaičius (KITM
-                            renginiai, susitikimai BU
-                            mokyklose)... </label>
+                            @endif
+                        </div>
+                        <p class="btn btn-outline-success" id="prideti">Pridėti kitą projektą</p><br>
+                        <label class="card-title">2.2. Pravestų profesinio orientavimo susitikimų skaičius (KITM renginiai, susitikimai BU mokyklose)</label>
                         <input class="form-control" type="number" name="number_of_career_guidance_meetings" value="{{($update->{'2_2'})}}">
                         <label class="card-title">2.3. Pravestų nuotolinių pamokų 7-12 klasių mokiniams
                             skaičius </label>
                         <input class="form-control" type="number" name="number_of_distance_learning_lessons_for_students_in_grades_7_12" value="{{($update->{'2_3'})}}">
                         <p class="text-muted">
-                            2.4 Metodinė veikla mokykloje, pagalba kolegoms. Išvardinkite veiklas</label>
+                            <label class="card-title">2.4 Metodinė veikla mokykloje, pagalba kolegoms. Išvardinkite veiklas</label>
                             <input class="form-control" type="text" name="first_activity" value="{{($update->{'2_4_1'})}}">
                             <input class="form-control" type="text" name="second_activity" value="{{($update->{'2_4_2'})}}">
                             <input class="form-control" type="text" name="third_activity" value="{{($update->{'2_4_3'})}}">
@@ -404,7 +412,7 @@
                     <div class="card-body">
                         <p class="card-title text-muted">Kvalifikacijos kėlimas mažiau kaip 5 dienas (30 val.) per
                             mokslo metus </p>
-                        <input class="form-control" type="number" name="training" value="{{ $pateikta == true ? $update->{'3_hours'} : $hourscore }}"  readonly="readonly">
+                        <input class="form-control" type="number" name="training" value="{{ $pateikta == true ? $update->{'3_hours'} : $hourscore }}" readonly="readonly">
                         <p class="text-muted text-decoration-underline">Už kiekvieną dieną (6 valandas) 1 balas </p>
                     </div>
                     <div class="card-body">
@@ -1010,3 +1018,54 @@
         </fieldset>
     </form>
 </div>
+<script>
+    let key = document.getElementsByClassName('key');
+    let button = document.getElementById("prideti");
+    let cont = document.getElementById("projects");
+    let counter = Array.from(key).slice(-1).pop()['textContent'];
+    let count;
+
+    if (counter == 0) {
+        count = 0;
+    } else if (counter > 0) {
+        count = counter - 1;
+    }
+    console.log(count)
+
+    button.addEventListener("click", function() {
+        var confirm = window.confirm('Pridėti naują projektą?');
+        if (confirm == true) {
+            count++
+            let prname = document.createElement("input");
+            prname.setAttribute('type', 'text');
+            prname.setAttribute('class', 'form-control');
+            prname.setAttribute('name', 'projects[' + count + '][prname]');
+            prname.setAttribute('placeholder', 'projektas');
+
+            let prdev = document.createElement("input");
+            prdev.setAttribute('type', 'text');
+            prdev.setAttribute('class', 'form-control');
+            prdev.setAttribute('name', 'projects[' + count + '][prdev]');
+            prdev.setAttribute('placeholder', 'projekto rengėjas');
+
+            let prcoo = document.createElement("input");
+            prcoo.setAttribute('type', 'text');
+            prcoo.setAttribute('class', 'form-control');
+            prcoo.setAttribute('name', 'projects[' + count + '][prcoo]');
+            prcoo.setAttribute('placeholder', 'projekto koordinatorius');
+
+            let prexe = document.createElement("input");
+            prexe.setAttribute('type', 'text');
+            prexe.setAttribute('class', 'form-control');
+            prexe.setAttribute('name', 'projects[' + count + '][prexe]');
+            prexe.setAttribute('placeholder', 'projekto vykdytojas');
+            prexe.setAttribute('style', 'margin-bottom: 2em;');
+
+            cont.appendChild(prname);
+            cont.appendChild(prdev);
+            cont.appendChild(prcoo);
+            cont.appendChild(prexe);
+        }
+
+    })
+</script>

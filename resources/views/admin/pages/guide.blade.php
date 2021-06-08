@@ -29,7 +29,7 @@
                 <!--<input class="form-control mt-2" type="text" name="first_help_which_I_need">
                 <input class="form-control mt-2" type="text" name="second_help_which_I_need">
                 <input class="form-control mt-2" type="text" name="third_help_which_I_need">-->
-                <label>5.5. Vadovo vertinimas(10 balu sistemoje)</label>
+                <label>5.5. Vadovo vertinimas(10 balų sistemoje)</label>
                 <input class="form-control" type="number" name="guide_evaluation" min="0" max="10">
             </div>
         </div>

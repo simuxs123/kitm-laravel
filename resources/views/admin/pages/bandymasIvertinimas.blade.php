@@ -19,6 +19,7 @@
         <a href="/assessment">
         <button type="button" class="btn btn-outline-success">Peržiūrėti anketą</button>
         </a>
+        <a class="btn btn-outline-warning" href="/export">Atsiųsti anketos duomenis</a>
         @endif
         @else
         <p>Anketa neaktyvuota</p>

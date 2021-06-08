@@ -77,10 +77,7 @@ class CreateSelfAssessmentsTable extends Migration
 
             //              2
 
-            $table->string('2_1')->nullable();
-            $table->string('2_1_1')->nullable();
-            $table->string('2_1_2')->nullable();
-            $table->string('2_1_3')->nullable();
+            $table->json('2_1')->nullable();
             $table->integer('2_2')->nullable();
             $table->integer('2_3')->nullable();
             $table->string('2_4_1')->nullable();

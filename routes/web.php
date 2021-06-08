@@ -50,6 +50,7 @@ Route::group(['middleware' => ['check']], function () {
         Route::get('/guide/{survey}','GuideController@guide');
         Route::post('/storeGuide/{survey}','GuideController@storeGuide');
         Route::get('/removeQuali/{item}', 'QualificationController@removeQuali');
+        Route::get('/export', 'ExcelExportController@export')->name('export');
     });
 
     Route::group(['middleware' => ['roles:moksleivis,admin']], function () {

@@ -64,7 +64,7 @@ class SelfAssessmentController extends Controller
                 $emailTo = KitmUsers::where('roles_id', 3)->orWhere('roles_id', 1)->pluck('email')->all();
                 Mail::to($emailTo)->send(new FormActivation($data));
             } else {
-                return back()->with('danger', 'Forma galite aktyvuoti tik vieną kartą. Jeigu norite atnaujinti, ištrinkite ir aktyvuokite dar kartą');
+                return back()->with('danger', 'Formą galite aktyvuoti tik vieną kartą. Jeigu norite atnaujinti, ištrinkite ir aktyvuokite dar kartą');
             }
         } else {
             return back()->with('danger', 'Pasirinkote praeities datą');
@@ -139,9 +139,6 @@ class SelfAssessmentController extends Controller
                 '1_17' => request('employer_reviews'),
                 '1_18' => request('graduate_reviews'),
                 '2_1' => request('projects'),
-                '2_1_1' => request('project_name'),
-                '2_1_2' => request('project_coordinator'),
-                '2_1_3' => request('project_executor'),
                 '2_2' => request('number_of_career_guidance_meetings'),
                 '2_3' => request('number_of_distance_learning_lessons_for_students_in_grades_7_12'),
                 '2_4_1' => request('first_activity'),
@@ -257,9 +254,6 @@ class SelfAssessmentController extends Controller
                 '1_17' => request('employer_reviews'),
                 '1_18' => request('graduate_reviews'),
                 '2_1' => request('projects'),
-                '2_1_1' => request('project_name'),
-                '2_1_2' => request('project_coordinator'),
-                '2_1_3' => request('project_executor'),
                 '2_2' => request('number_of_career_guidance_meetings'),
                 '2_3' => request('number_of_distance_learning_lessons_for_students_in_grades_7_12'),
                 '2_4_1' => request('first_activity'),
@@ -336,14 +330,15 @@ class SelfAssessmentController extends Controller
         }
         $update = SelfAssessment::where(['user_id' => $id])->first();
         $check = SelfAssessment::where(['user_id' => $id])->first();
+        $projects = SelfAssessment::where(['user_id' => $id])->pluck('2_1');
+        
         if ($check == null or $check['pateikta'] < 1) {
             $pateikta = false;
         } else {
             $pateikta = true;
         }
 
-
-        return view('admin.pages.assessment', compact('qualifications', 'name', 'surname', 'update', 'pateikta', 'hourscore'));
+        return view('admin.pages.assessment', compact('qualifications', 'name', 'surname', 'update', 'pateikta', 'hourscore', 'projects'));
     }
 
     //-------------------------------------------- ATASKAITA ------------------------------------------------------------

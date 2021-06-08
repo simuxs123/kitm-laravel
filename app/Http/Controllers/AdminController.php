@@ -53,6 +53,10 @@ class AdminController extends Controller
 
     public function activateModule(Request $request)
     {
+        $validateData = $request->validate([
+            'date' => 'required',
+            'time' => 'required'
+        ]);
 
         if ($request->date . ' ' . $request->time > Carbon::now()) {
             if (Module::where(['id' => request('module')])->first()['active'] == 0) {

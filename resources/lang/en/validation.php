@@ -161,7 +161,9 @@ return [
         'safe_environment' => 'Saugi aplinka',
         'quality' => 'Modulio kokybė',
         'preferences' => 'Pageidavimai',
-        'recommendation' => 'Rekomendacija'
+        'recommendation' => 'Rekomendacija',
+        'date' => 'Data',
+        'time' => 'Laikas'
     ],
 
 ];
