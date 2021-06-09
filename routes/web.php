@@ -41,14 +41,14 @@ Route::group(['middleware' => ['check']], function () {
         Route::get('/reportView/{report}', 'SelfAssessmentController@reportView');
         Route::patch('/activateModule', 'AdminController@activateModule');
         Route::patch('/cancelActivation/{item}', 'AdminController@cancelActivation');
+        Route::get('/guide/{survey}','GuideController@guide');
+        Route::post('/storeGuide/{survey}','GuideController@storeGuide');
     });
 
     Route::group(['middleware' => ['roles:mokytojas,admin']], function () {
         Route::get('/assessment', 'SelfAssessmentController@assessment')->middleware('form.active');
         Route::post('/saveQuali', 'QualificationController@saveQuali');
         Route::patch('/storeAssessment', 'SelfAssessmentController@storeAssessment');
-        Route::get('/guide/{survey}','GuideController@guide');
-        Route::post('/storeGuide/{survey}','GuideController@storeGuide');
         Route::get('/removeQuali/{item}', 'QualificationController@removeQuali');
         Route::get('/export', 'ExcelExportController@export')->name('export');
     });

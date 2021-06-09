@@ -17,7 +17,7 @@ class CreateQualificationsTable extends Migration
             $table->id();
             $table->integer('user_id');
             $table->string('name');
-            $table->string('surname');
+            // $table->string('surname');
             $table->string('duty');
             $table->string('category');
             $table->string('seminar');

@@ -9,7 +9,7 @@ class Qualification extends Model
     protected $fillable=[
         'user_id',
         'name',
-        'surname',
+        // 'surname',
         'duty',
         'category',
         'seminar',

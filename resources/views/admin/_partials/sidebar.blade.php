@@ -27,7 +27,7 @@
                     </li>
                     @endroles
 
-                    @roles('admin,mokytojas')
+                    @roles('admin,mokytojas,darbuotojas')
                     <li class="sidebar-item">
                         <a href="/self-assessment" class='sidebar-link'>
                             <i class="bi bi-collection-fill"></i>
@@ -54,12 +54,6 @@
                         <a href="/assessmentReport" class='sidebar-link'>
                             <i class="bi bi-grid-1x2-fill"></i>
                             <span>Isivertinimo ataskaita</span>
-                        </a>
-                    </li>
-                    <li class="sidebar-item  ">
-                        <a href="table.html" class='sidebar-link'>
-                            <i class="bi bi-stack"></i>
-                            <span>Sukurtos ataskaitos</span>
                         </a>
                     </li>
                     @endroles

@@ -1,11 +1,11 @@
 @extends('admin.main')
 <div id="main">
-@roles('admin,mokytojas')
 @if(Session::has('danger'))
     <div class="alert alert-danger">
         {{Session::get('danger')}}
     </div>
 @endif
+@roles('admin,mokytojas')
     <section id="multiple-column-form">
         <div class="row match-height">
             <div class="col-12">
@@ -20,16 +20,9 @@
                                 <div class="row">
                                     <div class="col-md-6 col-12">
                                         <div class="form-group">
-                                            <label for="name">Vardas</label>
+                                            <label for="name">Vardas, pavardė</label>
                                             <input type="text" id="name" class="form-control"
-                                                   value="{{$name}}" name="name" readonly="readonly">
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6 col-12">
-                                        <div class="form-group">
-                                            <label for="surname">Pavardė</label>
-                                            <input type="text" id="surname" class="form-control"
-                                                   value="{{$surname}}" name="surname" readonly="readonly">
+                                                   value="{{$name.' '.$surname}}" name="name" readonly="readonly">
                                         </div>
                                     </div>
                                     <div class="col-md-6 col-12">
@@ -107,8 +100,7 @@
                             <table class="table table-striped mb-0">
                                 <thead>
                                 <tr>
-                                    <th>Vardas</th>
-                                    <th>Pavardė</th>
+                                    <th>Vardas, pavardė</th>
                                     <th>Pareigos</th>
                                     <th>Kvalifikacinė kategorija</th>
                                     <th>Seminaro pavadinimas</th>
@@ -123,7 +115,6 @@
                                     @foreach($list as $item)
                                             <tr>
                                                 <td>{{$item->name}}</td>
-                                                <td>{{$item->surname}}</td>
                                                 <td>{{$item->duty}}</td>
                                                 <td>{{$item->category}}</td>
                                                 <td>{{$item->seminar}}</td>
@@ -159,16 +150,14 @@
                             <table class="table table-striped mb-0">
                                 <thead>
                                 <tr>
-                                    <th>Vardas</th>
-                                    <th>Pavardė</th>
+                                    <th>Vardas, pavardė</th>
                                     <th>Visas valandų kiekis</th>
                                 </tr>
                                 </thead>
                                 <tbody>
                                 @foreach($results as $result)
                                     <tr>
-                                        <td>{{$result[0] ?? "noname"}}</td>
-                                        <td>{{$result[1] ?? "noname"}}</td>
+                                        <td>{{$result[0].' '.$result[1]}}</td>
                                         <td>{{$result[2] ?? "0"}}</td>
                                     </tr>
                                 @endforeach

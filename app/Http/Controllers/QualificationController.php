@@ -35,7 +35,7 @@ class QualificationController extends Controller
                 Qualification::create([
                     'user_id' => $id,
                     'name' => request('name'),
-                    'surname' => request('surname'),
+                    // 'surname' => request('surname'),
                     'duty' => request('duty'),
                     'category' => request('category'),
                     'seminar' => request('seminar'),
