@@ -1,5 +1,14 @@
 @extends('admin.main')
 <div id="main">
+@if (count($errors) > 0)
+    <div>
+        <ul>
+            @foreach ($errors->all() as $error)
+            <li>{{$error}}</li>
+            @endforeach
+        </ul>
+    </div>
+    @endif
 <div class="card">
 <form method="post" action="/storeGuide/{{$survey}}">
     {{csrf_field()}}
