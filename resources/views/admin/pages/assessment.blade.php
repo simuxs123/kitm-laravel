@@ -29,7 +29,7 @@
                                     <div class="input-group-prepend">
                                         <div class="input-group-text">20-</div>
                                     </div>
-                                    <input class="form-control" type="text" name="dateOne" value="{{$update->dateOne}}">
+                                    <input class="form-control" type="text" name="dateOne" value="{{$update->dateOne}}" placeholder="Pradžios metai">
                                 </div>
                             </div>
                             <div class="row mt-2">
@@ -42,8 +42,8 @@
                                 <label>Pareigos</label>
                                 <div class="input-group">
                                     <select class="form-select" name="role">
-                                        <option value="Mokytojas" name="role" {{ ($update->role == "Mokytojas") ? 'selected' : '' }}>Mokytojas</option>
-                                        <option value="Profesijos mokytojas" name="role" {{ ($update->role == "Profesijos mokytojas") ? 'selected' : '' }}>Profesijos mokytojas</option>
+                                        <option value="Mokytojas" name="role" {{ ($update->role =="Mokytojas") ? 'selected' : '' }}>Mokytojas</option>
+                                        <option value="Profesijos mokytojas" name="role" {{ ($update->role =="Profesijos mokytojas") ? 'selected' : '' }}>Profesijos mokytojas</option>
                                     </select>
                                 </div>
                             </div>
@@ -55,18 +55,18 @@
                                     <div class="input-group-prepend">
                                         <div class="input-group-text">20-</div>
                                     </div>
-                                    <input class="form-control" type="text" name="dateTwo" value="{{$update->dateTwo}}">
+                                    <input class="form-control" type="text" name="dateTwo" value="{{$update->dateTwo}}" placeholder="Pabaigos metai">
                                 </div>
                             </div>
                             <div class="row mt-2">
                                 <label>Kvalifikacinė kategorija</label>
                                 <div class="input-group">
                                     <select class="form-select" name="category">
-                                        <option value="Mokytojas(nesuteikta)" name="category" {{ ($update->category == "Mokytojas(nesuteikta)") ? 'selected' : '' }}>Mokytojas(nesuteikta)</option>
-                                        <option value="Mokytojas(suteikta)" name="category" {{ ($update->category == "Mokytojas(suteikta)") ? 'selected' : '' }}>Mokytojas(suteikta)</option>
-                                        <option value="Vyr.Mokytojas" name="category" {{ ($update->category == "Vyr.Mokytojas") ? 'selected' : '' }}>Vyr.Mokytojas</option>
-                                        <option value="Metodininkas" name="category" {{ ($update->category == "Metodininkas") ? 'selected' : '' }}>Metodininkas</option>
-                                        <option value="Ekspertas" name="category" {{ ($update->category == "Ekspertas") ? 'selected' : '' }}>Ekspertas</option>
+                                        <option value="Mokytojas(nesuteikta)" name="category" {{ ($update->category =="Mokytojas(nesuteikta)") ? 'selected' : '' }}>Mokytojas(nesuteikta)</option>
+                                        <option value="Mokytojas(suteikta)" name="category" {{ ($update->category =="Mokytojas(suteikta)") ? 'selected' : '' }}>Mokytojas(suteikta)</option>
+                                        <option value="Vyr.Mokytojas" name="category" {{ ($update->category =="Vyr.Mokytojas") ? 'selected' : '' }}>Vyr.Mokytojas</option>
+                                        <option value="Metodininkas" name="category" {{ ($update->category =="Metodininkas") ? 'selected' : '' }}>Metodininkas</option>
+                                        <option value="Ekspertas" name="category" {{ ($update->category =="Ekspertas") ? 'selected' : '' }}>Ekspertas</option>
                                     </select>
                                     <input class=" pl-2 form-control" type="text" name="work_experience" placeholder="Darbo stažas" value="{{$update->work_experience}}">
                                 </div>
@@ -88,28 +88,28 @@
                             <div class="form-group">
                                 <label class=" card-title">1.1. Kokie pagrindiniai iššūkiai organizuojant mokymo
                                     procesą(išvardinkite)?</label>
-                                <div class="  ">
+                                <div class="">
                                     <textarea class="form-control" type="text" name="firstChallenge">{{($update->{'1_1_first'})}}</textarea>
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label class=" card-title">1.2. Aprašykite gerąją mokymo proceso organizavimo patirtį,
                                     pasiekimus.</label>
-                                <div class="  ">
+                                <div class="">
                                     <input class="form-control" type="text" name="training_organization_experience_achievements" value="{{($update->{'1_2'})}}">
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label class=" card-title">1.3. Kokie priimti sprendimai, turėjo įtakos mokymo kokybės
                                     gerinimui?</label>
-                                <div class=" col-md-8 ">
+                                <div class=" col-md-8">
                                     <input class="form-control" type="text" name="quality_of_teaching" value="{{($update->{'1_3'})}}">
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label class=" card-title">1.4. Kokios buvo kilusios problemos ir kokiais sprendimais jas
                                     pavyko išspręsti?</label>
-                                <div class="  ">
+                                <div class="">
                                     <input class="form-control" type="text" name="problems_and_solutions" value="{{($update->{'1_4'})}}">
                                 </div>
                             </div>
@@ -119,7 +119,7 @@
                                     atsakomybės,
                                     įstaigos veiklos
                                     tobulinimo, planavimo, sprendimų priėmimo ir jų įgyvendinimo pokyčius?</label>
-                                <div class="  ">
+                                <div class="">
                                     <textarea class="form-control" type="text" name="participated_acts">{{($update->{'1_5'})}}</textarea>
                                 </div>
                             </div>
@@ -132,8 +132,8 @@
                                 <label class=" card-title">1.6 Parengtų arba atnaujintų veiklos planų,
                                     individualių/dalyko, integruoto ugdymo programų/planų
                                     skaičius (įrašykite):</label>
-                                <div class="  ">
-                                    <input class="form-control" type="number" name="number_of_plans" value="{{($update->{'1_6'})}}">
+                                <div class="">
+                                    <input class="form-control" type="number" name="number_of_plans" value="{{($update->{'1_6'})}}" min="0">
                                     <p class="text-muted">Išvardinkite svarbiausius planus, kuriuos esate parengęs:</p>
                                     <textarea class="form-control" type="text" name="firstPlan" placeholder="Planai kuriuos esate parengę">{{($update->{'1_6_first'})}}</textarea>
                                     <p class="text-muted">Nurodykite, kur patalpinti dalyko/modulio teminiai planai:</p>
@@ -146,7 +146,7 @@
                                     mokymosi
                                     poreikius ir
                                     pasiekimus. Išvardinkite:</label>
-                                <div class=" c ">
+                                <div class=" c">
                                     <textarea class="form-control" type="text" name="tools_and_methods">{{($update->{'1_7'})}}</textarea>
                                     <p class="text-muted">Išvardinkite svarbiausius:</p>
                                     <textarea class="form-control" type="text" name="first_tool_or_method">{{($update->{'1_7_first'})}}</textarea>
@@ -158,7 +158,7 @@
                                     tinkamai
                                     ir ar yra
                                     savalaikė? Pateikite pavyzdžių.</label>
-                                <div class="  ">
+                                <div class="">
                                     <textarea class="form-control" type="text" name="student_assistance">{{($update->{'1_8'})}}</textarea>
                                 </div>
                             </div>
@@ -166,7 +166,7 @@
                                 <label class=" card-title">1.9. Kokius mokymosi būdus bei metodus taikote pamokose,
                                     skatinančias mokinius savarankiškai
                                     mokytis?</label>
-                                <div class="  ">
+                                <div class="">
                                     <textarea class="form-control" type="text" name="first_method_for_self_directed_learning">{{($update->{'1_9_first'})}}</textarea>
                                     <p class="text-muted">Kas pasisekė</p>
                                     <input class="form-control" type="text" name="luck" value="{{($update->{'1_9_success'})}}">
@@ -184,7 +184,7 @@
                                         <div class="form-check">
                                             <div class="checkbox">
                                                 <label class="text-left">Moodle aplinkoje</label>
-                                                <input class="form-check-input" type="checkbox" value="Moodle" name="material[]" id="Moodle" {{$update->{'1_10'} == null ? '' : (str_contains($update->{'1_10'}, "Moodle") ? 'checked' : '')}}>
+                                                <input class="form-check-input" type="checkbox" value="Moodle" name="material[]" id="Moodle" {{$update->{'1_10'} == null ? '' : (str_contains($update->{'1_10'},"Moodle") ? 'checked' : '')}}>
                                             </div>
                                         </div>
                                     </li>
@@ -192,7 +192,7 @@
                                         <div class="form-check">
                                             <div class="checkbox">
                                                 <label class="text-left">MS Teams aplinkoje</label>
-                                                <input class="form-check-input" type="checkbox" value="MS Teams" name="material[]" id="Teams" {{$update->{'1_10'} == null ? '' : (str_contains($update->{'1_10'}, "MS Teams") ? 'checked' : '')}}>
+                                                <input class="form-check-input" type="checkbox" value="MS Teams" name="material[]" id="Teams" {{$update->{'1_10'} == null ? '' : (str_contains($update->{'1_10'},"MS Teams") ? 'checked' : '')}}>
                                             </div>
                                         </div>
                                     </li>
@@ -200,7 +200,7 @@
                                         <div class="form-check">
                                             <div class="checkbox">
                                                 <label class="text-left">Google diske</label>
-                                                <input class="form-check-input" type="checkbox" value="Google diske" name="material[]" id="Google" {{$update->{'1_10'} == null ? '' : (str_contains($update->{'1_10'}, "Google diske") ? 'checked' : '')}}>
+                                                <input class="form-check-input" type="checkbox" value="Google diske" name="material[]" id="Google" {{$update->{'1_10'} == null ? '' : (str_contains($update->{'1_10'},"Google diske") ? 'checked' : '')}}>
                                             </div>
                                         </div>
                                     </li>
@@ -208,7 +208,7 @@
                                         <div class="form-check">
                                             <div class="checkbox">
                                                 <label class="text-left">Eduka aplinkoje</label>
-                                                <input class="form-check-input" type="checkbox" value="Eduka" name="material[]" id="Eduka" {{$update->{'1_10'} == null ? '' : (str_contains($update->{'1_10'}, "Eduka") ? 'checked' : '')}}>
+                                                <input class="form-check-input" type="checkbox" value="Eduka" name="material[]" id="Eduka" {{$update->{'1_10'} == null ? '' : (str_contains($update->{'1_10'},"Eduka") ? 'checked' : '')}}>
                                             </div>
                                         </div>
                                     </li>
@@ -216,7 +216,7 @@
                                         <div class="form-check">
                                             <div class="checkbox">
                                                 <label class="text-left">Gitlab kodo saugykla</label>
-                                                <input class="form-check-input" type="checkbox" value="Gitlab" name="material[]" id="Gitlab" {{$update->{'1_10'} == null ? '' : (str_contains($update->{'1_10'}, "Gitlab") ? 'checked' : '')}}>
+                                                <input class="form-check-input" type="checkbox" value="Gitlab" name="material[]" id="Gitlab" {{$update->{'1_10'} == null ? '' : (str_contains($update->{'1_10'},"Gitlab") ? 'checked' : '')}}>
                                             </div>
                                         </div>
                                     </li>
@@ -224,7 +224,7 @@
                                         <div class="form-check">
                                             <div class="checkbox">
                                                 <label class="text-left">Ftp paslauga</label>
-                                                <input class="form-check-input" type="checkbox" value="Ftp" name="material[]" id="Ftp" {{$update->{'1_10'} == null ? '' : (str_contains($update->{'1_10'}, "Ftp") ? 'checked' : '')}}>
+                                                <input class="form-check-input" type="checkbox" value="Ftp" name="material[]" id="Ftp" {{$update->{'1_10'} == null ? '' : (str_contains($update->{'1_10'},"Ftp") ? 'checked' : '')}}>
                                             </div>
                                         </div>
                                     </li>
@@ -232,7 +232,7 @@
                                         <div class="form-check">
                                             <div class="checkbox">
                                                 <label class="text-left">Siunčiu į el.paštą</label>
-                                                <input class="form-check-input" type="checkbox" value="El.paštas" name="material[]" id="Teams" {{$update->{'1_10'} == null ? '' : (str_contains($update->{'1_10'}, "El.paštas") ? 'checked' : '')}}>
+                                                <input class="form-check-input" type="checkbox" value="El.paštas" name="material[]" id="Teams" {{$update->{'1_10'} == null ? '' : (str_contains($update->{'1_10'},"El.paštas") ? 'checked' : '')}}>
                                             </div>
                                         </div>
                                     </li>
@@ -240,7 +240,7 @@
                                         <div class="form-check">
                                             <div class="checkbox">
                                                 <label class="text-left">Dalinuosi facebook grupėje</label>
-                                                <input class="form-check-input" type="checkbox" value="Facebook grupė" name="material[]" id="Teams" {{$update->{'1_10'} == null ? '' : (str_contains($update->{'1_10'}, "Facebook grupė") ? 'checked' : '')}}>
+                                                <input class="form-check-input" type="checkbox" value="Facebook grupė" name="material[]" id="Teams" {{$update->{'1_10'} == null ? '' : (str_contains($update->{'1_10'},"Facebook grupė") ? 'checked' : '')}}>
                                             </div>
                                         </div>
                                     </li>
@@ -258,7 +258,7 @@
                                     gebėjimai, rezultatais
                                     ugdomosios veiklos
                                     darbais, veiklomis džiaugiatės? (Išvardinkite)</label>
-                                <div class="  ">
+                                <div class="">
                                     <textarea class="form-control" type="text" name="first_happiness_for_good_student">{{($update->{'1_11_first'})}}</textarea>
                                 </div>
                             </div>
@@ -267,7 +267,7 @@
                                     parodose (ne mokykloje)
                                     individualiai arba su
                                     ugdytiniais? (Išvardinkite)</label>
-                                <div class="  ">
+                                <div class="">
                                     <input class="form-control" type="text" name="competitions" value="{{($update->{'1_12'})}}">
                                 </div>
                             </div>
@@ -275,9 +275,9 @@
                                 <label class=" card-title"> 1.13. BU mokytojams. Kiek mokinių pasirinko Jūsų dalyko
                                     valstybinį egzaminą? (Įrašykite
                                     skaičių)</label>
-                                <div class="  ">
-                                    <input class="form-control mt-2" type="number" name="pass_an_exam" placeholder="Kiek egzaminą išlaikė" value="{{($update->{'1_13_islaike'})}}">
-                                    <input class="form-control mt-2" type="number" name="didnt_pass_an_exam" placeholder="Kiek egzamino neišlaikė" value="{{($update->{'1_13_neislaike'})}}">
+                                <div class="">
+                                    <input class="form-control mt-2" type="number" name="pass_an_exam" placeholder="Kiek egzaminą išlaikė" value="{{($update->{'1_13_islaike'})}}" min="0">
+                                    <input class="form-control mt-2" type="number" name="didnt_pass_an_exam" placeholder="Kiek egzamino neišlaikė" value="{{($update->{'1_13_neislaike'})}}" min="0">
                                 </div>
                             </div>
                             <div class="form-group">
@@ -285,50 +285,50 @@
                                     dalyko atlikti mokyklinį
                                     technologijų
                                     egzaminą?</label>
-                                <div class="  ">
-                                    <input class="form-control mt-2" type="number" name="number_of_students" value="{{($update->{'1_14_nr'})}}">
-                                    <input class="form-control mt-2" type="number" name="pass_an_exam_technology" placeholder="Kiek egzaminą išlaikė " value="{{($update->{'1_14_islaike'})}}">
-                                    <input class="form-control mt-2" type="number" name="didnt_pass_an_exam_technology" placeholder="Kiek egzamino neišlaikė " value="{{($update->{'1_14_neislaike'})}}">
+                                <div class="">
+                                    <input class="form-control mt-2" type="number" name="number_of_students" value="{{($update->{'1_14_nr'})}}" min="0">
+                                    <input class="form-control mt-2" type="number" name="pass_an_exam_technology" placeholder="Kiek egzaminą išlaikė" value="{{($update->{'1_14_islaike'})}}" min="0">
+                                    <input class="form-control mt-2" type="number" name="didnt_pass_an_exam_technology" placeholder="Kiek egzamino neišlaikė" value="{{($update->{'1_14_neislaike'})}}" min="0">
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label class=" card-title">1.15. Praktikos vadovams. Kokiam mokinių skaičiui vadovavote praktikos metu?</label>
-                                <div class="  ">
-                                    <input class="form-control" type="number" name="guided_practice" placeholder="įrašykite" value="{{($update->{'1_15_nr'})}}">
+                                <div class="">
+                                    <input class="form-control" type="number" name="guided_practice" placeholder="įrašykite" value="{{($update->{'1_15_nr'})}}" min="0">
 
                                     <label class="col-md-12">Žinios apie mokinių praktikos vietas (pasirinkite).</label>
-                                    <input class="form-control mt-2" type="number" name="practise_in_companies" placeholder="Mokinių, atlikusių praktiką įmonėse skaičius " value="{{($update->{'1_15_1'})}}">
-                                    <input class="form-control mt-2" type="number" name="practise_apprenticeships" placeholder="Mokinių, atlikusių praktiką pameistrystės mokymosi forma skaičius  " value="{{($update->{'1_15_2'})}}">
-                                    <input class="form-control mt-2" type="number" name="practise_in_school" placeholder="Mokinių, atlikusių praktiką mokykloje skaičius  " value="{{($update->{'1_15_3'})}}">
-                                    <input class="form-control mt-2" type="number" name="practise_with_project_works" placeholder="Mokinių, praktikos metų atlikusių projektinius darbus skaičius " value="{{($update->{'1_15_4'})}}">
+                                    <input class="form-control mt-2" type="number" name="practise_in_companies" placeholder="Mokinių, atlikusių praktiką įmonėse skaičius" value="{{($update->{'1_15_1'})}}" min="0">
+                                    <input class="form-control mt-2" type="number" name="practise_apprenticeships" placeholder="Mokinių, atlikusių praktiką pameistrystės mokymosi forma skaičius" value="{{($update->{'1_15_2'})}}" min="0">
+                                    <input class="form-control mt-2" type="number" name="practise_in_school" placeholder="Mokinių, atlikusių praktiką mokykloje skaičius" value="{{($update->{'1_15_3'})}}">
+                                    <input class="form-control mt-2" type="number" name="practise_with_project_works" placeholder="Mokinių, praktikos metų atlikusių projektinius darbus skaičius" value="{{($update->{'1_15_4'})}}" min="0">
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label class=" card-title">1.16. Žinios apie absolventus. Absolventų skaičius iš
                                     jų:</label>
-                                <div class="  ">
-                                    <input class="form-control mt-2" type="number" name="Continue_studying_at_a_college_or_university" placeholder="Tęsia mokymąsi kolegijoje ar universitete (kiek) " value="{{($update->{'1_16_1'})}}">
-                                    <input class="form-control mt-2" type="number" name="Employed" placeholder="Įsidarbino (kiek) " value="{{($update->{'1_16_2'})}}">
-                                    <input class="form-control mt-2" type="number" name="not_working_not_studying" placeholder="Nedirba, nesimoko (kiek)  " value="{{($update->{'1_16_3'})}}">
-                                    <input class="form-control mt-2" type="number" name="Signed_up_for_UT" placeholder="Užsiregistravo UT (kiek)  " value="{{($update->{'1_16_4'})}}">
-                                    <input class="form-control mt-2" type="number" name="Went_abroad" placeholder="Išvyko į užsienį (kiek) " value="{{($update->{'1_16_5'})}}">
-                                    <input class="form-control mt-2" type="text" name="other" placeholder="Kita (nurodykite) " value="{{($update->{'1_16_6'})}}">
-                                    <input class="form-control mt-2" type="number" name="no_data" placeholder="Nėra duomenų (kiek) " value="{{($update->{'1_16_7'})}}">
-                                    <input class="form-control mt-2" type="text" name="data_not_provided" placeholder="Duomenys nepateikti (nurodykite priežastį) " value="{{($update->{'1_16_8'})}}">
+                                <div class="">
+                                    <input class="form-control mt-2" type="number" name="Continue_studying_at_a_college_or_university" placeholder="Tęsia mokymąsi kolegijoje ar universitete (kiek)" value="{{($update->{'1_16_1'})}}" min="0">
+                                    <input class="form-control mt-2" type="number" name="Employed" placeholder="Įsidarbino (kiek)" value="{{($update->{'1_16_2'})}}" min="0">
+                                    <input class="form-control mt-2" type="number" name="not_working_not_studying" placeholder="Nedirba, nesimoko (kiek)" value="{{($update->{'1_16_3'})}}" min="0">
+                                    <input class="form-control mt-2" type="number" name="Signed_up_for_UT" placeholder="Užsiregistravo UT (kiek)" value="{{($update->{'1_16_4'})}}" min="0">
+                                    <input class="form-control mt-2" type="number" name="Went_abroad" placeholder="Išvyko į užsienį (kiek)" value="{{($update->{'1_16_5'})}}" min="0">
+                                    <input class="form-control mt-2" type="text" name="other" placeholder="Kita (nurodykite)" value="{{($update->{'1_16_6'})}}">
+                                    <input class="form-control mt-2" type="number" name="no_data" placeholder="Nėra duomenų (kiek)" value="{{($update->{'1_16_7'})}}" min="0">
+                                    <input class="form-control mt-2" type="text" name="data_not_provided" placeholder="Duomenys nepateikti (nurodykite priežastį)" value="{{($update->{'1_16_8'})}}">
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label class=" card-title">1.17. Pateikite darbdavių atsiliepimus apie pasitenkinimą
                                     absolventų įgytomis
                                     kompetencijomis.</label>
-                                <div class="  ">
+                                <div class="">
                                     <input class="form-control" type="text" name="employer_reviews" value="{{($update->{'1_17'})}}">
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label class=" card-title">1.18. Pateikite absolventų atsiliepimus apie jų pasitenkinimą
                                     įgyta kvalifikaciją 5.2.5</label>
-                                <div class="  ">
+                                <div class="">
                                     <input class="form-control" type="text" name="graduate_reviews" value="{{($update->{'1_18'})}}">
                                 </div>
                             </div>
@@ -363,10 +363,10 @@
                         </div>
                         <p class="btn btn-outline-success" id="prideti">Pridėti kitą projektą</p><br>
                         <label class="card-title">2.2. Pravestų profesinio orientavimo susitikimų skaičius (KITM renginiai, susitikimai BU mokyklose).</label>
-                        <input class="form-control" type="number" name="number_of_career_guidance_meetings" value="{{($update->{'2_2'})}}">
+                        <input class="form-control" type="number" name="number_of_career_guidance_meetings" value="{{($update->{'2_2'})}}" min="0">
                         <label class="card-title">2.3. Pravestų nuotolinių pamokų 7-12 klasių mokiniams
                             skaičius.</label>
-                        <input class="form-control" type="number" name="number_of_distance_learning_lessons_for_students_in_grades_7_12" value="{{($update->{'2_3'})}}">
+                        <input class="form-control" type="number" name="number_of_distance_learning_lessons_for_students_in_grades_7_12" value="{{($update->{'2_3'})}}" min="0">
                         <p class="text-muted">
                             <label class="card-title">2.4 Metodinė veikla mokykloje, pagalba kolegoms. Išvardinkite veiklas:    </label>
                             <textarea class="form-control" type="text" name="first_activity">{{($update->{'2_4_1'})}}</textarea>
@@ -380,9 +380,9 @@
                             <input class="form-control mt-2" type="text" name="third_problem" value="{{($update->{'2_5_6'})}}">
                             <label class="card-title">2.6. Grupės vadovo veikla - mokinių nubyrėjimas.</label>
                         <p class="card-title text-muted">Kiek mokinių įstojo į I kursą?</p>
-                        <input class="form-control" type="number" name="students_in_first_year" value="{{($update->{'2_6_1'})}}">
+                        <input class="form-control" type="number" name="students_in_first_year" value="{{($update->{'2_6_1'})}}" min="0">
                         <p class="card-title text-muted">Kiek mokinių mokosi šiuo metu (baigė)?</p>
-                        <input class="form-control" type="number" name="students_studying_or_graduated" value="{{($update->{'2_6_2'})}}">
+                        <input class="form-control" type="number" name="students_studying_or_graduated" value="{{($update->{'2_6_2'})}}" min="0">
                         <label class="card-title">2.7. Įvardinkite mokinių „nubyrėjimo“ priežastis ir kaip jas
                             sprendžiate:</label>
                         <textarea class="form-control" type="text" name="The_cause_of_the_fall">{{($update->{'2_7'})}}</textarea>
@@ -558,7 +558,7 @@
                         <div class="form-group">
                             <p label class="card-title">4.1. Aprūpinimas materialiaisiais ištekliais</p>
 
-                            <label class="card-title ">Pedagogo dalyvavimas formuojant ilgalaikius materialiųjų išteklių
+                            <label class="card-title">Pedagogo dalyvavimas formuojant ilgalaikius materialiųjų išteklių
                                 modernizavimo tikslus</label>
                             <ul class="list-unstyled mb-0">
                                 <li class="d-block me-2 mb-1">
@@ -587,13 +587,13 @@
                                 </li>
                                 <li class="d-block me-2 mb-1">
                                     <div class="form-check form-check-success">
-                                        <input class="form-check-input " type="radio" value="5" name="teacher_participation" {{ ($update->{'4_1_1'} =="5") ? 'checked' : '' }}>
+                                        <input class="form-check-input" type="radio" value="5" name="teacher_participation" {{ ($update->{'4_1_1'} =="5") ? 'checked' : '' }}>
                                         <label class="text-Success"> Tikrai pritariu (5)</label>
                                     </div>
                                 </li>
                             </ul>
 
-                            <label class="card-title ">Pagrindinių materialiųjų išteklių nėra ar nepakanka</label>
+                            <label class="card-title">Pagrindinių materialiųjų išteklių nėra ar nepakanka</label>
                             <ul class="list-unstyled mb-0">
                                 <li class="d-block me-2 mb-1">
                                     <div class="form-check form-check-danger">
@@ -621,12 +621,12 @@
                                 </li>
                                 <li class="d-block me-2 mb-1">
                                     <div class="form-check form-check-success">
-                                        <input class="form-check-input " type="radio" value="5" name="no_insufficient_basic_material_resources" {{ ($update->{'4_1_2'} =="5") ? 'checked' : '' }}>
+                                        <input class="form-check-input" type="radio" value="5" name="no_insufficient_basic_material_resources" {{ ($update->{'4_1_2'} =="5") ? 'checked' : '' }}>
                                         <label class="text-Success"> Tikrai pritariu (5)</label>
                                     </div>
                                 </li>
                             </ul>
-                            <label class="card-title ">Materialiųjų išteklių modernumas ir atitiktis darbo rinkos
+                            <label class="card-title">Materialiųjų išteklių modernumas ir atitiktis darbo rinkos
                                 poreikiams</label>
                             <ul class="list-unstyled mb-0">
                                 <li class="d-block me-2 mb-1">
@@ -655,7 +655,7 @@
                                 </li>
                                 <li class="d-block me-2 mb-1">
                                     <div class="form-check form-check-success">
-                                        <input class="form-check-input " type="radio" value="5" name="modernity_of_material_resources" {{ ($update->{'4_1_3'} =="5") ? 'checked' : '' }}>
+                                        <input class="form-check-input" type="radio" value="5" name="modernity_of_material_resources" {{ ($update->{'4_1_3'} =="5") ? 'checked' : '' }}>
                                         <label class="text-Success"> Tikrai pritariu (5)</label>
                                     </div>
                                 </li>
@@ -690,7 +690,7 @@
                                 </li>
                                 <li class="d-block me-2 mb-1">
                                     <div class="form-check form-check-success">
-                                        <input class="form-check-input " type="radio" value="5" name="availability_of_material_resources_for_students_and_teachers" {{ ($update->{'4_1_4'} =="5") ? 'checked' : '' }}>
+                                        <input class="form-check-input" type="radio" value="5" name="availability_of_material_resources_for_students_and_teachers" {{ ($update->{'4_1_4'} =="5") ? 'checked' : '' }}>
                                         <label class="text-Success"> Tikrai pritariu (5)</label>
                                     </div>
                                 </li>
@@ -724,7 +724,7 @@
                                 </li>
                                 <li class="d-block me-2 mb-1">
                                     <div class="form-check form-check-success">
-                                        <input class="form-check-input " type="radio" value="5" name="school_library_with_modern_material_resources" {{ ($update->{'4_1_5'} =="5") ? 'checked' : '' }}>
+                                        <input class="form-check-input" type="radio" value="5" name="school_library_with_modern_material_resources" {{ ($update->{'4_1_5'} =="5") ? 'checked' : '' }}>
                                         <label class="text-Success"> Tikrai pritariu (5)</label>
                                     </div>
                                 </li>
@@ -765,7 +765,7 @@
                                 </li>
                                 <li class="d-block me-2 mb-1">
                                     <div class="form-check form-check-success">
-                                        <input class="form-check-input " type="radio" value="5" name="school_microclimate" {{ ($update->{'4_2_1'} =="5") ? 'checked' : '' }}>
+                                        <input class="form-check-input" type="radio" value="5" name="school_microclimate" {{ ($update->{'4_2_1'} =="5") ? 'checked' : '' }}>
                                         <label class="text-Success"> Tikrai pritariu (5)</label>
                                     </div>
                                 </li>
@@ -798,7 +798,7 @@
                                 </li>
                                 <li class="d-block me-2 mb-1">
                                     <div class="form-check form-check-success">
-                                        <input class="form-check-input " type="radio" value="5" name="transparency_of_the_pay_system" {{ ($update->{'4_2_2'} =="5") ? 'checked' : '' }}>
+                                        <input class="form-check-input" type="radio" value="5" name="transparency_of_the_pay_system" {{ ($update->{'4_2_2'} =="5") ? 'checked' : '' }}>
                                         <label class="text-Success"> Tikrai pritariu (5)</label>
                                     </div>
                                 </li>
@@ -831,7 +831,7 @@
                                 </li>
                                 <li class="d-block me-2 mb-1">
                                     <div class="form-check form-check-success">
-                                        <input class="form-check-input " type="radio" value="5" name="material_working_conditions" {{ ($update->{'4_2_3'} =="5") ? 'checked' : '' }}>
+                                        <input class="form-check-input" type="radio" value="5" name="material_working_conditions" {{ ($update->{'4_2_3'} =="5") ? 'checked' : '' }}>
                                         <label class="text-Success"> Tikrai pritariu (5)</label>
                                     </div>
                                 </li>
@@ -863,7 +863,7 @@
                                     </div>
                                 <li class="d-block me-2 mb-1">
                                     <div class="form-check form-check-success">
-                                        <input class="form-check-input " type="radio" value="5" name="work_relations" {{ ($update->{'4_2_4'} =="5") ? 'checked' : '' }}>
+                                        <input class="form-check-input" type="radio" value="5" name="work_relations" {{ ($update->{'4_2_4'} =="5") ? 'checked' : '' }}>
                                         <label class="text-Success"> Tikrai pritariu (5)</label>
                                     </div>
                                 </li>
@@ -896,7 +896,7 @@
 
                                 <li class="d-block me-2 mb-1">
                                     <div class="form-check form-check-success">
-                                        <input class="form-check-input " type="radio" value="5" name="psychological_climate" {{ ($update->{'4_2_5'} =="5") ? 'checked' : '' }}>
+                                        <input class="form-check-input" type="radio" value="5" name="psychological_climate" {{ ($update->{'4_2_5'} =="5") ? 'checked' : '' }}>
                                         <label class="text-Success"> Tikrai pritariu (5)</label>
                                     </div>
                                 </li>
@@ -929,7 +929,7 @@
 
                                 <li class="d-block me-2 mb-1">
                                     <div class="form-check form-check-success">
-                                        <input class="form-check-input " type="radio" value="5" name="implementation_of_direct_work_process" {{ ($update->{'4_2_6'} =="5") ? 'checked' : '' }}>
+                                        <input class="form-check-input" type="radio" value="5" name="implementation_of_direct_work_process" {{ ($update->{'4_2_6'} =="5") ? 'checked' : '' }}>
                                         <label class="text-Success"> Tikrai pritariu (5)</label>
                                     </div>
                                 </li>
@@ -962,13 +962,13 @@
                                     </div>
                                 <li class="d-block me-2 mb-1">
                                     <div class="form-check form-check-success">
-                                        <input class="form-check-input " type="radio" value="5" name="effective_communication" {{ ($update->{'4_2_7'} =="5") ? 'checked' : '' }}>
+                                        <input class="form-check-input" type="radio" value="5" name="effective_communication" {{ ($update->{'4_2_7'} =="5") ? 'checked' : '' }}>
                                         <label class="text-Success"> Tikrai pritariu (5)</label>
                                     </div>
                                 </li>
                             </ul>
-                            <div class="form-group"><label class="card-title">4.3. Pedagogo</label><input class="form-control" type="text" name="pedagogues" value="{{($update->{'4_3_1'})}}"></div>
-                            <label class="card-title text-muted">Koks Svarbiausias asmeninis šių metų profesinis
+                            <div class="form-group"><label class="card-title">4.3. Pedagogo grįžtamasis ryšys.</label></div>
+                            <label class="card-title text-muted">Koks svarbiausias asmeninis šių metų profesinis
                                 pasiekimas (patirtis)?</label>
                             <input class="form-control" type="text" name="the_most_important_achievement" value="{{($update->{'4_3_2'})}}">
                             <label class="card-title text-muted">Koks nemaloniausias šių metų įvykis

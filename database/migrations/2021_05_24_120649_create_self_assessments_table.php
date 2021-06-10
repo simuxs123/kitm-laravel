@@ -126,7 +126,6 @@ class CreateSelfAssessmentsTable extends Migration
             $table->integer('4_2_5')->nullable();
             $table->integer('4_2_6')->nullable();
             $table->integer('4_2_7')->nullable();
-            $table->text('4_3_1')->nullable();
             $table->text('4_3_2')->nullable();
             $table->text('4_3_3')->nullable();
             $table->text('4_3_4')->nullable();

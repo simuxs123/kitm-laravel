@@ -641,11 +641,7 @@
     </tr>
     <tr><td></td></tr>
     <tr>
-        <td style="font-size: 13px;"><b>4.3. Pedagogo</b></td>
-    </tr>
-    <tr><td></td></tr>
-    <tr>
-        <td>{{($info->{'4_3_1'})}}</td>
+        <td style="font-size: 13px;"><b>4.3. Pedagogo grįžtamasis ryšys.</b></td>
     </tr>
     <tr><td></td></tr>
     <tr>

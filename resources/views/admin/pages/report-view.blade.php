@@ -1022,7 +1022,7 @@
                                     </div>
                                 </li>
                             </ul>
-                            <div class="form-group"><label class="card-title">4.3. Pedagogo</label><input class="form-control" type="text" name="pedagogues" value="{{($report->{'4_3_1'})}}"></div>
+                            <div class="form-group"><label class="card-title">4.3. Pedagogo grįžtamasis ryšys.</label></div>
                             <label class="card-title text-muted">Koks Svarbiausias asmeninis šių metų profesinis
                                 pasiekimas (patirtis)?</label>
                             <input class="form-control" type="text" name="the_most_important_achievement" value="{{($report->{'4_3_2'})}}">
