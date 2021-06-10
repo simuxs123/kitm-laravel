@@ -163,7 +163,12 @@ return [
         'preferences' => 'Pageidavimai',
         'recommendation' => 'Rekomendacija',
         'date' => 'Data',
-        'time' => 'Laikas'
+        'time' => 'Laikas',
+        'first_number_of_lessons_discussed_by_the_supervisor' => '5.1',
+        'managers_comment_on_activities_and_suggestions' => '5.2',
+        'assistance_in_the_next_school_year' => '5.3',
+        'first_help_which_I_need' => '5.4',
+        'guide_evaluation' => '5.5',
     ],
 
 ];

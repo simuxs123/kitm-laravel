@@ -4,7 +4,7 @@
         @roles('admin,mokytojas')
         @if($activated)
         <div class="text-center">
-            <label>Anketos pildymo pabaiga: {{$data->end_date}}</label>
+            <h5 class="mb-5 mt-5">Anketos pildymo pabaiga: {{$data->end_date}}</h5>
         </div>
 
         @if(!$pateikta)
@@ -13,7 +13,8 @@
             <button type="button" class="btn btn-success">Pildyti mokytojo apklausą</button>
         </a>
         @else
-        <h2 style="color: red;">Jūs neturite išsaugotų <a href="/qualification">mokytojo kvalifikacijų</a></h2>
+        <h2 style="color: red;">Jūs neturite išsaugotų mokytojo kvalifikacijų.</h2>
+        <a href="/qualification" class="btn btn-primary mt-4">Kvalifikacijas galite pildyti čia</a>
         @endif
         @else
         <h4 style="color: green;">Jūsų anketa pateikta, redaguoti jos nebegalite.</h4>
@@ -26,7 +27,7 @@
         <p>Anketa neaktyvuota</p>
         @endif
         @endroles
-        <hr>
+        <hr class="mb-5 mt-5">
 
         @roles('admin,darbuotojas')
         <h3>Vadovo vertinimai</h3>
@@ -34,12 +35,17 @@
         <table class="table table-striped">
             <tr>
                 <th>Vardas, pavardė</th>
-                <th></th>
+                <th>Būklė</th>
             </tr>
             @foreach($surveys as $survey)
             <tr>
                 <td>{{$survey->name.' '.$survey->surname}}</td>
-                <td><a href="/guide/{{$survey->user_id}}">vadovo vertinimas</a></td>
+                @if($survey->vertinta == false)
+                <td><span style="color: red;">Vertinimas nepateiktas</span></td>
+                <td><a href="/guide/{{$survey->user_id}}" class="btn btn-success">Vertinti</a></td>
+                @else
+                <td><span style="color: green;">Vertinimas pateiktas</span></td>
+                @endif
             </tr>
             @endforeach
         </table>

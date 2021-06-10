@@ -18,7 +18,7 @@
     <div class="card-content">
         <div class="card-body">
             <div class="form-group">
-                <label for="5.1vadovas">5.1.Kuruojančio vadovo stebėtų ir aptartų pamokų (veiklų) skaičius
+                <label for="5.1vadovas">5.1. Kuruojančio vadovo stebėtų ir aptartų pamokų (veiklų) skaičius
                     (kokiose grupėse ir kokiam tikslui) </label>
                 <textarea class="form-control" id="5.1vadovas"name="first_number_of_lessons_discussed_by_the_supervisor" rows="4" cols="50"></textarea>
 

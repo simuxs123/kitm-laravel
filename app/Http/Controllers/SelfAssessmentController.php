@@ -388,7 +388,10 @@ class SelfAssessmentController extends Controller
         $surveycheck = Survey::where(['teacher_id' => $id])->exists();
         $guidecheck = Guide::where(['user_id' => $id])->exists();
         $name = KitmUsers::where(['id' => $id])->first();
+        $report = SelfAssessment::where(['user_id' => $id])->first();
+        $projects = SelfAssessment::where(['user_id' => $id])->pluck('2_1');
+        $guide = Guide::where(['user_id' => $id])->first();
 
-        return view('admin.pages.report-view', compact('assessmentcheck', 'surveycheck', 'name', 'guidecheck'));
+        return view('admin.pages.report-view', compact('assessmentcheck', 'surveycheck', 'name', 'guidecheck', 'report', 'projects', 'guide'));
     }
 }

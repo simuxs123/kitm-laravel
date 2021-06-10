@@ -139,6 +139,7 @@ class CreateSelfAssessmentsTable extends Migration
             $table->string('4_3_11')->nullable();
             $table->timestamps();
             $table->boolean('pateikta')->default(0);
+            $table->boolean('vertinta')->default(0);
         });
     }
 

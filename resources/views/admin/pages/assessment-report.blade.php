@@ -14,9 +14,7 @@
         <td>{{$report[0].' '.$report[1]}}</td>
         <td style="color: red;">{{($report[3] == false) ? 'Trūksta duomenų' : $report[2]}}</td>
         <td style="color: red;">{{($report[3] == false or $report[4] == false or $report[7] == false) ? 'Trūksta duomenų' : $report[5]}}</td>
-        @if($report[3] == false or $report[4] == false or $report[7] == false)
         <td><a href="/reportView/{{$report[6]}}"><button type="button" class="btn btn-danger">Plačiau</button></a></td>
-        @endif
     </tr>
     @endforeach
 </table>

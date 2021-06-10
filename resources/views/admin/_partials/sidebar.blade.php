@@ -53,7 +53,7 @@
                     <li class="sidebar-item  ">
                         <a href="/assessmentReport" class='sidebar-link'>
                             <i class="bi bi-grid-1x2-fill"></i>
-                            <span>Isivertinimo ataskaita</span>
+                            <span>Įsivertinimo ataskaita</span>
                         </a>
                     </li>
                     @endroles

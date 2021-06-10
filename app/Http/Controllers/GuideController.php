@@ -42,6 +42,10 @@ class GuideController extends Controller
             'guide_evaluation' => request('guide_evaluation')
         ]);
 
+        SelfAssessment::where(['user_id' => $survey])->update([
+            'vertinta' => true
+        ]);
+
         return redirect('/');
     }
 }

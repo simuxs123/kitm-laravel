@@ -76,47 +76,6 @@
                 </div>
             </div>
 
-            <!--<div class="step">
-                <div class="card-content">
-                        <div class="card-body mt-5">
-                            </ul>
-                            <div class="form-group row align-items-center">
-                                <div class="col-lg-1 col-1"><label class="col-form-label"> 20-</label></div>
-                                <div class="col-lg-1 col-1"><input class="form-control form-control-sm " type="text" name="dateOne" value="{{$update->dateOne}}"></div>
-                                -
-                                <div class="col-lg-1 col-1"><label class="col-form-label">20- </label></div>
-                                <div class="col-lg-1 col-1"><input class="form-control form-control-sm" type="text" name="dateTwo" value="{{$update->dateTwo}}"></div>
-                                <div class="col-lg-4 col-4"><label class="card-title">MOKSLO METAIS SAVIANALIZĖS ANKETA</label>
-                                </div>
-                            </div>
-                            <div class="form-group row align-items-center">
-                                <div class="col-lg-5 col-5">
-                                    <input class="form-control" type="text" value="{{$name}}" name="name" readonly="readonly">
-                                </div>
-                            </div>
-                            <div class="form-group row align-items-center">
-                                <div class="col-lg-5 col-5">
-                                    <label class="card-title">Pareigos</label>
-                                   
-                                </div>
-                                <div class="col-lg-5 col-5">
-                                    <label class="card-title">Kvalifikacinė kategorija</label>
-                                    <select class="form-select" name="category">
-                                        <option value="Mokytojas(nesuteikta)" name="category" {{ ($update->category == "Mokytojas(nesuteikta)") ? 'selected' : '' }}>Mokytojas(nesuteikta)</option>
-                                        <option value="Mokytojas(suteikta)" name="category" {{ ($update->category == "Mokytojas(suteikta)") ? 'selected' : '' }}>Mokytojas(suteikta)</option>
-                                        <option value="Vyr.Mokytojas" name="category" {{ ($update->category == "Vyr.Mokytojas") ? 'selected' : '' }}>Vyr.Mokytojas</option>
-                                        <option value="Metodininkas" name="category" {{ ($update->category == "Metodininkas") ? 'selected' : '' }}>Metodininkas</option>
-                                        <option value="Ekspertas" name="category" {{ ($update->category == "Ekspertas") ? 'selected' : '' }}>Ekspertas</option>
-                                    </select>
-                                    <input class="form-control" type="text" name="work_experience" placeholder="Darbo stažas" value="{{$update->work_experience}}">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>-->
-
-
             <h6 class="text-danger">Kiekviena sritis vertinamas 1-10 balų</h6>
 
             <div class="card">
@@ -135,21 +94,21 @@
                             </div>
                             <div class="form-group">
                                 <label class=" card-title">1.2. Aprašykite gerąją mokymo proceso organizavimo patirtį,
-                                    pasiekimus. </label>
+                                    pasiekimus.</label>
                                 <div class="  ">
                                     <input class="form-control" type="text" name="training_organization_experience_achievements" value="{{($update->{'1_2'})}}">
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label class=" card-title">1.3. Kokie priimti sprendimai, turėjo įtakos mokymo kokybės
-                                    gerinimui? </label>
+                                    gerinimui?</label>
                                 <div class=" col-md-8 ">
                                     <input class="form-control" type="text" name="quality_of_teaching" value="{{($update->{'1_3'})}}">
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label class=" card-title">1.4. Kokios buvo kilusios problemos ir kokias sprendimais jas
-                                    pavyko išspręsti? </label>
+                                <label class=" card-title">1.4. Kokios buvo kilusios problemos ir kokiais sprendimais jas
+                                    pavyko išspręsti?</label>
                                 <div class="  ">
                                     <input class="form-control" type="text" name="problems_and_solutions" value="{{($update->{'1_4'})}}">
                                 </div>
@@ -159,7 +118,7 @@
                                     1.5. Kokiose bendruomenės narių veiklose dalyvavote sprendžiant iniciatyvumo ir
                                     atsakomybės,
                                     įstaigos veiklos
-                                    tobulinimo, planavimo, sprendimų priėmimo ir jų įgyvendinimo pokyčius</label>
+                                    tobulinimo, planavimo, sprendimų priėmimo ir jų įgyvendinimo pokyčius?</label>
                                 <div class="  ">
                                     <textarea class="form-control" type="text" name="participated_acts">{{($update->{'1_5'})}}</textarea>
                                 </div>
@@ -172,12 +131,12 @@
                             <div class="form-group">
                                 <label class=" card-title">1.6 Parengtų arba atnaujintų veiklos planų,
                                     individualių/dalyko, integruoto ugdymo programų/planų
-                                    skaičius (įrašykite): </label>
+                                    skaičius (įrašykite):</label>
                                 <div class="  ">
                                     <input class="form-control" type="number" name="number_of_plans" value="{{($update->{'1_6'})}}">
-                                    <p class="text-muted">Išvardinkite svarbiausius planus, kuriuos esate parengęs: </p>
+                                    <p class="text-muted">Išvardinkite svarbiausius planus, kuriuos esate parengęs:</p>
                                     <textarea class="form-control" type="text" name="firstPlan" placeholder="Planai kuriuos esate parengę">{{($update->{'1_6_first'})}}</textarea>
-                                    <p class="text-muted">Nurodykite, kur patalpinti dalyko/modulio teminiai planai </p>
+                                    <p class="text-muted">Nurodykite, kur patalpinti dalyko/modulio teminiai planai:</p>
                                     <input class="form-control" type="text" name="link_to_plans" value="{{($update->{'1_6_link'})}}">
                                 </div>
                             </div>
@@ -186,10 +145,10 @@
                                     turinį ir išsiaiškinti mokinių
                                     mokymosi
                                     poreikius ir
-                                    pasiekimus. Išvardinkite </label>
+                                    pasiekimus. Išvardinkite:</label>
                                 <div class=" c ">
                                     <textarea class="form-control" type="text" name="tools_and_methods">{{($update->{'1_7'})}}</textarea>
-                                    <p class="text-muted">Išvardinkite svarbiausius: </p>
+                                    <p class="text-muted">Išvardinkite svarbiausius:</p>
                                     <textarea class="form-control" type="text" name="first_tool_or_method">{{($update->{'1_7_first'})}}</textarea>
                                 </div>
                             </div>
@@ -198,7 +157,7 @@
                                     pagalba mokiniui, ar ji teikiama
                                     tinkamai
                                     ir ar yra
-                                    savalaikė. Pateikite pavyzdžių. </label>
+                                    savalaikė? Pateikite pavyzdžių.</label>
                                 <div class="  ">
                                     <textarea class="form-control" type="text" name="student_assistance">{{($update->{'1_8'})}}</textarea>
                                 </div>
@@ -206,12 +165,12 @@
                             <div class="form-group">
                                 <label class=" card-title">1.9. Kokius mokymosi būdus bei metodus taikote pamokose,
                                     skatinančias mokinius savarankiškai
-                                    mokytis: </label>
+                                    mokytis?</label>
                                 <div class="  ">
                                     <textarea class="form-control" type="text" name="first_method_for_self_directed_learning">{{($update->{'1_9_first'})}}</textarea>
-                                    <p class="text-muted">Kas pasisekė </p>
+                                    <p class="text-muted">Kas pasisekė</p>
                                     <input class="form-control" type="text" name="luck" value="{{($update->{'1_9_success'})}}">
-                                    <p class="text-muted">Kokių patyrėte sunkumų </p>
+                                    <p class="text-muted">Kokių patyrėte sunkumų</p>
                                     <input class="form-control" type="text" name="difficulties" value="{{($update->{'1_9_failure'})}}">
                                 </div>
                             </div>
@@ -219,12 +178,12 @@
                                 <label class=" card-title">1.10. Kur patalpinate mokymo(si) medžiagą, kurią esate
                                     parengęs pamokoms ir/ar
                                     diferencijuotam
-                                    mokymui . </label>
+                                    mokymui?</label>
                                 <ul class="list-unstyled mb-0">
                                     <li class="d-block me-2 mb-1">
                                         <div class="form-check">
                                             <div class="checkbox">
-                                                <label class="text-left">Moodle aplinkoje </label>
+                                                <label class="text-left">Moodle aplinkoje</label>
                                                 <input class="form-check-input" type="checkbox" value="Moodle" name="material[]" id="Moodle" {{$update->{'1_10'} == null ? '' : (str_contains($update->{'1_10'}, "Moodle") ? 'checked' : '')}}>
                                             </div>
                                         </div>
@@ -232,7 +191,7 @@
                                     <li class="d-block me-2 mb-1">
                                         <div class="form-check">
                                             <div class="checkbox">
-                                                <label class="text-left">MS Teams aplinkoje </label>
+                                                <label class="text-left">MS Teams aplinkoje</label>
                                                 <input class="form-check-input" type="checkbox" value="MS Teams" name="material[]" id="Teams" {{$update->{'1_10'} == null ? '' : (str_contains($update->{'1_10'}, "MS Teams") ? 'checked' : '')}}>
                                             </div>
                                         </div>
@@ -248,7 +207,7 @@
                                     <li class="d-block me-2 mb-1">
                                         <div class="form-check">
                                             <div class="checkbox">
-                                                <label class="text-left">Eduka aplinkoje </label>
+                                                <label class="text-left">Eduka aplinkoje</label>
                                                 <input class="form-check-input" type="checkbox" value="Eduka" name="material[]" id="Eduka" {{$update->{'1_10'} == null ? '' : (str_contains($update->{'1_10'}, "Eduka") ? 'checked' : '')}}>
                                             </div>
                                         </div>
@@ -256,7 +215,7 @@
                                     <li class="d-block me-2 mb-1">
                                         <div class="form-check">
                                             <div class="checkbox">
-                                                <label class="text-left">Gitlab kodo saugykla </label>
+                                                <label class="text-left">Gitlab kodo saugykla</label>
                                                 <input class="form-check-input" type="checkbox" value="Gitlab" name="material[]" id="Gitlab" {{$update->{'1_10'} == null ? '' : (str_contains($update->{'1_10'}, "Gitlab") ? 'checked' : '')}}>
                                             </div>
                                         </div>
@@ -264,7 +223,7 @@
                                     <li class="d-block me-2 mb-1">
                                         <div class="form-check">
                                             <div class="checkbox">
-                                                <label class="text-left">Ftp paslauga </label>
+                                                <label class="text-left">Ftp paslauga</label>
                                                 <input class="form-check-input" type="checkbox" value="Ftp" name="material[]" id="Ftp" {{$update->{'1_10'} == null ? '' : (str_contains($update->{'1_10'}, "Ftp") ? 'checked' : '')}}>
                                             </div>
                                         </div>
@@ -272,7 +231,7 @@
                                     <li class="d-block me-2 mb-1">
                                         <div class="form-check">
                                             <div class="checkbox">
-                                                <label class="text-left">Siunčiu į el.paštą </label>
+                                                <label class="text-left">Siunčiu į el.paštą</label>
                                                 <input class="form-check-input" type="checkbox" value="El.paštas" name="material[]" id="Teams" {{$update->{'1_10'} == null ? '' : (str_contains($update->{'1_10'}, "El.paštas") ? 'checked' : '')}}>
                                             </div>
                                         </div>
@@ -280,7 +239,7 @@
                                     <li class="d-block me-2 mb-1">
                                         <div class="form-check">
                                             <div class="checkbox">
-                                                <label class="text-left">Dalinuosi facebook grupėje </label>
+                                                <label class="text-left">Dalinuosi facebook grupėje</label>
                                                 <input class="form-check-input" type="checkbox" value="Facebook grupė" name="material[]" id="Teams" {{$update->{'1_10'} == null ? '' : (str_contains($update->{'1_10'}, "Facebook grupė") ? 'checked' : '')}}>
                                             </div>
                                         </div>
@@ -298,24 +257,24 @@
                                 <label class=" card-title">1.11. Kokiais jūsų dėstomo dalyko šių mokslo metų mokinių įgytais
                                     gebėjimai, rezultatais
                                     ugdomosios veiklos
-                                    darbais, veiklomis džiaugiatės (išvardinkite) </label>
+                                    darbais, veiklomis džiaugiatės? (Išvardinkite)</label>
                                 <div class="  ">
                                     <textarea class="form-control" type="text" name="first_happiness_for_good_student">{{($update->{'1_11_first'})}}</textarea>
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label class=" card-title">1.12. Kokiuose dalyvavote konkursuose konkursuose, projektuose,
+                                <label class=" card-title">1.12. Kokiuose dalyvavote konkursuose, projektuose,
                                     parodose (ne mokykloje)
                                     individualiai arba su
-                                    ugdytiniais (išvardinkite) </label>
+                                    ugdytiniais? (Išvardinkite)</label>
                                 <div class="  ">
                                     <input class="form-control" type="text" name="competitions" value="{{($update->{'1_12'})}}">
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label class=" card-title"> 1.13. BU mokytojams. Kiek mokinių pasirinko Jūsų dalyko
-                                    valstybinį egzaminą (įrašykite
-                                    skaičių) </label>
+                                    valstybinį egzaminą? (Įrašykite
+                                    skaičių)</label>
                                 <div class="  ">
                                     <input class="form-control mt-2" type="number" name="pass_an_exam" placeholder="Kiek egzaminą išlaikė" value="{{($update->{'1_13_islaike'})}}">
                                     <input class="form-control mt-2" type="number" name="didnt_pass_an_exam" placeholder="Kiek egzamino neišlaikė" value="{{($update->{'1_13_neislaike'})}}">
@@ -325,7 +284,7 @@
                                 <label class=" card-title">1.14. Profesijos mokytojams. Kiek mokinių pasirinko iš Jūsų
                                     dalyko atlikti mokyklinį
                                     technologijų
-                                    egzaminą? </label>
+                                    egzaminą?</label>
                                 <div class="  ">
                                     <input class="form-control mt-2" type="number" name="number_of_students" value="{{($update->{'1_14_nr'})}}">
                                     <input class="form-control mt-2" type="number" name="pass_an_exam_technology" placeholder="Kiek egzaminą išlaikė " value="{{($update->{'1_14_islaike'})}}">
@@ -333,12 +292,11 @@
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label class=" card-title">1.15. Praktikos vadovams. Kokiam mokinių skaičiui vadovauta
-                                    praktikai</label>
+                                <label class=" card-title">1.15. Praktikos vadovams. Kokiam mokinių skaičiui vadovavote praktikos metu?</label>
                                 <div class="  ">
                                     <input class="form-control" type="number" name="guided_practice" placeholder="įrašykite" value="{{($update->{'1_15_nr'})}}">
 
-                                    <label class="col-md-12">Žinios apie mokinių praktikos vietas (pasirinkite) </label>
+                                    <label class="col-md-12">Žinios apie mokinių praktikos vietas (pasirinkite).</label>
                                     <input class="form-control mt-2" type="number" name="practise_in_companies" placeholder="Mokinių, atlikusių praktiką įmonėse skaičius " value="{{($update->{'1_15_1'})}}">
                                     <input class="form-control mt-2" type="number" name="practise_apprenticeships" placeholder="Mokinių, atlikusių praktiką pameistrystės mokymosi forma skaičius  " value="{{($update->{'1_15_2'})}}">
                                     <input class="form-control mt-2" type="number" name="practise_in_school" placeholder="Mokinių, atlikusių praktiką mokykloje skaičius  " value="{{($update->{'1_15_3'})}}">
@@ -346,8 +304,8 @@
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label class=" card-title">1.16. Žinios apie absolventus. Absolventų skaičius Iš
-                                    jų: </label>
+                                <label class=" card-title">1.16. Žinios apie absolventus. Absolventų skaičius iš
+                                    jų:</label>
                                 <div class="  ">
                                     <input class="form-control mt-2" type="number" name="Continue_studying_at_a_college_or_university" placeholder="Tęsia mokymąsi kolegijoje ar universitete (kiek) " value="{{($update->{'1_16_1'})}}">
                                     <input class="form-control mt-2" type="number" name="Employed" placeholder="Įsidarbino (kiek) " value="{{($update->{'1_16_2'})}}">
@@ -362,14 +320,14 @@
                             <div class="form-group">
                                 <label class=" card-title">1.17. Pateikite darbdavių atsiliepimus apie pasitenkinimą
                                     absolventų įgytomis
-                                    kompetencijomis </label>
+                                    kompetencijomis.</label>
                                 <div class="  ">
                                     <input class="form-control" type="text" name="employer_reviews" value="{{($update->{'1_17'})}}">
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label class=" card-title">1.18. Pateikite absolventų atsiliepimus apie jų pasitenkinimą
-                                    įgyta kvalifikacija 5.2.5 </label>
+                                    įgyta kvalifikaciją 5.2.5</label>
                                 <div class="  ">
                                     <input class="form-control" type="text" name="graduate_reviews" value="{{($update->{'1_18'})}}">
                                 </div>
@@ -385,7 +343,7 @@
                 <div class="card-content">
                     <div class="card-body form-group">
                         <label class="card-title">2.1. Išvardinkite projektus, kuriuose dalyvavote ir savo vaidmenį
-                            juose </label>
+                            juose:</label>
                         <div id="projects">
                             @if($projects[0] == null)
                             <input class="form-control" type="text" name="projects[0][prname]" placeholder="projektas">
@@ -404,44 +362,44 @@
                             @endif
                         </div>
                         <p class="btn btn-outline-success" id="prideti">Pridėti kitą projektą</p><br>
-                        <label class="card-title">2.2. Pravestų profesinio orientavimo susitikimų skaičius (KITM renginiai, susitikimai BU mokyklose)</label>
+                        <label class="card-title">2.2. Pravestų profesinio orientavimo susitikimų skaičius (KITM renginiai, susitikimai BU mokyklose).</label>
                         <input class="form-control" type="number" name="number_of_career_guidance_meetings" value="{{($update->{'2_2'})}}">
                         <label class="card-title">2.3. Pravestų nuotolinių pamokų 7-12 klasių mokiniams
-                            skaičius </label>
+                            skaičius.</label>
                         <input class="form-control" type="number" name="number_of_distance_learning_lessons_for_students_in_grades_7_12" value="{{($update->{'2_3'})}}">
                         <p class="text-muted">
-                            <label class="card-title">2.4 Metodinė veikla mokykloje, pagalba kolegoms. Išvardinkite veiklas</label>
+                            <label class="card-title">2.4 Metodinė veikla mokykloje, pagalba kolegoms. Išvardinkite veiklas:    </label>
                             <textarea class="form-control" type="text" name="first_activity">{{($update->{'2_4_1'})}}</textarea>
                             <label class="card-title">
                                 2.5. Grupės vadovo veikla, bendravimas su tėvais, mokinių
-                                pasitenkinimas Kas pasisekė: </label>
+                                pasitenkinimas. Kas pasisekė:</label>
                             <textarea class="form-control" type="text" name="first_group_leader_activities_luck">{{($update->{'2_5_1'})}}</textarea>
-                            <label class="card-title">Kokių turėjote problemų </label>
+                            <label class="card-title">Kokių turėjote problemų?</label>
                             <input class="form-control" type="text" name="first_problem" value="{{($update->{'2_5_4'})}}">
                             <input class="form-control mt-2" type="text" name="second_problem" value="{{($update->{'2_5_5'})}}">
                             <input class="form-control mt-2" type="text" name="third_problem" value="{{($update->{'2_5_6'})}}">
-                            <label class="card-title">2.6. Grupės vadovo veikla - mokinių nubyrėjimas </label>
-                        <p class="card-title text-muted">Kiek mokinių įstojo į I kursą: </p>
+                            <label class="card-title">2.6. Grupės vadovo veikla - mokinių nubyrėjimas.</label>
+                        <p class="card-title text-muted">Kiek mokinių įstojo į I kursą?</p>
                         <input class="form-control" type="number" name="students_in_first_year" value="{{($update->{'2_6_1'})}}">
-                        <p class="card-title text-muted">Kiek mokinių mokosi šiuo metu (baigė)</p>
+                        <p class="card-title text-muted">Kiek mokinių mokosi šiuo metu (baigė)?</p>
                         <input class="form-control" type="number" name="students_studying_or_graduated" value="{{($update->{'2_6_2'})}}">
                         <label class="card-title">2.7. Įvardinkite mokinių „nubyrėjimo“ priežastis ir kaip jas
-                            sprendžiate </label>
+                            sprendžiate:</label>
                         <textarea class="form-control" type="text" name="The_cause_of_the_fall">{{($update->{'2_7'})}}</textarea>
                         <label class="card-title">2.8. Kaip informaciją pateikiate ir aptariate ją su mokinių tėvais
                             (globėjais, rūpintojais),
                             kolegomis,
                             kitais
-                            suinteresuotais asmenimis? </label>
+                            suinteresuotais asmenimis?</label>
                         <textarea class="form-control" type="text" name="first_provision_of_information">{{($update->{'2_8_1'})}}</textarea>
                         <label class="card-title">2.9. Jūsų (kaip grupės vadovo) naudojami mokinių motyvavimo mokytis ir
                             lankyti pamokas būdai ir
-                            priemonės </label>
+                            priemonės:</label>
                         <textarea class="form-control" type="text" name="first_student_motivation">{{($update->{'2_9_1'})}}</textarea>
                         <label class="card-title">2.10. Dalyvavimas mokyklos socialiniame kultūriniame gyvenime. Jūsų
                             suorganizuoti renginiai
                             mokykloje, kita
-                            popamokinė veikla (mokiniams arba mokytojams). </label>
+                            popamokinė veikla (mokiniams arba mokytojams):</label>
                         <textarea class="form-control" type="text" name="first_events_and_extracurricular_activities">{{($update->{'2_10_1'})}}</textarea>
                     </div>
                 </div>
@@ -453,9 +411,9 @@
                 <div class="card-content">
                     <div class="card-body">
                         <p class="card-title text-muted">Kvalifikacijos kėlimas mažiau kaip 5 dienas (30 val.) per
-                            mokslo metus </p>
+                            mokslo metus.</p>
                         <input class="form-control" id="input1" type="number" name="training" value="{{ $pateikta == true ? $update->{'3_hours'} : $hourscore }}" readonly="readonly">
-                        <p class="text-muted text-decoration-underline">Už kiekvieną dieną (6 valandas) 1 balas </p>
+                        <p class="text-muted text-decoration-underline">Už kiekvieną dieną (6 valandas) 1 balas</p>
                     </div>
                     <div class="card-body">
                         <p>I sritis</p>
@@ -598,10 +556,10 @@
                 <div class="card-content">
                     <div class="card-body">
                         <div class="form-group">
-                            <p label class="card-title">4.1. Aprūpinimas materialiaisiais ištekliais </p>
+                            <p label class="card-title">4.1. Aprūpinimas materialiaisiais ištekliais</p>
 
                             <label class="card-title ">Pedagogo dalyvavimas formuojant ilgalaikius materialiųjų išteklių
-                                modernizavimo tikslus </label>
+                                modernizavimo tikslus</label>
                             <ul class="list-unstyled mb-0">
                                 <li class="d-block me-2 mb-1">
                                     <div class="form-check form-check-danger">
@@ -635,7 +593,7 @@
                                 </li>
                             </ul>
 
-                            <label class="card-title ">Pagrindinių materialiųjų išteklių nėra ar nepakanka </label>
+                            <label class="card-title ">Pagrindinių materialiųjų išteklių nėra ar nepakanka</label>
                             <ul class="list-unstyled mb-0">
                                 <li class="d-block me-2 mb-1">
                                     <div class="form-check form-check-danger">
@@ -669,7 +627,7 @@
                                 </li>
                             </ul>
                             <label class="card-title ">Materialiųjų išteklių modernumas ir atitiktis darbo rinkos
-                                poreikiams </label>
+                                poreikiams</label>
                             <ul class="list-unstyled mb-0">
                                 <li class="d-block me-2 mb-1">
                                     <div class="form-check form-check-danger">
@@ -704,7 +662,7 @@
                             </ul>
                             <label class="card-title">Mokykloje analizuojamas materialiųjų išteklių pakankamumas ir
                                 prieinamumas mokiniams ir
-                                pedagogams </label>
+                                pedagogams</label>
                             <ul class="list-unstyled mb-0">
                                 <li class="d-block me-2 mb-1">
                                     <div class="form-check form-check-danger">
@@ -738,7 +696,7 @@
                                 </li>
                             </ul>
                             <label class="card-title">Mokyklos biblioteka aprūpinta moderniais materialiaisiais
-                                ištekliais </label>
+                                ištekliais</label>
                             <ul class="list-unstyled mb-0">
                                 <li class="d-block me-2 mb-1">
                                     <div class="form-check form-check-danger">
@@ -775,7 +733,7 @@
                                 galėtumėte išskirti kaip
                                 reikšmingiausius
                                 Jūsų
-                                institucijoje? </label>
+                                institucijoje?</label>
                             <textarea class="form-control" type="text" name="the_most_significant_resources">{{ ($update->{'4_1_6'}) }}</textarea>
                             <div class="form-group"><label class="card-title"> 4.2. Pedagogų pasitenkinimas darbo
                                     sąlygomis</label></div>
@@ -812,7 +770,7 @@
                                     </div>
                                 </li>
                             </ul>
-                            <label class="card-title text-muted">Apmokėjimo už darbą sistemos skaidrumas </label>
+                            <label class="card-title text-muted">Apmokėjimo už darbą sistemos skaidrumas</label>
                             <ul class="list-unstyled mb-0">
                                 <li class="d-block me-2 mb-1">
                                     <div class="form-check form-check-danger">
@@ -878,7 +836,7 @@
                                     </div>
                                 </li>
                             </ul>
-                            <label class="card-title text-muted">Darbo santykiai </label>
+                            <label class="card-title text-muted">Darbo santykiai</label>
                             <ul class="list-unstyled mb-0">
                                 <li class="d-block me-2 mb-1">
                                     <div class="form-check form-check-danger">
@@ -910,7 +868,7 @@
                                     </div>
                                 </li>
                             </ul>
-                            <label class="card-title text-muted">Psichologinis klimatas </label>
+                            <label class="card-title text-muted">Psichologinis klimatas</label>
                             <ul class="list-unstyled mb-0">
                                 <li class="d-block me-2 mb-1">
                                     <div class="form-check form-check-danger">
@@ -943,7 +901,7 @@
                                     </div>
                                 </li>
                             </ul>
-                            <label class="card-title text-muted">Tiesioginio darbo proceso įgyvendinimas </label>
+                            <label class="card-title text-muted">Tiesioginio darbo proceso įgyvendinimas</label>
                             <ul class="list-unstyled mb-0">
                                 <li class="d-block me-2 mb-1">
                                     <div class="form-check form-check-danger">
@@ -1022,8 +980,8 @@
                             <label class="card-title text-muted">Kokias kompetencijas Jūs turėtumėte tobulinti
                                 ateinančiais metais? Kokia reikalinga pagalba? </>
                                 <input class="form-control" type="text" name="improvements_and_support" value="{{($update->{'4_3_5'})}}">
-                                <label class="card-title text-muted">Kokis sritys, kuriose labiausiai susiduriu su
-                                    problemomis</label>
+                                <label class="card-title text-muted">Sritys, kuriose labiausiai susiduriu su
+                                    problemomis:</label>
                                 <input class="form-control" type="text" name="problematic_areas" value="{{($update->{'4_3_6'})}}">
                                 <label class="card-title text-muted">Ką tiesioginis vadovas turėtų tobulinti savo
                                     sprendimuose ar elgsenoje, kad jūsų veiklos
@@ -1031,15 +989,15 @@
                                     geresnis?</label>
                                 <input class="form-control" type="text" name="what_should_manager_improve" value="{{($update->{'4_3_7'})}}">
                                 <p class="card-title text-muted">Kokie institucijos veiksmai užtikrintų vykdomų programų
-                                    populiarumą? </p>
+                                    populiarumą?</p>
                                 <input class="form-control" type="text" name="popularity_of_programs" value="{{($update->{'4_3_8'})}}">
                                 <p class="card-title text-muted">Kaip personalas vertina institucijos vadybą ir
-                                    administravimą</p>
+                                    administravimą?</p>
                                 <input class="form-control" type="text" name="staff_evaluation" value="{{($update->{'4_3_9'})}}">
                                 <p class="card-title text-muted">Grįžtamasis ryšys iš vadovų. Ar esate patenkintas
                                     bendravimu su institucijos administracija
                                     (parašykite
-                                    komentarą)</p>
+                                    komentarą)?</p>
                                 <input class="form-control" type="text" name="happiness_with_communication" value="{{($update->{'4_3_10'})}}">
                                 <p class="card-title text-muted">Kuo galėtumėte būti naudingas mokyklai (veikla, nesusijusi
                                     su pareigybėmis)?</p>
