@@ -10,7 +10,7 @@
         @if(!$pateikta)
         @if($qualiExists)
         <a href="/assessment">
-            <button type="button" class="btn btn-success">Pildyti mokytojo apklausą</button>
+            <button type="button" class="btn btn-success btn-lg">Pildyti įsivertinimo anketą</button>
         </a>
         @else
         <h2 style="color: red;">Jūs neturite išsaugotų mokytojo kvalifikacijų.</h2>

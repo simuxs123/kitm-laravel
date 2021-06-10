@@ -16,6 +16,5 @@
     <script src="../assets/js/bootstrap.bundle.min.js"></script>
 
     <script src="../assets/vendors/apexcharts/apexcharts.js"></script>
-    <link href="{{URL::asset('css/style.css')}}" rel="stylesheet" />
     <script src="../assets/js/main.js"></script>
 </head>
