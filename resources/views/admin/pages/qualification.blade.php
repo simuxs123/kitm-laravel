@@ -29,21 +29,21 @@
                                         <div class="form-group">
                                             <label for="duty">Pareigos</label>
                                             <input type="text" id="duty" class="form-control"
-                                                    name="duty" required>
+                                                    name="duty" maxlength="255" required>
                                         </div>
                                     </div>
                                     <div class="col-md-6 col-12">
                                         <div class="form-group">
                                             <label for="category">Kvalifikacinė kategorija</label>
                                             <input type="text" id="category" class="form-control"
-                                                   name="category" required>
+                                                   name="category" maxlength="255" required>
                                         </div>
                                     </div>
                                     <div class="col-md-6 col-12">
                                         <div class="form-group">
                                             <label for="seminar">Seminaro Pavadinimas</label>
                                             <input type="text" id="seminar" class="form-control"
-                                                   name="seminar" required>
+                                                   name="seminar" maxlength="255" required>
                                         </div>
                                     </div>
                                     <div class="col-md-6 col-12">
@@ -64,14 +64,14 @@
                                         <div class="form-group">
                                             <label for="certificate">Pažymėjimo numeris</label>
                                             <input type="text" id="certificate" class="form-control"
-                                                   name="certificate" required>
+                                                   name="certificate" maxlength="255" required>
                                         </div>
                                     </div>
                                     <div class="col-md-6 col-12">
                                         <div class="form-group">
                                             <label for="location">Kur kelta kvalifikacija</label>
                                             <input type="text" id="location" class="form-control"
-                                                   name="location" required>
+                                                   name="location" maxlength="255" required>
                                         </div>
                                     </div>
 

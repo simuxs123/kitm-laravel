@@ -1,33 +1,34 @@
 <table>
     <tr>
-        <td><b>20{{$info->dateOne}}</b></td>
-        <td><b>20{{$info->dateTwo}}</b></td>
-        <td><b>MOKSLO METAIS SAVIANALIZĖS ANKETA</b></td>
+        <td style="text-align: center;"><b>MOKSLO METAIS SAVIANALIZĖS ANKETA</b></td>
+    </tr>
+    <tr>
+        <td style="text-align: center;"><b>20{{$info->dateOne}} - 20{{$info->dateTwo}}</b></td>
     </tr>
     <tr><td></td></tr>
     <tr>
-        <td style="font-size: 13px;"><b>{{$info->name}}</b></td>
+        <td style="font-size: 13px; text-align: center;"><b>{{$info->name}}</b></td>
     </tr>
     <tr><td></td></tr>
     <tr>
-        <td><b>Pareigos:</b></td>{{$info->role}}
+        <td style="text-align: center;"><b>Pareigos:</b></td>{{$info->role}}
     </tr>
     <tr>
-        <td>{{$info->role}}</td>
-    </tr>
-    <tr><td></td></tr>
-    <tr>
-        <td><b>Kvalifikacinė kategorija:</b></td>
-    </tr>
-    <tr>
-        <td>{{$info->category}}</td>
+        <td style="text-align: center;">{{$info->role}}</td>
     </tr>
     <tr><td></td></tr>
     <tr>
-        <td><b>Darbo stažas:</b></td>
+        <td style="text-align: center;"><b>Kvalifikacinė kategorija:</b></td>
     </tr>
     <tr>
-        <td style="text-align: left;">{{$info->work_experience}}</td>
+        <td style="text-align: center;">{{$info->category}}</td>
+    </tr>
+    <tr><td></td></tr>
+    <tr>
+        <td style="text-align: center;"><b>Darbo stažas:</b></td>
+    </tr>
+    <tr>
+        <td style="text-align: left; text-align: center;">{{$info->work_experience}}</td>
     </tr>
     <tr>
         <td></td>

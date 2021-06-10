@@ -3,25 +3,14 @@
 namespace App\Exports;
 
 use App\SelfAssessment;
-use Maatwebsite\Excel\Concerns\FromCollection;
-use Maatwebsite\Excel\Concerns\ShouldAutoSize;
-use Maatwebsite\Excel\Concerns\WithHeadings;
-use Maatwebsite\Excel\Concerns\WithMapping;
 use Maatwebsite\Excel\Concerns\FromView;
 use Illuminate\Contracts\View\View;
 use App\KitmUsers;
+use Maatwebsite\Excel\Concerns\WithStyles;
+use PhpOffice\PhpSpreadsheet\Worksheet\Worksheet;
 
-class SelfAssessmentExport implements FromView
+class SelfAssessmentExport implements FromView, WithStyles
 {
-    /**
-    * @return \Illuminate\Support\Collection
-    */
-    // public function collection()
-    // {
-    //     $id = KitmUsers::where(['email' => session('userEmail')])->first()->id;
-
-    //     return SelfAssessment::where(['user_id' => $id])->get();
-    // }
 
     public function view(): View
     {
@@ -29,5 +18,11 @@ class SelfAssessmentExport implements FromView
         $info = SelfAssessment::where(['user_id' => $id])->first();
         $projects = SelfAssessment::where(['user_id' => $id])->pluck('2_1');
         return view('admin.pages.download', compact('info', 'projects'));
+    }
+
+    public function styles(Worksheet $sheet)
+    {
+        $sheet->getColumnDimension('A')->setWidth(100);
+        $sheet->getStyle('A')->getAlignment()->setWrapText(true);
     }
 }

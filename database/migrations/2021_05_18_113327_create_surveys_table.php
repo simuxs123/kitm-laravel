@@ -28,7 +28,7 @@ class CreateSurveysTable extends Migration
             $table->integer('good_resources');
             $table->integer('safe_environment');
             $table->integer('quality');
-            $table->longText('preferences');
+            $table->text('preferences');
             $table->integer('recommendation');
             $table->timestamps();
         });

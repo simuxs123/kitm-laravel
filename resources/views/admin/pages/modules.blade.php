@@ -32,11 +32,11 @@
                     </div>
                     <div class="form-group">
                         <label for="groupName">Grupės pavadinimas</label>
-                        <input type="text" class="form-control" name="groupName">
+                        <input type="text" class="form-control" name="groupName" maxlength="255">
                     </div>
                     <div class="form-group">
                         <label for="moduleName">Modulio pavadinimas</label>
-                        <input type="text" class="form-control" name="moduleName">
+                        <input type="text" class="form-control" name="moduleName" maxlength="255">
                     </div>
                     <button type="submit" class="btn btn-primary">Pateikti</button>
                 </form>

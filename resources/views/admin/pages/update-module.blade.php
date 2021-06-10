@@ -28,11 +28,11 @@
                 </div>
                 <div class="form-group">
                     <label for="groupName">Grupės pavadinimas</label>
-                    <input type="text" class="form-control" name="groupName" value="{{$module->group_name}}">
+                    <input type="text" class="form-control" name="groupName" value="{{$module->group_name}}" maxlength="255">
                 </div>
                 <div class="form-group">
                     <label for="moduleName">Modulio pavadinimas</label>
-                    <input type="text" class="form-control" name="moduleName" value="{{$module->module_name}}">
+                    <input type="text" class="form-control" name="moduleName" value="{{$module->module_name}}" maxlength="255">
                 </div>
                 <div class="form-group">
                     <label for="updatecheck">Taip pat atnaujinti apklausų informaciją</label>
