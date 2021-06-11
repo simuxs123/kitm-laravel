@@ -30,6 +30,10 @@ class QualificationController extends Controller
     {
         $id = KitmUsers::where(['email' => session('userEmail')])->first()->id;
 
+        $validateData = $request->validate([
+            'date' => 'before:today|after:1900-01-01'
+        ]);
+
         if (!Qualification::where(['user_id' => $id])->where('certificate', '=', request('certificate'))->exists()) {
             if (!Qualification::where(['user_id' => $id])->where('seminar', '=', request('seminar'))->exists()) {
                 Qualification::create([

@@ -133,7 +133,7 @@
                     </div>
                 </div>
             </div>
-            <h6 class="text-danger">Kiekviena sritis vertinamas 1-10 balų</h6>
+            <h6 class="text-danger">Kiekviena sritis vertinama 1-10 balų</h6>
             <div class="card">
                 <div class="card-header">
                     <h3>I sritis. Veiklos planavimas, tiesioginio darbo vykdymas</h3>
@@ -191,7 +191,7 @@
                                 <div class="  ">
                                     <input class="form-control" type="number" name="number_of_plans" value="{{($report->{'1_6'})}}">
                                     <p class="text-muted">Išvardinkite svarbiausius planus, kuriuos esate parengęs:</p>
-                                    <textarea class="form-control" type="text" name="firstPlan" placeholder="Planai kuriuos esate parengę">{{($report->{'1_6_first'})}}</textarea>
+                                    <textarea class="form-control" type="text" name="firstPlan">{{($report->{'1_6_first'})}}</textarea>
                                     <p class="text-muted">Nurodykite, kur patalpinti dalyko/modulio teminiai planai:</p>
                                     <input class="form-control" type="text" name="link_to_plans" value="{{($report->{'1_6_link'})}}">
                                 </div>
@@ -224,9 +224,9 @@
                                     mokytis?</label>
                                 <div class="  ">
                                     <textarea class="form-control" type="text" name="first_method_for_self_directed_learning">{{($report->{'1_9_first'})}}</textarea>
-                                    <p class="text-muted">Kas pasisekė</p>
+                                    <p class="text-muted">Kas pasisekė?</p>
                                     <input class="form-control" type="text" name="luck" value="{{($report->{'1_9_success'})}}">
-                                    <p class="text-muted">Kokių patyrėte sunkumų</p>
+                                    <p class="text-muted">Kokių patyrėte sunkumų?</p>
                                     <input class="form-control" type="text" name="difficulties" value="{{($report->{'1_9_failure'})}}">
                                 </div>
                             </div>
@@ -383,7 +383,7 @@
                             </div>
                             <div class="form-group">
                                 <label class=" card-title">1.18. Pateikite absolventų atsiliepimus apie jų pasitenkinimą
-                                    įgyta kvalifikaciją 5.2.5</label>
+                                    įgyta kvalifikacija 5.2.5</label>
                                 <div class="  ">
                                     <input class="form-control" type="text" name="graduate_reviews" value="{{($report->{'1_18'})}}">
                                 </div>
@@ -784,7 +784,7 @@
                                     </div>
                                 </li>
                             </ul>
-                            <label class="card-title">Kokius naujos jums svarbius metodinių išteklių įsigijimo atvejus
+                            <label class="card-title">Kokius naujus Jums svarbius metodinių išteklių įsigijimo atvejus
                                 galėtumėte išskirti kaip
                                 reikšmingiausius
                                 Jūsų
@@ -1023,7 +1023,7 @@
                                 </li>
                             </ul>
                             <div class="form-group"><label class="card-title">4.3. Pedagogo grįžtamasis ryšys.</label></div>
-                            <label class="card-title text-muted">Koks Svarbiausias asmeninis šių metų profesinis
+                            <label class="card-title text-muted">Koks svarbiausias asmeninis šių metų profesinis
                                 pasiekimas (patirtis)?</label>
                             <input class="form-control" type="text" name="the_most_important_achievement" value="{{($report->{'4_3_2'})}}">
                             <label class="card-title text-muted">Koks nemaloniausias šių metų įvykis

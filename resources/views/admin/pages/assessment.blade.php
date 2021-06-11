@@ -38,6 +38,23 @@
         cursor: pointer;
     }
 
+    .qmark:hover {
+        pointer-events: none;
+    }
+
+    .qmark {
+        border-top-right-radius: 0 !important;
+        border-bottom-right-radius: 0 !important;
+    }
+
+    .modB {
+        border-top-left-radius: 0 !important;
+        border-bottom-left-radius: 0 !important;
+    }
+
+    .sritis {
+        margin-right: 5em;
+    }
 </style>
 
 @extends('admin.main')
@@ -57,17 +74,17 @@
             <span class="closeModal" onclick="closeMod1()">X</span>
             <ul>
                 <li>Anketos nebūtina užpildyti iš karto.</li>
-            <li>Norėdami tęsti pildymą kitą kartą, nepamirškite paspausti “Išsaugoti pakeitimus”, kad vėliau galėtumėte grįžti ir pratęsti anketos pildymą.</li>
-            <li>Pilnai baigus pildyti anketą galite ją pateikti paspaudę "Pateikti anketą".</li>
-            <li><b>SVARBU!</b> Suvedus duomenis ir paspaudus "Pateikti anketą", jų jau nebebus galima koreguoti.</li>
-            <li><b>SVARBU!</b> Nepamirškite atkreipti dėmesio į anketos pildymo termino pabaigą.</li>
-            <li>2.1 Punkte galite pridėti Jums reikalingą kiekį projekų, kuriuose dalyvavote, paspaudę "Pridėti kitą projektą".</li>
+                <li>Norėdami tęsti pildymą kitą kartą, nepamirškite paspausti “Išsaugoti pakeitimus”, kad vėliau galėtumėte grįžti ir pratęsti anketos pildymą.</li>
+                <li>Pilnai baigus pildyti anketą galite ją pateikti paspaudę "Pateikti anketą".</li>
+                <li><b>SVARBU!</b> Suvedus duomenis ir paspaudus "Pateikti anketą", jų jau nebebus galima koreguoti.</li>
+                <li><b>SVARBU!</b> Nepamirškite atkreipti dėmesio į anketos pildymo termino pabaigą.</li>
+                <li>2.1 Punkte galite pridėti Jums reikalingą kiekį projekų, kuriuose dalyvavote, paspaudę "Pridėti kitą projektą".</li>
             </ul>
         </div>
     </div>
     @if($pateikta == false)
     <div class="d-flex justify-content-center">
-    <p id="modalB" class="btn btn-outline-danger mb-5 mt-4">Anketos pildymo informacija</p>
+        <span class="btn btn-danger mb-5 mt-4 qmark"><b>?</b></span><span id="modalB" class="btn btn-outline-danger mb-5 mt-4 modB">Anketos pildymo informacija</span>
     </div>
     @endif
 
@@ -158,21 +175,21 @@
                                 <label class=" card-title">1.2. Aprašykite gerąją mokymo proceso organizavimo patirtį,
                                     pasiekimus.</label>
                                 <div>
-                                    <input class="form-control" type="text" name="training_organization_experience_achievements" value="{{($update->{'1_2'})}}">
+                                    <textarea class="form-control" type="text" name="training_organization_experience_achievements">{{($update->{'1_2'})}}</textarea>
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label class=" card-title">1.3. Kokie priimti sprendimai, turėjo įtakos mokymo kokybės
                                     gerinimui?</label>
                                 <div class=" col-md-8">
-                                    <input class="form-control" type="text" name="quality_of_teaching" value="{{($update->{'1_3'})}}">
+                                    <textarea class="form-control" type="text" name="quality_of_teaching">{{($update->{'1_3'})}}</textarea>
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label class=" card-title">1.4. Kokios buvo kilusios problemos ir kokiais sprendimais jas
                                     pavyko išspręsti?</label>
                                 <div>
-                                    <input class="form-control" type="text" name="problems_and_solutions" value="{{($update->{'1_4'})}}">
+                                    <textarea class="form-control" type="text" name="problems_and_solutions">{{($update->{'1_4'})}}</textarea>
                                 </div>
                             </div>
                             <div class="form-group">
@@ -190,9 +207,9 @@
                                     individualių/dalyko, integruoto ugdymo programų/planų
                                     skaičius (įrašykite):</label>
                                 <div>
-                                    <input class="form-control" type="number" name="number_of_plans" value="{{($update->{'1_6'})}}" min="0">
+                                    <input class="form-control" type="number" name="number_of_plans" value="{{($update->{'1_6'})}}" min="0" max="999">
                                     <p class="text-muted mt-3">Išvardinkite svarbiausius planus, kuriuos esate parengęs:</p>
-                                    <textarea class="form-control" type="text" name="firstPlan" placeholder="Planai kuriuos esate parengę">{{($update->{'1_6_first'})}}</textarea>
+                                    <textarea class="form-control" type="text" name="firstPlan">{{($update->{'1_6_first'})}}</textarea>
                                     <p class="text-muted mt-3">Nurodykite, kur patalpinti dalyko/modulio teminiai planai:</p>
                                     <input class="form-control" type="text" name="link_to_plans" value="{{($update->{'1_6_link'})}}">
                                 </div>
@@ -225,9 +242,9 @@
                                     mokytis?</label>
                                 <div>
                                     <textarea class="form-control" type="text" name="first_method_for_self_directed_learning">{{($update->{'1_9_first'})}}</textarea>
-                                    <p class="text-muted mt-3">Kas pasisekė</p>
+                                    <p class="text-muted mt-3">Kas pasisekė?</p>
                                     <input class="form-control" type="text" name="luck" value="{{($update->{'1_9_success'})}}">
-                                    <p class="text-muted mt-3">Kokių patyrėte sunkumų</p>
+                                    <p class="text-muted mt-3">Kokių patyrėte sunkumų?</p>
                                     <input class="form-control" type="text" name="difficulties" value="{{($update->{'1_9_failure'})}}">
                                 </div>
                             </div>
@@ -325,7 +342,7 @@
                                     individualiai arba su
                                     ugdytiniais? (Išvardinkite)</label>
                                 <div>
-                                    <input class="form-control" type="text" name="competitions" value="{{($update->{'1_12'})}}">
+                                    <textarea class="form-control" type="text" name="competitions">{{($update->{'1_12'})}}</textarea>
                                 </div>
                             </div>
                             <div class="form-group">
@@ -333,8 +350,8 @@
                                     valstybinį egzaminą? (Įrašykite
                                     skaičių)</label>
                                 <div>
-                                    <input class="form-control mt-2" type="number" name="pass_an_exam" placeholder="Kiek egzaminą išlaikė" value="{{($update->{'1_13_islaike'})}}" min="0">
-                                    <input class="form-control mt-2" type="number" name="didnt_pass_an_exam" placeholder="Kiek egzamino neišlaikė" value="{{($update->{'1_13_neislaike'})}}" min="0">
+                                    <input class="form-control mt-2" type="number" name="pass_an_exam" placeholder="Kiek egzaminą išlaikė" value="{{($update->{'1_13_islaike'})}}" min="0" max="999">
+                                    <input class="form-control mt-2" type="number" name="didnt_pass_an_exam" placeholder="Kiek egzamino neišlaikė" value="{{($update->{'1_13_neislaike'})}}" min="0" max="999">
                                 </div>
                             </div>
                             <div class="form-group">
@@ -343,34 +360,34 @@
                                     technologijų
                                     egzaminą?</label>
                                 <div>
-                                    <input class="form-control mt-2" type="number" name="number_of_students" value="{{($update->{'1_14_nr'})}}" min="0">
-                                    <input class="form-control mt-2" type="number" name="pass_an_exam_technology" placeholder="Kiek egzaminą išlaikė" value="{{($update->{'1_14_islaike'})}}" min="0">
-                                    <input class="form-control mt-2" type="number" name="didnt_pass_an_exam_technology" placeholder="Kiek egzamino neišlaikė" value="{{($update->{'1_14_neislaike'})}}" min="0">
+                                    <input class="form-control mt-2" type="number" name="number_of_students" value="{{($update->{'1_14_nr'})}}" min="0" max="999">
+                                    <input class="form-control mt-2" type="number" name="pass_an_exam_technology" placeholder="Kiek egzaminą išlaikė" value="{{($update->{'1_14_islaike'})}}" min="0" max="999">
+                                    <input class="form-control mt-2" type="number" name="didnt_pass_an_exam_technology" placeholder="Kiek egzamino neišlaikė" value="{{($update->{'1_14_neislaike'})}}" min="0" max="999">
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label class=" card-title">1.15. Praktikos vadovams. Kokiam mokinių skaičiui vadovavote praktikos metu?</label>
                                 <div>
-                                    <input class="form-control mb-3" type="number" name="guided_practice" placeholder="įrašykite" value="{{($update->{'1_15_nr'})}}" min="0">
+                                    <input class="form-control mb-3" type="number" name="guided_practice" placeholder="įrašykite" value="{{($update->{'1_15_nr'})}}" min="0" max="999">
 
                                     <label class="col-md-12">Žinios apie mokinių praktikos vietas (pasirinkite).</label>
-                                    <input class="form-control mt-2" type="number" name="practise_in_companies" placeholder="Mokinių, atlikusių praktiką įmonėse skaičius" value="{{($update->{'1_15_1'})}}" min="0">
-                                    <input class="form-control mt-2" type="number" name="practise_apprenticeships" placeholder="Mokinių, atlikusių praktiką pameistrystės mokymosi forma skaičius" value="{{($update->{'1_15_2'})}}" min="0">
+                                    <input class="form-control mt-2" type="number" name="practise_in_companies" placeholder="Mokinių, atlikusių praktiką įmonėse skaičius" value="{{($update->{'1_15_1'})}}" min="0" max="999">
+                                    <input class="form-control mt-2" type="number" name="practise_apprenticeships" placeholder="Mokinių, atlikusių praktiką pameistrystės mokymosi forma skaičius" value="{{($update->{'1_15_2'})}}" min="0" max="999">
                                     <input class="form-control mt-2" type="number" name="practise_in_school" placeholder="Mokinių, atlikusių praktiką mokykloje skaičius" value="{{($update->{'1_15_3'})}}">
-                                    <input class="form-control mt-2" type="number" name="practise_with_project_works" placeholder="Mokinių, praktikos metų atlikusių projektinius darbus skaičius" value="{{($update->{'1_15_4'})}}" min="0">
+                                    <input class="form-control mt-2" type="number" name="practise_with_project_works" placeholder="Mokinių, praktikos metų atlikusių projektinius darbus skaičius" value="{{($update->{'1_15_4'})}}" min="0" max="999">
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label class=" card-title">1.16. Žinios apie absolventus. Absolventų skaičius iš
                                     jų:</label>
                                 <div>
-                                    <input class="form-control mt-2" type="number" name="Continue_studying_at_a_college_or_university" placeholder="Tęsia mokymąsi kolegijoje ar universitete (kiek)" value="{{($update->{'1_16_1'})}}" min="0">
-                                    <input class="form-control mt-2" type="number" name="Employed" placeholder="Įsidarbino (kiek)" value="{{($update->{'1_16_2'})}}" min="0">
-                                    <input class="form-control mt-2" type="number" name="not_working_not_studying" placeholder="Nedirba, nesimoko (kiek)" value="{{($update->{'1_16_3'})}}" min="0">
-                                    <input class="form-control mt-2" type="number" name="Signed_up_for_UT" placeholder="Užsiregistravo UT (kiek)" value="{{($update->{'1_16_4'})}}" min="0">
-                                    <input class="form-control mt-2" type="number" name="Went_abroad" placeholder="Išvyko į užsienį (kiek)" value="{{($update->{'1_16_5'})}}" min="0">
+                                    <input class="form-control mt-2" type="number" name="Continue_studying_at_a_college_or_university" placeholder="Tęsia mokymąsi kolegijoje ar universitete (kiek)" value="{{($update->{'1_16_1'})}}" min="0" max="999">
+                                    <input class="form-control mt-2" type="number" name="Employed" placeholder="Įsidarbino (kiek)" value="{{($update->{'1_16_2'})}}" min="0" max="999">
+                                    <input class="form-control mt-2" type="number" name="not_working_not_studying" placeholder="Nedirba, nesimoko (kiek)" value="{{($update->{'1_16_3'})}}" min="0" max="999">
+                                    <input class="form-control mt-2" type="number" name="Signed_up_for_UT" placeholder="Užsiregistravo UT (kiek)" value="{{($update->{'1_16_4'})}}" min="0" max="999">
+                                    <input class="form-control mt-2" type="number" name="Went_abroad" placeholder="Išvyko į užsienį (kiek)" value="{{($update->{'1_16_5'})}}" min="0" max="999">
                                     <input class="form-control mt-2" type="text" name="other" placeholder="Kita (nurodykite)" value="{{($update->{'1_16_6'})}}">
-                                    <input class="form-control mt-2" type="number" name="no_data" placeholder="Nėra duomenų (kiek)" value="{{($update->{'1_16_7'})}}" min="0">
+                                    <input class="form-control mt-2" type="number" name="no_data" placeholder="Nėra duomenų (kiek)" value="{{($update->{'1_16_7'})}}" min="0" max="999">
                                     <input class="form-control mt-2" type="text" name="data_not_provided" placeholder="Duomenys nepateikti (nurodykite priežastį)" value="{{($update->{'1_16_8'})}}">
                                 </div>
                             </div>
@@ -379,14 +396,14 @@
                                     absolventų įgytomis
                                     kompetencijomis.</label>
                                 <div>
-                                    <input class="form-control" type="text" name="employer_reviews" value="{{($update->{'1_17'})}}">
+                                    <textarea class="form-control" type="text" name="employer_reviews">{{($update->{'1_17'})}}</textarea>
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label class=" card-title">1.18. Pateikite absolventų atsiliepimus apie jų pasitenkinimą
                                     įgyta kvalifikacija 5.2.5</label>
                                 <div>
-                                    <input class="form-control" type="text" name="graduate_reviews" value="{{($update->{'1_18'})}}">
+                                    <textarea class="form-control" type="text" name="graduate_reviews">{{($update->{'1_18'})}}</textarea>
                                 </div>
                             </div>
                         </div>
@@ -403,27 +420,27 @@
                             juose:</label>
                         <div id="projects">
                             @if($projects[0] == null)
-                            <input class="form-control" type="text" name="projects[0][prname]" placeholder="projektas">
-                            <input class="form-control mt-2" type="text" name="projects[0][prdev]" placeholder="projekto rengėjas">
-                            <input class="form-control mt-2" type="text" name="projects[0][prcoo]" placeholder="projekto koordinatorius">
-                            <input class="form-control mt-2" type="text" name="projects[0][prexe]" placeholder="projekto vykdytojas">
+                            <input class="form-control" type="text" name="projects[0][prname]" placeholder="Projektas">
+                            <input class="form-control mt-2" type="text" name="projects[0][prdev]" placeholder="Projekto rengėjas">
+                            <input class="form-control mt-2" type="text" name="projects[0][prcoo]" placeholder="Projekto koordinatorius">
+                            <input class="form-control mt-2" type="text" name="projects[0][prexe]" placeholder="Projekto vykdytojas">
                             <p style="visibility: hidden;" class="key">0</p>
                             @else
                             @foreach($projects[0] as $key=>$project)
-                            <input class="form-control" type="text" name="projects[{{$key}}][prname]" placeholder="projektas" value="{{$project['prname']}}">
-                            <input class="form-control" type="text" name="projects[{{$key}}][prdev]" placeholder="projekto rengėjas" value="{{$project['prdev']}}">
-                            <input class="form-control" type="text" name="projects[{{$key}}][prcoo]" placeholder="projekto koordinatorius" value="{{$project['prcoo']}}">
-                            <input class="form-control" type="text" name="projects[{{$key}}][prexe]" placeholder="projekto vykdytojas" value="{{$project['prexe']}}">
+                            <input class="form-control" type="text" name="projects[{{$key}}][prname]" placeholder="Projektas" value="{{$project['prname']}}">
+                            <input class="form-control" type="text" name="projects[{{$key}}][prdev]" placeholder="Projekto rengėjas" value="{{$project['prdev']}}">
+                            <input class="form-control" type="text" name="projects[{{$key}}][prcoo]" placeholder="Projekto koordinatorius" value="{{$project['prcoo']}}">
+                            <input class="form-control" type="text" name="projects[{{$key}}][prexe]" placeholder="Projekto vykdytojas" value="{{$project['prexe']}}">
                             <p style="visibility: hidden;" class="key">{{++$key}}</p>
                             @endforeach
                             @endif
                         </div>
-                        <p class="btn btn-outline-success" id="prideti">Pridėti kitą projektą</p><br>
+                        <span class="btn btn-outline-success mb-5" id="prideti">Pridėti kitą projektą</span><br>
                         <label class="card-title">2.2. Pravestų profesinio orientavimo susitikimų skaičius (KITM renginiai, susitikimai BU mokyklose).</label>
-                        <input class="form-control" type="number" name="number_of_career_guidance_meetings" value="{{($update->{'2_2'})}}" min="0">
+                        <input class="form-control" type="number" name="number_of_career_guidance_meetings" value="{{($update->{'2_2'})}}" min="0" max="999">
                         <label class="card-title">2.3. Pravestų nuotolinių pamokų 7-12 klasių mokiniams
                             skaičius.</label>
-                        <input class="form-control" type="number" name="number_of_distance_learning_lessons_for_students_in_grades_7_12" value="{{($update->{'2_3'})}}" min="0">
+                        <input class="form-control" type="number" name="number_of_distance_learning_lessons_for_students_in_grades_7_12" value="{{($update->{'2_3'})}}" min="0" max="999">
                         <p class="text-muted">
                             <label class="card-title">2.4 Metodinė veikla mokykloje, pagalba kolegoms. Išvardinkite veiklas: </label>
                             <textarea class="form-control" type="text" name="first_activity">{{($update->{'2_4_1'})}}</textarea>
@@ -437,9 +454,9 @@
                             <input class="form-control mt-2" type="text" name="third_problem" value="{{($update->{'2_5_6'})}}">
                             <label class="card-title">2.6. Grupės vadovo veikla - mokinių nubyrėjimas.</label>
                         <p class="card-title text-muted">Kiek mokinių įstojo į I kursą?</p>
-                        <input class="form-control" type="number" name="students_in_first_year" value="{{($update->{'2_6_1'})}}" min="0">
+                        <input class="form-control" type="number" name="students_in_first_year" value="{{($update->{'2_6_1'})}}" min="0" max="999">
                         <p class="card-title text-muted">Kiek mokinių mokosi šiuo metu (baigė)?</p>
-                        <input class="form-control" type="number" name="students_studying_or_graduated" value="{{($update->{'2_6_2'})}}" min="0">
+                        <input class="form-control" type="number" name="students_studying_or_graduated" value="{{($update->{'2_6_2'})}}" min="0" max="999">
                         <label class="card-title">2.7. Įvardinkite mokinių „nubyrėjimo“ priežastis ir kaip jas
                             sprendžiate:</label>
                         <textarea class="form-control" type="text" name="The_cause_of_the_fall">{{($update->{'2_7'})}}</textarea>
@@ -472,8 +489,9 @@
                         <input class="form-control" id="input1" type="number" name="training" value="{{ $pateikta == true ? $update->{'3_hours'} : $hourscore }}" readonly="readonly">
                         <p class="text-muted text-decoration-underline">Už kiekvieną dieną (6 valandas) 1 balas</p>
                     </div>
-                    <div class="card-body">
-                        <p>I sritis</p>
+                    <div class="card-body d-flex">
+                    <div class="sritis">
+                        <p><b>I sritis</b></p>
                         <div class="form-check form-check">
                             <input class="form-check-input input2" type="radio" name="I_score" id="inlineRadioExt2" value="1" onclick="calculate()" {{ ($update->{'3_I'} =="1") ? 'checked' : '' }}>
                             <label class="form-check-label" for="inlineRadioExt2">1</label>
@@ -516,8 +534,8 @@
                         </div>
                     </div>
 
-                    <div class="card-body">
-                        <p>II sritis</p>
+                    <div class="sritis">
+                        <p><b>II sritis</b></p>
                         <div class="form-check form-check">
                             <input class="form-check-input input3" type="radio" name="II_score" id="inlineRadioExt2" value="1" onclick="calculate()" {{ ($update->{'3_II'} =="1") ? 'checked' : '' }}>
                             <label class="form-check-label" for="inlineRadioExt2">1</label>
@@ -559,9 +577,9 @@
                             <label class="form-check-label" for="inlineRadioExt2">10</label>
                         </div>
                     </div>
-                </div>
-                <div class="card-body">
-                    <p>III sritis.</p>
+                
+                <div class="">
+                    <p><b>III sritis</b></p>
                     <div class="form-check form-check">
                         <input class="form-check-input input4" type="radio" name="III_score" id="inlineRadioExt2" value="1" onclick="calculate()" {{ ($update->{'3_III'} =="1") ? 'checked' : '' }}>
                         <label class="form-check-label" for="inlineRadioExt2">1</label>
@@ -602,6 +620,8 @@
                         <input class="form-check-input input4" type="radio" name="III_score" id="inlineRadioExt2" value="10" onclick="calculate()" {{ ($update->{'3_III'} =="10") ? 'checked' : '' }}>
                         <label class="form-check-label" for="inlineRadioExt2">10</label>
                     </div>
+                </div>
+                </div>
                 </div>
                 <h4 class="p-2">VEIKLOS ĮSIVERTINIMAS BALŲ: </h4>
                 <p class="card-title text-muted p-2">Surinktų balų suma: <input class="form-control" id="sum" type="number" name="final_score" value="{{($update->{'3_sum'})}}" readonly="readonly"></p>
@@ -787,7 +807,7 @@
                                     </div>
                                 </li>
                             </ul>
-                            <label class="card-title mt-4">Kokius naujos jums svarbius metodinių išteklių įsigijimo atvejus
+                            <label class="card-title mt-4">Kokius naujus Jums svarbius metodinių išteklių įsigijimo atvejus
                                 galėtumėte išskirti kaip
                                 reikšmingiausius
                                 Jūsų
@@ -1096,25 +1116,25 @@
             prname.setAttribute('type', 'text');
             prname.setAttribute('class', 'form-control');
             prname.setAttribute('name', 'projects[' + count + '][prname]');
-            prname.setAttribute('placeholder', 'projektas');
+            prname.setAttribute('placeholder', 'Projektas');
 
             let prdev = document.createElement("input");
             prdev.setAttribute('type', 'text');
             prdev.setAttribute('class', 'form-control');
             prdev.setAttribute('name', 'projects[' + count + '][prdev]');
-            prdev.setAttribute('placeholder', 'projekto rengėjas');
+            prdev.setAttribute('placeholder', 'Projekto rengėjas');
 
             let prcoo = document.createElement("input");
             prcoo.setAttribute('type', 'text');
             prcoo.setAttribute('class', 'form-control');
             prcoo.setAttribute('name', 'projects[' + count + '][prcoo]');
-            prcoo.setAttribute('placeholder', 'projekto koordinatorius');
+            prcoo.setAttribute('placeholder', 'Projekto koordinatorius');
 
             let prexe = document.createElement("input");
             prexe.setAttribute('type', 'text');
             prexe.setAttribute('class', 'form-control');
             prexe.setAttribute('name', 'projects[' + count + '][prexe]');
-            prexe.setAttribute('placeholder', 'projekto vykdytojas');
+            prexe.setAttribute('placeholder', 'Projekto vykdytojas');
             prexe.setAttribute('style', 'margin-bottom: 2em;');
 
             cont.appendChild(prname);
@@ -1161,11 +1181,8 @@
     }
 
     let modal = document.querySelector(".modalC");
-
     let btn = document.querySelector("#modalB");
-
     let modalClose = document.querySelector(".modalClose");
-
     let modalContent = document.querySelector('.modalContent');
 
     btn.onclick = function() {

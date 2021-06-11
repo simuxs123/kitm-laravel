@@ -31,7 +31,7 @@
                     <li class="sidebar-item">
                         <a href="/self-assessment" class='sidebar-link'>
                             <i class="bi bi-collection-fill"></i>
-                            <span>Mokytojų įvertinimas</span>
+                            <span>Mokytojų įsivertinimas</span>
                         </a>
                     </li>
                     @endroles

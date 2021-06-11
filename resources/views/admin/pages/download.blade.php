@@ -144,13 +144,13 @@
         <td>{{($info->{'1_9_third'})}}</td>
     </tr> -->
     <tr>
-        <td><b>Kas pasisekė</b></td>
+        <td><b>Kas pasisekė?</b></td>
     </tr>
     <tr>
         <td>{{($info->{'1_9_success'})}}</td>
     </tr>
     <tr>
-        <td><b>Kokių patyrėte sunkumų </b></td>
+        <td><b>Kokių patyrėte sunkumų?</b></td>
     </tr>
     <tr>
         <td>{{($info->{'1_9_failure'})}}</td>
@@ -539,7 +539,7 @@
     </tr>
     <tr><td></td></tr>
     <tr>
-        <td><b>Kokius naujos jums svarbius metodinių išteklių įsigijimo atvejus galėtumėte išskirti kaip reikšmingiausius Jūsų institucijoje?</b></td>
+        <td><b>Kokius naujus Jums svarbius metodinių išteklių įsigijimo atvejus galėtumėte išskirti kaip reikšmingiausius Jūsų institucijoje?</b></td>
     </tr>
     <tr>
         <td>{{($info->{'4_1_6'})}}</td>
@@ -645,7 +645,7 @@
     </tr>
     <tr><td></td></tr>
     <tr>
-        <td><b>Koks Svarbiausias asmeninis šių metų profesinis pasiekimas (patirtis)?</b></td>
+        <td><b>Koks svarbiausias asmeninis šių metų profesinis pasiekimas (patirtis)?</b></td>
     </tr>
     <tr>
         <td>{{($info->{'4_3_2'})}}</td>
