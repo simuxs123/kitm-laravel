@@ -65,4 +65,5 @@ Route::group(['middleware' => ['check']], function () {
 
 
     Route::get('/restriction', 'AdminController@restriction')->middleware('roles:moksleivis,darbuotojas,mokytojas,admin');
+
 });

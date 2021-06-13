@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\Module;
 use Illuminate\Http\Request;
 use App\Datepicker;
+use App\KitmUsers;
+use App\SelfAssessment;
 use Illuminate\Support\Carbon;
 
 class AdminController extends Controller

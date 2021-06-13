@@ -343,11 +343,11 @@ class SelfAssessmentController extends Controller
     {
         $teachers = KitmUsers::where(['roles_id' => 3])->orWhere(['roles_id' => 1])->get();
         $reports = array();
-        $scores = array();
         $average = 0;
         $category = '';
 
         foreach ($teachers as $teacher) {
+            $scores = array();
             $check = SelfAssessment::where(['user_id' => $teacher->id])->first();
             $assessmentcheck = SelfAssessment::where(['user_id' => $teacher->id])->exists() && $check['pateikta'] > 0;
             $surveycheck = Survey::where(['teacher_id' => $teacher->id])->exists();
@@ -371,7 +371,8 @@ class SelfAssessmentController extends Controller
             } else {
                 $average = 0;
             }
-
+            unset($scores);
+            $scores = array();
             array_push($reports, [$teacher->name, $teacher->surname, $category, $assessmentcheck, $surveycheck, $average, $teacher->id, $guidecheck]);
         }
 
