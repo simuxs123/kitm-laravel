@@ -24,8 +24,8 @@
                                         </div>
                                     </div>
                                     <div class="col-md-8">
-                                        <h6 class="text-muted font-semibold">Prisijungimai</h6>
-                                        <h6 class="font-extrabold mb-0">--</h6>
+                                        <h6 class="text-muted font-semibold">Peržiūros šiandien</h6>
+                                        <h6 class="font-extrabold mb-0">{{$prisijungimai}}</h6>
                                     </div>
                                 </div>
                             </div>
@@ -102,11 +102,13 @@
                                 <h4>TOP mokytojai</h4>
                             </div>
                             <div class="card-body">
-                            <ol>
-                            @foreach($result as $item)
-                                <li><h5>{{$item[0].' '.$item[1].' - '.$item[2]}}</h5></li>
-                            @endforeach
-                            </ol>
+                                <ol>
+                                    @foreach($result as $item)
+                                    <li>
+                                        <h5>{{$item[0].' '.$item[1].' - '.$item[2]}}</h5>
+                                    </li>
+                                    @endforeach
+                                </ol>
                             </div>
                         </div>
                     </div>
@@ -158,3 +160,56 @@
         </section>
     </div>
     @include('admin/_partials/footer')
+
+    <script>
+        var sausis = '{{$menesiai[0]}}';
+        var vasaris = '{{$menesiai[1]}}';
+        var kovas = '{{$menesiai[2]}}';
+        var balandis = '{{$menesiai[3]}}';
+        var geguze = '{{$menesiai[4]}}';
+        var birzelis = '{{$menesiai[5]}}';
+        var liepa = '{{$menesiai[6]}}';
+        var rugpjutis = '{{$menesiai[7]}}';
+        var rugsejis = '{{$menesiai[8]}}';
+        var spalis = '{{$menesiai[9]}}';
+        var lapkritis = '{{$menesiai[10]}}';
+        var gruodis = '{{$menesiai[11]}}';
+
+        var optionsProfileVisit = {
+            annotations: {
+                position: 'back'
+            },
+            dataLabels: {
+                enabled: false
+            },
+            chart: {
+                type: 'bar',
+                height: 300
+            },
+            fill: {
+                opacity: 1
+            },
+            plotOptions: {},
+            series: [{
+                name: 'Apsilankymai',
+                data: [sausis,
+                    vasaris,
+                    kovas,
+                    balandis,
+                    geguze,
+                    birzelis,
+                    liepa,
+                    rugpjutis,
+                    rugsejis,
+                    spalis,
+                    lapkritis,
+                    gruodis,
+                ]
+            }],
+            colors: '#435ebe',
+            xaxis: {
+                categories: ["Sausis", "Vasaris", "Kovas", "Balandis", "Gegužė", "Birželis", "Liepa", "Rugpjūtis", "Rugsėjis", "Spalis", "Lapkritis", "Gruodis"],
+            },
+        }
+        var chartProfileVisit = new ApexCharts(document.querySelector("#chart-profile-visit"), optionsProfileVisit);
+    </script>

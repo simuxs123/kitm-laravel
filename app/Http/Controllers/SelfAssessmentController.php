@@ -373,7 +373,7 @@ class SelfAssessmentController extends Controller
             }
             unset($scores);
             $scores = array();
-            array_push($reports, [$teacher->name, $teacher->surname, $category, $assessmentcheck, $surveycheck, $average, $teacher->id, $guidecheck]);
+            array_push($reports, [$teacher->surname, $teacher->name, $category, $assessmentcheck, $surveycheck, $average, $teacher->id, $guidecheck]);
         }
 
         return view('admin.pages.assessment-report', compact('reports'));

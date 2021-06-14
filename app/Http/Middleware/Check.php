@@ -15,6 +15,6 @@ class Check extends Controller
             return $next($request);
         }
 
-        abort(Response::HTTP_UNAUTHORIZED);
+        return redirect('/');
     }
 }

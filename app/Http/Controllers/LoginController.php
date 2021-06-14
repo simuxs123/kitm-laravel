@@ -8,7 +8,7 @@ use Illuminate\Support\Facades\Gate;
 use App\Survey;
 use App\SelfAssessment;
 use App\Guide;
-use Maatwebsite\Excel\Concerns\ToArray;
+use App\Traffics;
 
 class LoginController extends Controller
 {
@@ -18,10 +18,23 @@ class LoginController extends Controller
         $mokiniai = KitmUsers::where(['roles_id' => 4])->count();
         $apklausos = Survey::all()->count();
         $naujausi = KitmUsers::orderBy('created_at', 'DESC')->take(3)->get();
-        
+        $prisijungimai = Traffics::where('visitor', '>', 0)->sum('visits');
         $teachers = KitmUsers::where(['roles_id' => 3])->orWhere(['roles_id' => 1])->get();
+        $sausis = Traffics::sum('Jan');
+        $vasaris = Traffics::sum('Feb');
+        $kovas = Traffics::sum('Mar');
+        $balandis = Traffics::sum('Apr');
+        $geguze = Traffics::sum('May');
+        $birzelis = Traffics::sum('Jun');
+        $liepa = Traffics::sum('Jul');
+        $rugpjutis = Traffics::sum('Aug');
+        $rugsejis = Traffics::sum('Sep');
+        $spalis = Traffics::sum('Oct');
+        $lapkritis = Traffics::sum('Nov');
+        $gruodis = Traffics::sum('Dec');
+        $menesiai = array ();
+        array_push($menesiai, $sausis, $vasaris, $kovas, $balandis, $geguze, $birzelis, $liepa, $rugpjutis, $rugsejis, $spalis, $lapkritis, $gruodis);
         $reports = array();
-        
         $average = 0;
 
         foreach ($teachers as $teacher) {
@@ -51,7 +64,7 @@ class LoginController extends Controller
         $array = $collect->sortByDesc(2)->toArray();
         $result = array_slice($array, 0, 3);
 
-        return view('admin.pages.welcome',$viewData, compact('mokytojai', 'mokiniai', 'apklausos', 'naujausi', 'result'));
+        return view('admin.pages.welcome',$viewData, compact('mokytojai', 'mokiniai', 'apklausos', 'naujausi', 'result', 'prisijungimai', 'menesiai'));
     }
 
     public function addEmail(Request $request){

@@ -103,7 +103,7 @@
                                     <div class="col-md-6 col-12">
                                         <div class="form-group">
                                             <label for="name">Vardas, pavardė</label>
-                                            <input type="text" id="name" class="form-control" value="{{$name.' '.$surname}}" name="name" readonly="readonly">
+                                            <input type="text" id="name" class="form-control" value="{{$surname.' '.$name}}" name="name" readonly="readonly">
                                         </div>
                                     </div>
                                     <div class="col-md-6 col-12">

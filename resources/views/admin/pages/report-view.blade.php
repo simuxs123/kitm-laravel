@@ -17,7 +17,7 @@
 
 <div id="main">
     <a href="/assessmentReport/"><button type="button" class="btn btn-primary mb-5">Grįžti</button></a>
-    <h4 class="mb-4">{{$name->name.' '.$name->surname}}</h4>
+    <h4 class="mb-4">{{$name->surname.' '.$name->name}}</h4>
     @if($surveycheck == false)
     <h5 style="color: red;">Nėra pateiktų modulio apklausų.</h5>
     @else

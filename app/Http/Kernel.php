@@ -67,5 +67,6 @@ class Kernel extends HttpKernel
         'form.active' => \App\Http\Middleware\FormFill::class,
         'check' => \App\Http\Middleware\Check::class,
         'surveycheck' => \App\Http\Middleware\Survey::class,
+        'traffic' => \App\Http\Middleware\Traffic::class,
     ];
 }

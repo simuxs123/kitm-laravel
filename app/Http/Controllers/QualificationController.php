@@ -19,7 +19,7 @@ class QualificationController extends Controller
         $results = array();
         foreach ($teachers as $teacher) {
             $sum = Qualification::where(['user_id' => $teacher->id])->sum('hours');
-            array_push($results, [$teacher->name, $teacher->surname, $sum]);
+            array_push($results, [$teacher->surname, $teacher->name, $sum]);
         }
 
 
