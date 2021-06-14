@@ -20,8 +20,8 @@ class Traffic
     {
         if (!session('userName') == null) {
         Traffics::where(['visitor' => 0])->increment('visits');
-        $time = Carbon::now()->subDays(1)->endOfDay()->addSecond();
-        $year = Carbon::now()->subYears(1)->endOfYear()->addSecond();
+        $time = Carbon::now()->subDays(1)->endOfDay();
+        $year = Carbon::now()->subYears(1)->endOfYear();
         $last = Traffics::where(['visitor' => 0])->first();
 
         if ($last->updated_at < $time) {
