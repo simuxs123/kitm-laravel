@@ -19,15 +19,14 @@ class Traffic
     public function handle($request, Closure $next)
     {
         if (!session('userName') == null) {
-        Traffics::where(['visitor' => 0])->increment('visits');
         $time = Carbon::now()->subDays(1)->endOfDay();
         $year = Carbon::now()->subYears(1)->endOfYear();
         $last = Traffics::where(['visitor' => 0])->first();
 
-        if ($last->updated_at < $time) {
+        if ($last->updated_at <= $time) {
             Traffics::query()->update(['visits' => 0]);
         }
-
+        
         if ($last->updated_at < $year) {
             Traffics::query()->update(['Jan' => 0]);
             Traffics::query()->update(['Feb' => 0]);
@@ -42,7 +41,8 @@ class Traffic
             Traffics::query()->update(['Nov' => 0]);
             Traffics::query()->update(['Dec' => 0]);
         }
-
+        
+        Traffics::where(['visitor' => 0])->increment('visits');
         $id = KitmUsers::where(['email' => session('userEmail')])->first()->id;
         Traffics::firstOrCreate(['visitor' => $id]);
         Traffics::where(['visitor' => $id])->increment('visits');
