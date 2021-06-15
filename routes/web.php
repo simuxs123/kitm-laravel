@@ -15,7 +15,7 @@ use Illuminate\Support\Facades\Auth;
 |
 */
 
-Route::get('/', 'LoginController@home')->middleware('traffic');
+Route::get('/', 'LoginController@home');
 Route::get('/sign-in', 'AuthController@signin');
 Route::get('/sign-in/redirect', 'AuthController@signinRedirect');
 Route::get('/sign-out', 'AuthController@signout');
