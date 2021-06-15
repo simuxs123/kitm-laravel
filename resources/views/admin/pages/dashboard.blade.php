@@ -122,18 +122,9 @@
                                 <img src="assets/images/faces/4.png" alt="Face 1">
                             </div>
                             <div class="ms-3 name ">
-                                <h5 class="font-bold">{{$userName}}
-                                    <h6>{{$userRole}}</h6>
-                                </h5>
-                                <div class="btn-group dropstart ">
-                                    <button type="button" class="btn  " data-bs-toggle="dropdown">
-
-                                        <h6 class="text-muted mb-0"><i class="iconly-boldArrow---Left-2"></i>{{$userEmail}}</h6>
-                                    </button>
-                                    <div class="dropdown-menu dropleft " style="margin: 0px;">
-                                        <a class="dropdown-item " href="/sign-out">Logout</a>
-                                    </div>
-                                </div>
+                                <h5 class="font-bold">{{$userName}}</h5>
+                                <h6>{{$userRole}}</h6>
+                                <a class="dropdown-item " href="/sign-out">Atsijungti</a>
                             </div>
                         </div>
                     </div>
