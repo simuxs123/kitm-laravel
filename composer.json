@@ -17,9 +17,7 @@
         "laravel/ui": "^2.4",
         "league/oauth2-client": "^2.6",
         "maatwebsite/excel": "^3.1",
-        "microsoft/microsoft-graph": "^1.31",
-        "phpoffice/phpexcel": "^1.8",
-        "phpoffice/phpspreadsheet": "^1.18"
+        "microsoft/microsoft-graph": "^1.31"
     },
     "require-dev": {
         "facade/ignition": "^2.0",

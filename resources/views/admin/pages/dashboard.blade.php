@@ -124,7 +124,7 @@
                             <div class="ms-3 name ">
                                 <h5 class="font-bold">{{$userName}}</h5>
                                 <h6>{{$userRole}}</h6>
-                                <a class="dropdown-item " href="/sign-out">Atsijungti</a>
+                                <a class="btn btn-success" href="/sign-out">Atsijungti</a>
                             </div>
                         </div>
                     </div>

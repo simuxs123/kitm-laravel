@@ -4,7 +4,7 @@
     <thead>
       <tr>
         <th scope="col">Vardas, pavardė</th>
-        <th scope="col">Kvalifikacine kategorija</th>
+        <th scope="col">Kvalifikacinė kategorija</th>
         <th scope="col">Vidurkis</th>
       </tr>
     </thead>
